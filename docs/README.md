@@ -1,3 +1,13 @@
+## v1.0 — Canonical Release
+- Initial publication of Agile AI Functional Elements
+- Definitions, intent, and governance locked
+- This version is the authoritative reference
+
+## v1.0 — Canonical Release
+- Initial canonical publication of Agile AI Functional Elements
+- Governance, intent, and functional definitions locked
+- This version is the authoritative reference
+
 # Agile AI Foundation
 
 This folder contains the canonical definition of the Agile AI Functional Elements.
