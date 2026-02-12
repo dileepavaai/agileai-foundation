@@ -29,11 +29,11 @@
 }
 
 /* =========================================================
-   Dark Mode — Explicit + System Support
+   Theme Modes — Explicit + System Governance
    ========================================================= */
 
-/* Explicit Dark (user override) */
-[data-theme="dark"] {
+/* Explicit Dark Mode */
+:root[data-theme="dark"] {
   --color-bg-primary: #0f1115;
 
   --color-text-primary: #f2f2f2;
@@ -45,10 +45,22 @@
   --color-link: #ffffff;
 }
 
-/* System Dark (only if no explicit override) */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]):not([data-theme="dark"]) {
+/* Explicit Light Mode (governance clarity) */
+:root[data-theme="light"] {
+  --color-bg-primary: #ffffff;
 
+  --color-text-primary: #111111;
+  --color-text-secondary: #555555;
+
+  --color-border-subtle: #dddddd;
+  --color-border-footer: #eeeeee;
+
+  --color-link: #111111;
+}
+
+/* System Mode (only when no explicit override exists) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
     --color-bg-primary: #0f1115;
 
     --color-text-primary: #f2f2f2;
