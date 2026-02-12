@@ -30,7 +30,6 @@
   <meta property="og:url" content="https://agileai.foundation/" />
 
   <link rel="stylesheet" href="styles.css" />
-
 </head>
 
 <body>
@@ -42,6 +41,15 @@
     <section id="intro">
       <h1>Agile AI Functional Elements</h1>
       <p class="subtitle">Version 1.0 — Canonical Release</p>
+
+      <!-- Editorial Theme Control -->
+      <nav class="theme-switcher no-print">
+        <a href="#" onclick="setAgileAITheme('light'); return false;">Light</a>
+        ·
+        <a href="#" onclick="setAgileAITheme('dark'); return false;">Dark</a>
+        ·
+        <a href="#" onclick="setAgileAITheme('system'); return false;">System</a>
+      </nav>
 
       <p>
         Agile Artificial Intelligence (Agile AI) is defined by a small set of
@@ -274,5 +282,9 @@
     </footer>
 
   </main>
+
+  <!-- Theme Controller -->
+  <script src="theme.js"></script>
+
 </body>
 </html>
