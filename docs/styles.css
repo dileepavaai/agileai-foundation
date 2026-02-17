@@ -1,7 +1,8 @@
 /* =========================================================
-   AGILE AI UNIVERSITY
-   Institutional CSS Token Contract — v1.1
-   Foundation Surface Implementation
+   AGILE AI FOUNDATION
+   Institutional CSS Token Contract — v1.2
+   Canonical Surface Implementation
+   Non-Destructive Governance Upgrade
    ========================================================= */
 
 :root {
@@ -138,6 +139,12 @@ article {
   font-size: 0.8rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+}
+
+.version-badge {
+  font-size: 0.9rem;
   color: var(--color-text-secondary);
   margin-bottom: 1rem;
 }
