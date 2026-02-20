@@ -274,13 +274,12 @@ a:hover {
 
 /* =========================================================
    Governance Seal (Archival Mark — Optional)
-   Inert unless .governance-seal is used
    ========================================================= */
 
 .governance-seal {
   width: 140px;
   margin: 2rem auto 0;
-  opacity: 0.75;
+  opacity: 0.85;
   color: var(--color-text-primary);
 }
 
@@ -288,6 +287,14 @@ a:hover {
   width: 100%;
   height: auto;
   display: block;
+}
+
+/* Dark mode contrast adjustment (scoped, safe) */
+:root[data-theme="dark"] .governance-seal,
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .governance-seal {
+    opacity: 0.95;
+  }
 }
 
 /* =========================================================
