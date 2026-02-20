@@ -1,29 +1,43 @@
 /* =========================================================
    AGILE AI FOUNDATION
-   Institutional CSS Token Contract — v1.4.1
+   Institutional CSS Token Contract — v1.5
+   Unified Adaptive Token Model
    Canonical Surface Implementation
    Governance Enhancements — Scoped & Non-Destructive
    ========================================================= */
 
 /* =========================================================
-   Root Design Tokens
+   Root Design Tokens — Light (Default Authority Surface)
    ========================================================= */
 
 :root {
 
-  /* Background */
+  /* Core Surface */
   --color-bg-primary: #ffffff;
-
-  /* Text */
   --color-text-primary: #111111;
   --color-text-secondary: #555555;
 
-  /* Borders */
+  /* Structural */
   --color-border-subtle: #dddddd;
   --color-border-footer: #eeeeee;
 
   /* Links */
   --color-link: #111111;
+
+  /* =====================================================
+     Governance Semantic Tokens
+     ===================================================== */
+
+  /* Watermark */
+  --color-watermark: rgba(0, 0, 0, 0.035);
+
+  /* Seal */
+  --color-seal-stroke: rgba(0, 0, 0, 0.55);
+  --color-seal-fill: rgba(0, 0, 0, 0.85);
+  --seal-opacity: 0.85;
+
+  /* Authority Muted Layer */
+  --color-authority-muted: rgba(0, 0, 0, 0.6);
 
   /* Typography */
   --font-sans: system-ui, -apple-system, BlinkMacSystemFont,
@@ -34,35 +48,45 @@
 }
 
 /* =========================================================
-   Theme Modes — Explicit + System Governance
+   Explicit Dark Theme Override
    ========================================================= */
 
 :root[data-theme="dark"] {
+
   --color-bg-primary: #0f1115;
   --color-text-primary: #f2f2f2;
   --color-text-secondary: #c9c9c9;
   --color-border-subtle: #2a2f3a;
   --color-border-footer: #2a2f3a;
   --color-link: #ffffff;
+
+  /* Governance Tokens — Dark */
+  --color-watermark: rgba(255, 255, 255, 0.045);
+  --color-seal-stroke: rgba(255, 255, 255, 0.65);
+  --color-seal-fill: rgba(255, 255, 255, 0.9);
+  --seal-opacity: 0.95;
+  --color-authority-muted: rgba(255, 255, 255, 0.75);
 }
 
-:root[data-theme="light"] {
-  --color-bg-primary: #ffffff;
-  --color-text-primary: #111111;
-  --color-text-secondary: #555555;
-  --color-border-subtle: #dddddd;
-  --color-border-footer: #eeeeee;
-  --color-link: #111111;
-}
+/* =========================================================
+   System Dark Mode (When No Explicit Theme)
+   ========================================================= */
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
+
     --color-bg-primary: #0f1115;
     --color-text-primary: #f2f2f2;
     --color-text-secondary: #c9c9c9;
     --color-border-subtle: #2a2f3a;
     --color-border-footer: #2a2f3a;
     --color-link: #ffffff;
+
+    --color-watermark: rgba(255, 255, 255, 0.045);
+    --color-seal-stroke: rgba(255, 255, 255, 0.65);
+    --color-seal-fill: rgba(255, 255, 255, 0.9);
+    --seal-opacity: 0.95;
+    --color-authority-muted: rgba(255, 255, 255, 0.75);
   }
 }
 
@@ -86,19 +110,13 @@ body {
 }
 
 /* =========================================================
-   Typography Hierarchy (Canonical Surface)
+   Typography Hierarchy
    ========================================================= */
 
 h1 {
   font-size: 2.6rem;
   margin-bottom: 0.25rem;
   font-weight: 600;
-}
-
-.subtitle {
-  font-size: 1rem;
-  color: var(--color-text-secondary);
-  margin-bottom: 2rem;
 }
 
 h2 {
@@ -124,7 +142,7 @@ article {
 }
 
 /* =========================================================
-   Foundation Identity Layer
+   Identity Layer
    ========================================================= */
 
 .identity-line {
@@ -143,7 +161,7 @@ article {
 
 .authority-micro {
   font-size: 0.85rem;
-  color: var(--color-text-secondary);
+  color: var(--color-authority-muted);
   line-height: 1.5;
   margin-bottom: 2rem;
 }
@@ -200,7 +218,7 @@ a:hover {
 }
 
 /* =========================================================
-   Authority Breadcrumb (Global Safe)
+   Authority Breadcrumb
    ========================================================= */
 
 .authority-breadcrumb {
@@ -221,7 +239,7 @@ a:hover {
 }
 
 /* =========================================================
-   Governance Enhancements (Scoped Only)
+   Governance Enhancements (Scoped)
    ========================================================= */
 
 .governance-page h1 {
@@ -238,12 +256,8 @@ a:hover {
   opacity: 0.9;
 }
 
-.governance-page .authority-micro {
-  opacity: 0.75;
-}
-
 /* =========================================================
-   Governance Constitutional Watermark
+   Constitutional Watermark (Token Driven)
    ========================================================= */
 
 .governance-page::before {
@@ -255,7 +269,7 @@ a:hover {
   font-size: 4rem;
   font-weight: 700;
   letter-spacing: 0.2em;
-  color: rgba(0, 0, 0, 0.03);
+  color: var(--color-watermark);
   pointer-events: none;
   z-index: 0;
 }
@@ -273,13 +287,13 @@ a:hover {
 }
 
 /* =========================================================
-   Governance Seal (Archival Mark — Optional)
+   Governance Seal (Token Driven)
    ========================================================= */
 
 .governance-seal {
   width: 140px;
   margin: 2rem auto 0;
-  opacity: 0.85;
+  opacity: var(--seal-opacity);
   color: var(--color-text-primary);
 }
 
@@ -287,17 +301,8 @@ a:hover {
   width: 100%;
   height: auto;
   display: block;
-}
-
-/* Dark Mode Contrast Adjustment (Scoped & Safe) */
-:root[data-theme="dark"] .governance-seal {
-  opacity: 0.95;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) .governance-seal {
-    opacity: 0.95;
-  }
+  stroke: var(--color-seal-stroke);
+  fill: var(--color-seal-fill);
 }
 
 /* =========================================================
