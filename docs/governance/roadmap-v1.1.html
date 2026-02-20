@@ -1,21 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <!-- ====================================================== -->
+  <!-- Institutional Measurement Layer (GA4)                 -->
+  <!-- Added: 18 Feb 2026                                     -->
+  <!-- Purpose: Public traffic observation (Phase A Indexing) -->
+  <!-- Scope: Non-invasive analytics, no structural impact    -->
+  <!-- ====================================================== -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B7RTGWC99E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    /* Governance Note:
+       Analytics instrumentation does NOT modify canonical content,
+       versioning logic, or structural authority boundaries.
+    */
+    gtag('config', 'G-B7RTGWC99E', { anonymize_ip: true });
+  </script>
+
+  <!-- ===================== -->
+  <!-- Core Document Metadata -->
+  <!-- ===================== -->
+
   <meta charset="UTF-8" />
   <meta http-equiv="content-language" content="en" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-  <title>v1.1 Governance Roadmap (Planned) — Agile AI Foundation</title>
+  <title>Agile AI Functional Elements v1.1 Roadmap</title>
 
+  <!-- Canonical Authority (Roadmap Page) -->
   <link rel="canonical" href="https://agileai.foundation/governance/roadmap-v1.1.html" />
 
-  <meta name="description"
-        content="Forward governance planning for Agile AI Functional Elements v1.1. Non-structural refinements only. Not active." />
-
+  <!-- Core Metadata -->
+  <meta
+    name="description"
+    content="Roadmap for Agile AI Functional Elements v1.1. Planned structural evolution, governance considerations, and version advancement guidance."
+  />
   <meta name="robots" content="index, follow" />
+
+  <!-- Publisher & Classification -->
   <meta name="author" content="Agile AI Foundation" />
   <meta name="publisher" content="Agile AI Foundation" />
-  <meta name="classification" content="Governance Planning Document" />
+  <meta name="classification" content="Governance, Roadmap, Version Advancement" />
+  <meta name="application-name" content="Agile AI Functional Elements" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Agile AI Functional Elements v1.1 Roadmap" />
+  <meta property="og:description" content="Roadmap for Agile AI Functional Elements v1.1. Planned structural evolution and governance considerations." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://agileai.foundation/governance/roadmap-v1.1.html" />
+
+  <!-- Structured Semantic Microdata -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Agile AI Functional Elements v1.1 Roadmap",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Agile AI Foundation",
+      "url": "https://agileai.foundation"
+    },
+    "inLanguage": "en",
+    "mainEntityOfPage": "https://agileai.foundation/governance/roadmap-v1.1.html"
+  }
+  </script>
 
   <link rel="stylesheet" href="../styles.css" />
 </head>
@@ -23,11 +77,7 @@
 <body>
   <main class="container">
 
-    <!-- ===================== -->
-    <!-- Roadmap Header -->
-    <!-- ===================== -->
     <section>
-
       <p class="identity-line">
         Agile AI Foundation — Forward Governance Planning
       </p>
@@ -45,34 +95,24 @@
         This roadmap does not introduce, redefine, or reinterpret the Six
         Functional Elements.
       </p>
-
     </section>
 
-    <!-- ===================== -->
-    <!-- Scope Boundary -->
-    <!-- ===================== -->
     <section>
       <h2>Scope Boundary</h2>
-
       <ul>
         <li>No change to the Six Functional Elements</li>
         <li>No change to the Authority Model</li>
         <li>No expansion of institutional or commercial positioning</li>
         <li>No semantic alteration of canonical definitions</li>
       </ul>
-
       <p>
         Any modification beyond these boundaries requires formal advancement
         to a major version (v2.0 or later).
       </p>
     </section>
 
-    <!-- ===================== -->
-    <!-- Permitted Enhancements -->
-    <!-- ===================== -->
     <section>
       <h2>Permitted Enhancements (Non-Structural Only)</h2>
-
       <ul>
         <li>Typography refinement</li>
         <li>Reference formatting improvements</li>
@@ -80,57 +120,38 @@
         <li>Archival integrity strengthening</li>
         <li>Navigation clarity within governance pages</li>
       </ul>
-
       <p>
         These enhancements do not alter definitions, structure, authority,
         or canonical meaning.
       </p>
     </section>
 
-    <!-- ===================== -->
-    <!-- Reserved for v2.0 -->
-    <!-- ===================== -->
     <section>
       <h2>Reserved for v2.0 Only</h2>
-
       <ul>
         <li>Addition of new Functional Elements</li>
         <li>Redefinition of existing elements</li>
         <li>Authority restructuring</li>
         <li>Structural expansion of the canonical model</li>
       </ul>
-
       <p>
         Structural evolution, if ever required, will occur only through
         deliberate major version advancement.
       </p>
     </section>
 
-    <!-- ===================== -->
-    <!-- Footer -->
-    <!-- ===================== -->
     <footer>
-
       <hr />
-
-      <p>
-        Status: <strong>Planning Stage — Not Active</strong>
-      </p>
-
-      <p>
-        For current authoritative definition, refer to:
-      </p>
-
+      <p>Status: <strong>Planning Stage — Not Active</strong></p>
+      <p>For current authoritative definition, refer to:</p>
       <p>
         <a href="/governance/archive/v1.0/">Agile AI Functional Elements v1.0 (Canonical)</a>
       </p>
-
-      <p>
-        © Agile AI Foundation
-      </p>
-
+      <p>© Agile AI Foundation</p>
     </footer>
 
   </main>
+
+  <script src="../theme.js"></script>
 </body>
 </html>

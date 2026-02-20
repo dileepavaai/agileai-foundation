@@ -1,21 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <!-- ====================================================== -->
+  <!-- Institutional Measurement Layer (GA4)                 -->
+  <!-- Added: 18 Feb 2026                                     -->
+  <!-- Purpose: Public traffic observation (Phase A Indexing) -->
+  <!-- Scope: Non-invasive analytics, no structural impact    -->
+  <!-- ====================================================== -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B7RTGWC99E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    /* Governance Note:
+       Analytics instrumentation does NOT modify canonical content,
+       versioning logic, or structural authority boundaries.
+    */
+    gtag('config', 'G-B7RTGWC99E', { anonymize_ip: true });
+  </script>
+
+  <!-- ===================== -->
+  <!-- Core Document Metadata -->
+  <!-- ===================== -->
+
   <meta charset="UTF-8" />
   <meta http-equiv="content-language" content="en" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-  <title>Governance Index — Agile AI Foundation</title>
+  <title>Governance Index — Agile AI Functional Elements</title>
 
-  <!-- Canonical -->
+  <!-- Canonical Authority (Governance Index) -->
   <link rel="canonical" href="https://agileai.foundation/governance/" />
 
   <!-- Core Metadata -->
   <meta
     name="description"
-    content="Governance authority, version control, archival policy, and structural integrity model for Agile AI Functional Elements."
+    content="Governance index for Agile AI Functional Elements. Version control, archive access, roadmap, and authority boundaries."
   />
   <meta name="robots" content="index, follow" />
+
+  <!-- Publisher & Classification -->
+  <meta name="author" content="Agile AI Foundation" />
+  <meta name="publisher" content="Agile AI Foundation" />
+  <meta name="classification" content="Governance, Version Control, Canonical Index" />
+  <meta name="application-name" content="Agile AI Functional Elements" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Governance Index — Agile AI Functional Elements" />
+  <meta property="og:description" content="Governance index for Agile AI Functional Elements. Version control, archive access, roadmap, and authority boundaries." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://agileai.foundation/governance/" />
+
+  <!-- Structured Semantic Microdata -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Governance Index — Agile AI Functional Elements",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Agile AI Foundation",
+      "url": "https://agileai.foundation"
+    },
+    "inLanguage": "en",
+    "mainEntityOfPage": "https://agileai.foundation/governance/"
+  }
+  </script>
 
   <link rel="stylesheet" href="../styles.css" />
 </head>

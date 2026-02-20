@@ -1,12 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <!-- ====================================================== -->
+  <!-- Institutional Measurement Layer (GA4)                 -->
+  <!-- Added: 18 Feb 2026                                     -->
+  <!-- Purpose: Public traffic observation (Phase A Indexing) -->
+  <!-- Scope: Non-invasive analytics, no structural impact    -->
+  <!-- ====================================================== -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B7RTGWC99E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    /* Governance Note:
+       Analytics instrumentation does NOT modify canonical content,
+       versioning logic, or structural authority boundaries.
+    */
+    gtag('config', 'G-B7RTGWC99E', { anonymize_ip: true });
+  </script>
+
+  <!-- ===================== -->
+  <!-- Core Document Metadata -->
+  <!-- ===================== -->
+
   <meta charset="UTF-8" />
+  <meta http-equiv="content-language" content="en" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
 
   <title>About This Site — Agile AI Foundation</title>
 
-  <meta name="description" content="Purpose, scope, and governance of the Agile AI Foundation website." />
+  <!-- Canonical -->
+  <link rel="canonical" href="https://agileai.foundation/site-notice.html" />
+
+  <!-- Core Metadata -->
+  <meta name="description" content="Purpose, scope, governance posture, and institutional positioning of the Agile AI Foundation website." />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Publisher -->
+  <meta name="author" content="Agile AI Foundation" />
+  <meta name="publisher" content="Agile AI Foundation" />
+  <meta name="classification" content="Site Notice, Governance, Institutional Positioning" />
+  <meta name="application-name" content="Agile AI Foundation" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About This Site — Agile AI Foundation" />
+  <meta property="og:description" content="Purpose, scope, governance posture, and institutional positioning of the Agile AI Foundation website." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://agileai.foundation/site-notice.html" />
+
+  <!-- Structured Semantic Microdata -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "About This Site",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Agile AI Foundation",
+      "url": "https://agileai.foundation"
+    },
+    "inLanguage": "en",
+    "mainEntityOfPage": "https://agileai.foundation/site-notice.html"
+  }
+  </script>
 
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -55,6 +115,7 @@
       <p>
         <a href="index.html">Return to the main document</a>
       </p>
+      <p>© Agile AI Foundation</p>
     </footer>
 
   </main>
