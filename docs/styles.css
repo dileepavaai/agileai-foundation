@@ -1,6 +1,6 @@
 /* =========================================================
    AGILE AI FOUNDATION
-   Institutional CSS Token Contract — v1.4
+   Institutional CSS Token Contract — v1.4.1
    Canonical Surface Implementation
    Governance Enhancements — Scoped & Non-Destructive
    ========================================================= */
@@ -289,8 +289,11 @@ a:hover {
   display: block;
 }
 
-/* Dark mode contrast adjustment (scoped, safe) */
-:root[data-theme="dark"] .governance-seal,
+/* Dark Mode Contrast Adjustment (Scoped & Safe) */
+:root[data-theme="dark"] .governance-seal {
+  opacity: 0.95;
+}
+
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) .governance-seal {
     opacity: 0.95;
