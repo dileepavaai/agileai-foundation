@@ -15,9 +15,7 @@
     gtag('config', 'G-B7RTGWC99E', { anonymize_ip: true });
   </script>
 
-  <!-- ===================== -->
   <!-- Core Document Metadata -->
-  <!-- ===================== -->
 
   <meta charset="UTF-8" />
   <meta http-equiv="content-language" content="en" />
@@ -88,6 +86,7 @@
   </script>
 
   <link rel="stylesheet" href="../styles.css" />
+
 </head>
 
 <body class="governance-page">
@@ -95,7 +94,7 @@
   <main class="container">
 
     <!-- Authority Breadcrumb -->
-    <nav class="authority-breadcrumb">
+    <nav class="authority-breadcrumb no-print">
       <a href="/">Agile AI Foundation</a>
       <span>›</span>
       <a href="/governance/">Governance</a>
@@ -123,6 +122,15 @@
       </p>
 
     </section>
+
+    <!-- Theme Switcher -->
+    <nav class="theme-switcher no-print">
+      <a href="#" onclick="setAgileAITheme('light'); return false;">Light</a>
+      ·
+      <a href="#" onclick="setAgileAITheme('dark'); return false;">Dark</a>
+      ·
+      <a href="#" onclick="setAgileAITheme('system'); return false;">System</a>
+    </nav>
 
     <!-- Positioning Principles -->
     <section>
@@ -165,6 +173,8 @@
 
   </main>
 
-  <script src="../theme.js"></script>
+  <!-- Correct Script Path for docs/governance/ -->
+  <script src="../../theme.js"></script>
+
 </body>
 </html>
