@@ -257,7 +257,7 @@ a:hover {
 }
 
 /* =========================================================
-   Constitutional Watermark (Token Driven)
+   Constitutional Watermark (Governance Layer)
    ========================================================= */
 
 .governance-page::before {
@@ -303,6 +303,37 @@ a:hover {
   display: block;
   stroke: var(--color-seal-stroke);
   fill: var(--color-seal-fill);
+}
+
+/* =========================================================
+   Root Constitutional Watermark (Definition Layer)
+   ========================================================= */
+
+.constitutional-watermark {
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--color-watermark);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 0;
+  text-align: center;
+}
+
+/* Root surface should be subtle but visible.
+   Opacity is fully governed by token color. */
+
+.root-watermark {
+  opacity: 1;
+}
+
+main {
+  position: relative;
+  z-index: 1;
 }
 
 /* =========================================================
