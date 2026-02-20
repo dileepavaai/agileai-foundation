@@ -14,17 +14,10 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
-    /* Governance Note:
-       Analytics instrumentation does NOT modify canonical content,
-       versioning logic, or structural authority boundaries.
-    */
     gtag('config', 'G-B7RTGWC99E', { anonymize_ip: true });
   </script>
 
-  <!-- ===================== -->
-  <!-- Core Document Metadata -->
-  <!-- ===================== -->
+  <!-- Core Metadata -->
 
   <meta charset="UTF-8" />
   <meta http-equiv="content-language" content="en" />
@@ -35,12 +28,10 @@
 
   <link rel="canonical" href="https://agileai.foundation/governance/" />
 
-  <meta
-    name="description"
-    content="Governance index for Agile AI Functional Elements. Authority model, version control, archive access, institutional framework, and change management boundaries."
-  />
-  <meta name="robots" content="index, follow" />
+  <meta name="description"
+        content="Governance index for Agile AI Functional Elements. Authority model, version control, archive access, institutional framework, and change management boundaries." />
 
+  <meta name="robots" content="index, follow" />
   <meta name="author" content="Agile AI Foundation" />
   <meta name="publisher" content="Agile AI Foundation" />
   <meta name="classification" content="Governance, Version Control, Canonical Authority" />
@@ -91,6 +82,7 @@
   </script>
 
   <link rel="stylesheet" href="../styles.css" />
+
 </head>
 
 <body class="governance-page">
@@ -98,15 +90,13 @@
   <main class="container">
 
     <!-- Authority Breadcrumb -->
-    <nav class="authority-breadcrumb">
+    <nav class="authority-breadcrumb no-print">
       <a href="/">Agile AI Foundation</a>
       <span>›</span>
-      <a href="/governance/">Governance</a>
-      <span>›</span>
-      <span>Index</span>
+      <span>Governance</span>
     </nav>
 
-    <!-- Governance Introduction -->
+    <!-- Institutional Header -->
     <section>
 
       <p class="identity-line">
@@ -127,6 +117,15 @@
       </p>
 
     </section>
+
+    <!-- Theme Switcher -->
+    <nav class="theme-switcher no-print">
+      <a href="#" onclick="setAgileAITheme('light'); return false;">Light</a>
+      ·
+      <a href="#" onclick="setAgileAITheme('dark'); return false;">Dark</a>
+      ·
+      <a href="#" onclick="setAgileAITheme('system'); return false;">System</a>
+    </nav>
 
     <!-- Institutional Framework -->
     <section>
@@ -251,14 +250,20 @@
 
     </section>
 
-    <!-- Footer -->
+    <!-- Institutional Footer -->
     <footer>
       <p>© Agile AI Foundation</p>
       <p>
-        Governance authority and version control for Agile AI Functional Elements.
+        The Agile AI Foundation defines structured governance frameworks,
+        version discipline, and canonical archival models for Agile AI Functional Elements.
+        It operates as an independent governance body.
       </p>
     </footer>
 
   </main>
+
+  <!-- Correct Script Path for docs/governance/ -->
+  <script src="../../theme.js"></script>
+
 </body>
 </html>
