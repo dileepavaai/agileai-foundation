@@ -1,6 +1,6 @@
 /* =========================================================
    AGILE AI FOUNDATION
-   Institutional CSS Token Contract — v1.5
+   Institutional CSS Token Contract — v1.6
    Unified Adaptive Token Model
    Canonical Surface Implementation
    Governance Enhancements — Scoped & Non-Destructive
@@ -24,19 +24,12 @@
   /* Links */
   --color-link: #111111;
 
-  /* =====================================================
-     Governance Semantic Tokens
-     ===================================================== */
+  /* Governance Semantic Tokens */
 
-  /* Watermark */
   --color-watermark: rgba(0, 0, 0, 0.035);
-
-  /* Seal */
   --color-seal-stroke: rgba(0, 0, 0, 0.55);
   --color-seal-fill: rgba(0, 0, 0, 0.85);
   --seal-opacity: 0.85;
-
-  /* Authority Muted Layer */
   --color-authority-muted: rgba(0, 0, 0, 0.6);
 
   /* Typography */
@@ -60,7 +53,6 @@
   --color-border-footer: #2a2f3a;
   --color-link: #ffffff;
 
-  /* Governance Tokens — Dark */
   --color-watermark: rgba(255, 255, 255, 0.045);
   --color-seal-stroke: rgba(255, 255, 255, 0.65);
   --color-seal-fill: rgba(255, 255, 255, 0.9);
@@ -101,12 +93,40 @@ body {
   color: var(--color-text-primary);
   background: var(--color-bg-primary);
   transition: background 0.25s ease, color 0.25s ease;
+  position: relative;
 }
+
+/* =========================================================
+   Root Canonical Watermark (Definition Layer)
+   Non-DOM Decorative Implementation
+   ========================================================= */
+
+body::before {
+  content: "Agile AI Foundation · Canonical Definition";
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--color-watermark);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 0;
+  text-align: center;
+}
+
+/* =========================================================
+   Container
+   ========================================================= */
 
 .container {
   max-width: 860px;
   margin: 0 auto;
   padding: 4rem 1.5rem;
+  position: relative;
+  z-index: 1;
 }
 
 /* =========================================================
@@ -257,7 +277,7 @@ a:hover {
 }
 
 /* =========================================================
-   Constitutional Watermark (Governance Layer)
+   Governance Constitutional Watermark
    ========================================================= */
 
 .governance-page::before {
@@ -287,7 +307,7 @@ a:hover {
 }
 
 /* =========================================================
-   Governance Seal (Token Driven)
+   Governance Seal
    ========================================================= */
 
 .governance-seal {
@@ -303,37 +323,6 @@ a:hover {
   display: block;
   stroke: var(--color-seal-stroke);
   fill: var(--color-seal-fill);
-}
-
-/* =========================================================
-   Root Constitutional Watermark (Definition Layer)
-   ========================================================= */
-
-.constitutional-watermark {
-  position: fixed;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 3.5rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  color: var(--color-watermark);
-  white-space: nowrap;
-  pointer-events: none;
-  z-index: 0;
-  text-align: center;
-}
-
-/* Root surface should be subtle but visible.
-   Opacity is fully governed by token color. */
-
-.root-watermark {
-  opacity: 1;
-}
-
-main {
-  position: relative;
-  z-index: 1;
 }
 
 /* =========================================================
