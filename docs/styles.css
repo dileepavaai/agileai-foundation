@@ -1,8 +1,12 @@
 /* =========================================================
    AGILE AI FOUNDATION
-   Institutional CSS Token Contract — v1.2
+   Institutional CSS Token Contract — v1.4
    Canonical Surface Implementation
-   Non-Destructive Governance Upgrade
+   Governance Enhancements — Scoped & Non-Destructive
+   ========================================================= */
+
+/* =========================================================
+   Root Design Tokens
    ========================================================= */
 
 :root {
@@ -33,49 +37,37 @@
    Theme Modes — Explicit + System Governance
    ========================================================= */
 
-/* Explicit Dark Mode */
 :root[data-theme="dark"] {
   --color-bg-primary: #0f1115;
-
   --color-text-primary: #f2f2f2;
   --color-text-secondary: #c9c9c9;
-
   --color-border-subtle: #2a2f3a;
   --color-border-footer: #2a2f3a;
-
   --color-link: #ffffff;
 }
 
-/* Explicit Light Mode */
 :root[data-theme="light"] {
   --color-bg-primary: #ffffff;
-
   --color-text-primary: #111111;
   --color-text-secondary: #555555;
-
   --color-border-subtle: #dddddd;
   --color-border-footer: #eeeeee;
-
   --color-link: #111111;
 }
 
-/* System Mode */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
     --color-bg-primary: #0f1115;
-
     --color-text-primary: #f2f2f2;
     --color-text-secondary: #c9c9c9;
-
     --color-border-subtle: #2a2f3a;
     --color-border-footer: #2a2f3a;
-
     --color-link: #ffffff;
   }
 }
 
 /* =========================================================
-   Base Styles
+   Base Layout
    ========================================================= */
 
 body {
@@ -94,7 +86,7 @@ body {
 }
 
 /* =========================================================
-   Typography Hierarchy
+   Typography Hierarchy (Canonical Surface)
    ========================================================= */
 
 h1 {
@@ -132,7 +124,7 @@ article {
 }
 
 /* =========================================================
-   Foundation Identity Layer (Non-Destructive Additions)
+   Foundation Identity Layer
    ========================================================= */
 
 .identity-line {
@@ -156,7 +148,6 @@ article {
   margin-bottom: 2rem;
 }
 
-/* Slight vertical rhythm refinement for first section */
 #intro p {
   max-width: 75ch;
 }
@@ -188,7 +179,7 @@ a:hover {
 }
 
 /* =========================================================
-   Minimal Theme Switcher — Editorial Tone
+   Theme Switcher
    ========================================================= */
 
 .theme-switcher {
@@ -209,7 +200,98 @@ a:hover {
 }
 
 /* =========================================================
-   Print / PDF Styles — Academic Friendly
+   Authority Breadcrumb (Global Safe)
+   ========================================================= */
+
+.authority-breadcrumb {
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  opacity: 0.7;
+}
+
+.authority-breadcrumb a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.authority-breadcrumb span {
+  margin: 0 0.5rem;
+}
+
+/* =========================================================
+   Governance Enhancements (Scoped Only)
+   ========================================================= */
+
+.governance-page h1 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-top: 1rem;
+}
+
+.governance-page h2 {
+  margin-top: 3rem;
+}
+
+.governance-page h3 {
+  opacity: 0.9;
+}
+
+.governance-page .authority-micro {
+  opacity: 0.75;
+}
+
+/* =========================================================
+   Governance Constitutional Watermark
+   ========================================================= */
+
+.governance-page::before {
+  content: "CONSTITUTIONAL GOVERNANCE";
+  position: fixed;
+  top: 40%;
+  right: -120px;
+  transform: rotate(-90deg);
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: rgba(0, 0, 0, 0.03);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.governance-page main {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .governance-page::before {
+    font-size: 2rem;
+    right: -80px;
+  }
+}
+
+/* =========================================================
+   Governance Seal (Archival Mark — Optional)
+   Inert unless .governance-seal is used
+   ========================================================= */
+
+.governance-seal {
+  width: 140px;
+  margin: 2rem auto 0;
+  opacity: 0.75;
+  color: var(--color-text-primary);
+}
+
+.governance-seal svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =========================================================
+   Print / PDF Styles
    ========================================================= */
 
 @media print {
@@ -237,58 +319,12 @@ a:hover {
     page-break-inside: avoid;
   }
 
-  h1 {
-    font-size: 18pt;
-    margin-bottom: 0.5em;
-  }
-
-  h2 {
-    font-size: 14pt;
-    margin-top: 2em;
-  }
-
-  h3 {
-    font-size: 12pt;
-    margin-top: 1.5em;
-  }
-
   section, article {
     page-break-inside: avoid;
-  }
-
-  a {
-    color: #000;
-    text-decoration: none;
-  }
-
-  a[href]:after {
-    content: " (" attr(href) ")";
-    font-size: 9pt;
-  }
-
-  footer {
-    margin-top: 3em;
-    font-size: 9pt;
-    border-top: 1px solid #999;
-    padding-top: 0.5em;
   }
 
   nav,
   .no-print {
     display: none !important;
   }
-}
-
-/* =========================================================
-   Language List
-   ========================================================= */
-
-.language-list {
-  list-style: none;
-  padding-left: 0;
-}
-
-.language-list li {
-  margin: 0.25em 0;
-  color: var(--color-text-secondary);
 }

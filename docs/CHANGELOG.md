@@ -1,7 +1,7 @@
 # Changelog — Agile AI Functional Elements
 
-This document records formal version declarations and institutional freeze points
-for the Agile AI Functional Elements.
+This document records formal version declarations, institutional freeze points,
+and operational infrastructure milestones for the Agile AI Functional Elements.
 
 The Agile AI Functional Elements are governed as a stable, canonical reference.
 Changes are rare, deliberate, and structurally controlled.
@@ -52,6 +52,29 @@ Date of freeze: 2025-02-18
 - Structural or definitional changes require a new version.
 - Archived versions remain permanently accessible.
 - Tags are immutable once published.
+- Operational infrastructure changes must not alter canonical definitions.
 
 Future versions (e.g., v1.1, v2.0) will be declared explicitly and
 will not retroactively modify v1.0.
+
+---
+
+## 2026-02-18 — Institutional Measurement Layer Established
+
+This entry records the introduction of non-invasive analytics instrumentation
+across the governance surface.
+
+Scope:
+
+- GA4 (Measurement ID: G-B7RTGWC99E) implemented across all governance HTML pages.
+- IP anonymization enabled.
+- Referrer policy set to `strict-origin-when-cross-origin`.
+- Aggregated measurement only.
+- No personal data storage.
+- No structural or semantic impact on canonical definitions.
+
+The measurement layer constitutes operational infrastructure
+and does not modify authority boundaries, version semantics,
+or Functional Element definitions.
+
+This layer is frozen under v1.0 governance unless formally revised.
