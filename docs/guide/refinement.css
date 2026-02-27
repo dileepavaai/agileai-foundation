@@ -1,12 +1,12 @@
 /* ==========================================================
    Guide Refinement Layer
-   Scope: Visual proportion & rhythm only
+   Scope: Visual proportion & constitutional rhythm only
    Structural impact: None
    ========================================================== */
 
 
 /* ----------------------------------------------------------
-   SECTION RHYTHM (Constitutional Spacing)
+   SECTION RHYTHM
    ---------------------------------------------------------- */
 
 main.container section {
@@ -22,9 +22,28 @@ main.container h2 {
   margin-bottom: 28px;
 }
 
-main.container p,
+main.container p {
+  margin-bottom: 20px;
+}
+
+
+/* ----------------------------------------------------------
+   LIST TYPOGRAPHIC DENSITY (Constitutional Tone)
+   ---------------------------------------------------------- */
+
 main.container ul {
-  margin-bottom: 22px;
+  margin-top: 10px;
+  margin-bottom: 24px;
+  padding-left: 24px;
+}
+
+main.container ul li {
+  margin-bottom: 8px;        /* tighter vertical rhythm */
+  line-height: 1.55;         /* controlled readability */
+}
+
+main.container ul li strong {
+  font-weight: 600;
 }
 
 
@@ -50,8 +69,8 @@ main.container ul {
    ---------------------------------------------------------- */
 
 #diagram h2 {
-  font-size: 1.5rem;        /* slightly smaller */
-  font-weight: 500;         /* softer weight */
-  letter-spacing: 0.5px;    /* quiet institutional tone */
-  opacity: 0.85;            /* subtle visual demotion */
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  opacity: 0.85;
 }
