@@ -6,24 +6,41 @@
 
 
 /* ----------------------------------------------------------
-   SECTION RHYTHM
+   SECTION RHYTHM (Aligned with Foundation Density)
    ---------------------------------------------------------- */
 
 main.container section {
-  margin-top: 90px;
-  margin-bottom: 90px;
+  margin-top: 70px;
+  margin-bottom: 70px;
 }
 
 main.container section:first-of-type {
-  margin-top: 60px;
+  margin-top: 50px;
+}
+
+
+/* ----------------------------------------------------------
+   HEADING HARMONIZATION (Remove Segmentation Tone)
+   ---------------------------------------------------------- */
+
+body.guide-page h2 {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-top: 3rem;
+  font-weight: 600;
 }
 
 main.container h2 {
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
+
+/* ----------------------------------------------------------
+   PARAGRAPH FLOW
+   ---------------------------------------------------------- */
+
 main.container p {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 
@@ -32,14 +49,14 @@ main.container p {
    ---------------------------------------------------------- */
 
 main.container ul {
-  margin-top: 10px;
-  margin-bottom: 24px;
-  padding-left: 24px;
+  margin-top: 8px;
+  margin-bottom: 22px;
+  padding-left: 22px;
 }
 
 main.container ul li {
-  margin-bottom: 8px;        /* tighter vertical rhythm */
-  line-height: 1.55;         /* controlled readability */
+  margin-bottom: 6px;
+  line-height: 1.55;
 }
 
 main.container ul li strong {
@@ -52,10 +69,10 @@ main.container ul li strong {
    ---------------------------------------------------------- */
 
 #diagram .diagram-container img {
-  max-width: 760px;
+  max-width: 720px;
   width: 100%;
   height: auto;
-  margin: 60px auto 40px auto;
+  margin: 50px auto 35px auto;
   display: block;
 }
 
@@ -69,18 +86,28 @@ main.container ul li strong {
    ---------------------------------------------------------- */
 
 #diagram h2 {
-  font-size: 1.5rem;
+  font-size: 1.45rem;
   font-weight: 500;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
   opacity: 0.85;
 }
 
+
 /* ----------------------------------------------------------
-   Hide Theme Toggle on Guide Surface
+   THEME TOGGLE — Subtle for Thinking Surface
    ---------------------------------------------------------- */
 
-body.guide-page .theme-toggle,
-body.guide-page .theme-switcher,
-body.guide-page [class*="theme"] {
-  display: none !important;
+body.guide-page .theme-switcher {
+  opacity: 0.55;
+  font-size: 0.75rem;
+  margin-top: 1.25rem;
+  letter-spacing: 0.02em;
+}
+
+body.guide-page .theme-switcher a {
+  text-decoration: none;
+}
+
+body.guide-page .theme-switcher:hover {
+  opacity: 0.85;
 }
