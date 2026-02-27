@@ -20,7 +20,7 @@ main.container section:first-of-type {
 
 
 /* ----------------------------------------------------------
-   HEADING HARMONIZATION (Remove Segmentation Tone)
+   HEADING HARMONIZATION
    ---------------------------------------------------------- */
 
 body.guide-page h2 {
@@ -45,7 +45,7 @@ main.container p {
 
 
 /* ----------------------------------------------------------
-   LIST TYPOGRAPHIC DENSITY (Constitutional Tone)
+   LIST TYPOGRAPHIC DENSITY
    ---------------------------------------------------------- */
 
 main.container ul {
@@ -65,7 +65,7 @@ main.container ul li strong {
 
 
 /* ----------------------------------------------------------
-   DIAGRAM PROPORTION (Archival Alignment)
+   DIAGRAM PROPORTION (Stable Archival Alignment)
    ---------------------------------------------------------- */
 
 #diagram {
@@ -74,45 +74,47 @@ main.container ul li strong {
 
 #diagram .diagram-container {
   text-align: left;
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
 
 #diagram .diagram-container img {
   max-width: 620px;
   width: 100%;
   height: auto;
-  margin: 40px 0 30px 0;
   display: block;
 }
 
 
 /* ----------------------------------------------------------
-   THEME-AWARE DIAGRAM SWITCHING (Clean Cascade)
+   THEME-AWARE DIAGRAM SWITCHING
+   Deterministic — prevents dual rendering
    ---------------------------------------------------------- */
 
-/* Default: Light */
-.diagram-light {
-  display: block;
-}
-
+/* Hide both by default (prevents cascade glitches) */
+.diagram-light,
 .diagram-dark {
   display: none;
 }
 
-/* Explicit Dark */
-:root[data-theme="dark"] .diagram-light {
-  display: none;
+/* Explicit Light */
+:root[data-theme="light"] .diagram-light {
+  display: block;
 }
 
+/* Explicit Dark */
 :root[data-theme="dark"] .diagram-dark {
   display: block;
 }
 
-/* System Dark (no override) */
-@media (prefers-color-scheme: dark) {
+/* System preference (no manual override) */
+@media (prefers-color-scheme: light) {
   :root:not([data-theme]) .diagram-light {
-    display: none;
+    display: block;
   }
+}
 
+@media (prefers-color-scheme: dark) {
   :root:not([data-theme]) .diagram-dark {
     display: block;
   }
@@ -152,25 +154,21 @@ body.guide-page .theme-switcher:hover {
 
 
 /* ----------------------------------------------------------
-   MICRO TYPOGRAPHIC POLISH (Final Constitutional Pass)
+   MICRO TYPOGRAPHIC POLISH
    ---------------------------------------------------------- */
 
-/* Improve long-form readability */
 body.guide-page main.container {
   max-width: 780px;
 }
 
-/* Controlled paragraph measure */
 body.guide-page p {
   max-width: 70ch;
 }
 
-/* Slight visual calm between paragraphs */
 body.guide-page section p + p {
   margin-top: 14px;
 }
 
-/* Subtle refinement of strong emphasis */
 body.guide-page strong {
   font-weight: 600;
   letter-spacing: 0.01em;
