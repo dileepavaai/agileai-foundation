@@ -74,3 +74,13 @@ main.container ul li strong {
   letter-spacing: 0.5px;
   opacity: 0.85;
 }
+
+/* ----------------------------------------------------------
+   Hide Theme Toggle on Guide Surface
+   ---------------------------------------------------------- */
+
+body.guide-page .theme-toggle,
+body.guide-page .theme-switcher,
+body.guide-page [class*="theme"] {
+  display: none !important;
+}
