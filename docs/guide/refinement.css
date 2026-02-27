@@ -155,3 +155,33 @@ body.guide-page .theme-switcher a {
 body.guide-page .theme-switcher:hover {
   opacity: 0.85;
 }
+
+/* ----------------------------------------------------------
+   MICRO TYPOGRAPHIC POLISH (Final Constitutional Pass)
+   ---------------------------------------------------------- */
+
+/* Improve long-form readability */
+body.guide-page main.container {
+  max-width: 780px;   /* slightly tighter than global 860px */
+}
+
+/* Controlled paragraph measure */
+body.guide-page p {
+  max-width: 70ch;
+}
+
+/* Slightly tighter inter-list spacing */
+body.guide-page ul li {
+  margin-bottom: 5px;
+}
+
+/* Slight visual calm between paragraphs */
+body.guide-page section p + p {
+  margin-top: 14px;
+}
+
+/* Subtle refinement of strong emphasis */
+body.guide-page strong {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
