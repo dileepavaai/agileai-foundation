@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1000 900"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <style>
+    text {
+      font-family: Arial, Helvetica, sans-serif;
+      fill: #FFFFFF;
+    }
+    .title {
+      font-size: 24px;
+      font-weight: 600;
+    }
+    .hex {
+      stroke: #FFFFFF;
+      stroke-width: 3;
+      fill: none;
+    }
+    .vertex {
+      fill: #FFFFFF;
+    }
+    .node {
+      fill: #111827;
+      stroke: #FFFFFF;
+      stroke-width: 2;
+      rx: 14;
+    }
+    .label {
+      font-size: 14px;
+      font-weight: 600;
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#0B1220"/>
+
+  <!-- Title -->
+  <text x="500" y="80" text-anchor="middle" class="title">
+    Agile AI v1.0 — Canonical Structural Architecture
+  </text>
+
+  <!-- Regular Hexagon -->
+  <polygon class="hex"
+    points="
+      500,220
+      750,360
+      750,640
+      500,780
+      250,640
+      250,360
+    "/>
+
+  <!-- Top (bottom midpoint touches vertex 500,220) -->
+  <rect class="node" x="350" y="140" width="300" height="80"/>
+  <circle class="vertex" cx="500" cy="220" r="5"/>
+  <text class="label" x="500" y="175" text-anchor="middle">
+    <tspan x="500">Intent & Outcome</tspan>
+    <tspan x="500" dy="20">Alignment</tspan>
+  </text>
+
+  <!-- Upper Right (left midpoint touches 750,360) -->
+  <rect class="node" x="750" y="320" width="220" height="80"/>
+  <circle class="vertex" cx="750" cy="360" r="5"/>
+  <text class="label" x="860" y="355" text-anchor="middle">
+    <tspan x="860">Human Judgment &</tspan>
+    <tspan x="860" dy="20">Accountability</tspan>
+  </text>
+
+  <!-- Lower Right (left midpoint touches 750,640) -->
+  <rect class="node" x="750" y="605" width="220" height="70"/>
+  <circle class="vertex" cx="750" cy="640" r="5"/>
+  <text class="label" x="860" y="645" text-anchor="middle">
+    Governance by Design
+  </text>
+
+  <!-- Bottom (top midpoint touches 500,780) -->
+  <rect class="node" x="350" y="780" width="300" height="70"/>
+  <circle class="vertex" cx="500" cy="780" r="5"/>
+  <text class="label" x="500" y="820" text-anchor="middle">
+    Systemic Integration
+  </text>
+
+  <!-- Lower Left (right midpoint touches 250,640) -->
+  <rect class="node" x="30" y="605" width="220" height="80"/>
+  <circle class="vertex" cx="250" cy="640" r="5"/>
+  <text class="label" x="140" y="645" text-anchor="middle">
+    <tspan x="140">Continuous Learning</tspan>
+    <tspan x="140" dy="20">& Feedback</tspan>
+  </text>
+
+  <!-- Upper Left (right midpoint touches 250,360) -->
+  <rect class="node" x="30" y="325" width="220" height="70"/>
+  <circle class="vertex" cx="250" cy="360" r="5"/>
+  <text class="label" x="140" y="365" text-anchor="middle">
+    Adaptive Execution
+  </text>
+
+</svg>
