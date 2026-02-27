@@ -5,15 +5,15 @@
     <title>Agile AI Guide v1.0 — Canonical Reference</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Foundation Styles (Correct Relative Path) -->
+    <!-- Foundation Styles -->
     <link rel="stylesheet" href="../styles.css">
 
-    <!-- Theme Script (if used globally in Foundation) -->
+    <!-- Foundation Theme Script -->
     <script src="../theme.js" defer></script>
 
     <style>
         .guide-container {
-            max-width: 820px;
+            max-width: 860px;
             margin: 60px auto;
             padding: 0 20px;
         }
@@ -24,7 +24,7 @@
         }
 
         .guide-container section {
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
 
         .diagram-container {
@@ -40,6 +40,14 @@
         .meta {
             font-size: 0.9rem;
             opacity: 0.7;
+        }
+
+        .functional-elements-list {
+            margin-top: 20px;
+        }
+
+        .functional-elements-list li {
+            margin-bottom: 8px;
         }
     </style>
 </head>
@@ -85,10 +93,20 @@
     <section id="structural-overview">
         <h2>3. Structural Overview of Agile AI v1.0</h2>
         <p>
-            Agile AI v1.0 is defined through a system of Functional Elements that collectively establish its structural foundation.
+            Agile AI v1.0 is defined through six co-foundational Functional Elements that collectively establish its structural system.
         </p>
+
+        <ul class="functional-elements-list">
+            <li><strong>Intent & Outcome Alignment</strong></li>
+            <li><strong>Human Judgment & Accountability</strong></li>
+            <li><strong>Adaptive Execution</strong></li>
+            <li><strong>Continuous Learning & Feedback</strong></li>
+            <li><strong>Governance by Design</strong></li>
+            <li><strong>Systemic Integration</strong></li>
+        </ul>
+
         <p>
-            Each Functional Element represents a distinct but interdependent component. Structural integrity depends upon systemic coherence.
+            Each Functional Element represents a distinct but interdependent component. Structural integrity depends upon systemic coherence across all six.
         </p>
         <p>
             Agile AI is structural rather than procedural, systemic rather than sequential, and framework-independent rather than tool-bound.
@@ -172,11 +190,14 @@
         </p>
     </section>
 
-    <!-- Structural Diagram -->
+    <!-- Canonical Structural Diagram -->
     <section id="diagram">
         <h2>Canonical Structural Architecture — Agile AI v1.0</h2>
         <div class="diagram-container">
-            <img src="v1.0/diagram.svg" alt="Canonical Structural Architecture">
+            <picture>
+                <source srcset="v1.0/diagram-light.svg" media="(prefers-color-scheme: light)">
+                <img src="v1.0/diagram-dark.svg" alt="Canonical Structural Architecture">
+            </picture>
         </div>
     </section>
 
