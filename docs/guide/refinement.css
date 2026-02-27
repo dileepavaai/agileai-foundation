@@ -55,7 +55,7 @@ main.container ul {
 }
 
 main.container ul li {
-  margin-bottom: 6px;
+  margin-bottom: 5px;
   line-height: 1.55;
 }
 
@@ -65,23 +65,23 @@ main.container ul li strong {
 
 
 /* ----------------------------------------------------------
-   DIAGRAM PROPORTION (Reduced Dominance)
+   DIAGRAM PROPORTION (Archival Alignment)
    ---------------------------------------------------------- */
 
+#diagram {
+  text-align: left;
+}
+
+#diagram .diagram-container {
+  text-align: left;
+}
+
 #diagram .diagram-container img {
-  max-width: 640px;
+  max-width: 620px;
   width: 100%;
   height: auto;
-  margin: 50px auto 35px auto;
-}
-
-/* Center container instead */
-#diagram .diagram-container {
-  text-align: center;
-}
-
-#diagram {
-  text-align: center;
+  margin: 40px 0 30px 0;
+  display: block;
 }
 
 
@@ -92,8 +92,6 @@ main.container ul li strong {
 /* Default: Light */
 .diagram-light {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .diagram-dark {
@@ -107,8 +105,6 @@ main.container ul li strong {
 
 :root[data-theme="dark"] .diagram-dark {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* System Dark (no override) */
@@ -119,8 +115,6 @@ main.container ul li strong {
 
   :root:not([data-theme]) .diagram-dark {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
@@ -156,23 +150,19 @@ body.guide-page .theme-switcher:hover {
   opacity: 0.85;
 }
 
+
 /* ----------------------------------------------------------
    MICRO TYPOGRAPHIC POLISH (Final Constitutional Pass)
    ---------------------------------------------------------- */
 
 /* Improve long-form readability */
 body.guide-page main.container {
-  max-width: 780px;   /* slightly tighter than global 860px */
+  max-width: 780px;
 }
 
 /* Controlled paragraph measure */
 body.guide-page p {
   max-width: 70ch;
-}
-
-/* Slightly tighter inter-list spacing */
-body.guide-page ul li {
-  margin-bottom: 5px;
 }
 
 /* Slight visual calm between paragraphs */
