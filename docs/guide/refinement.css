@@ -65,11 +65,11 @@ main.container ul li strong {
 
 
 /* ----------------------------------------------------------
-   DIAGRAM PROPORTION
+   DIAGRAM PROPORTION (Reduced Dominance)
    ---------------------------------------------------------- */
 
 #diagram .diagram-container img {
-  max-width: 720px;
+  max-width: 640px;   /* reduced from 720px */
   width: 100%;
   height: auto;
   margin: 50px auto 35px auto;
@@ -78,6 +78,39 @@ main.container ul li strong {
 
 #diagram {
   text-align: center;
+}
+
+
+/* ----------------------------------------------------------
+   THEME-AWARE DIAGRAM SWITCHING
+   ---------------------------------------------------------- */
+
+/* Default (Light) */
+.diagram-light {
+  display: block;
+}
+
+.diagram-dark {
+  display: none;
+}
+
+/* Explicit Dark Theme */
+:root[data-theme="dark"] .diagram-light {
+  display: none;
+}
+
+:root[data-theme="dark"] .diagram-dark {
+  display: block;
+}
+
+/* System Dark (when no manual override) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .diagram-light {
+    display: none;
+  }
+  :root:not([data-theme]) .diagram-dark {
+    display: block;
+  }
 }
 
 
