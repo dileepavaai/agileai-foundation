@@ -17,7 +17,7 @@
     .radial-line {
       stroke: #FFFFFF;
       stroke-width: 1;
-      opacity: 0.5;
+      opacity: 0.45;
     }
 
     .inner-circle {
@@ -36,7 +36,6 @@
       font-size: 15px;
       font-weight: 600;
       fill: #EAEAEA;
-      text-anchor: middle;
     }
   </style>
 
@@ -47,21 +46,6 @@
   <text x="500" y="80" text-anchor="middle" class="title">
     Agile AI v1.0 — Canonical Structural Architecture
   </text>
-
-  <!-- Center -->
-  <!-- Hexagon coordinates (radius 300) -->
-  <!-- Top -->
-  <!-- (500,200) -->
-  <!-- Top Right -->
-  <!-- (759,350) -->
-  <!-- Bottom Right -->
-  <!-- (759,650) -->
-  <!-- Bottom -->
-  <!-- (500,800) -->
-  <!-- Bottom Left -->
-  <!-- (241,650) -->
-  <!-- Top Left -->
-  <!-- (241,350) -->
 
   <!-- Outer Hexagon -->
   <polygon class="hex-line"
@@ -86,28 +70,38 @@
   <circle cx="241" cy="650" r="6" class="dot"/>
   <circle cx="241" cy="350" r="6" class="dot"/>
 
-  <!-- Labels -->
-  <text x="500" y="170" class="label">
-    Intent &amp; Outcome Alignment
+  <!-- Labels positioned close to respective dots -->
+
+  <!-- Top -->
+  <text x="500" y="175" text-anchor="middle" class="label">
+    <tspan x="500">Intent &amp; Outcome</tspan>
+    <tspan x="500" dy="18">Alignment</tspan>
   </text>
 
-  <text x="830" y="345" class="label">
-    Human Judgment &amp; Accountability
+  <!-- Top Right -->
+  <text x="785" y="345" text-anchor="start" class="label">
+    <tspan x="785">Human Judgment &amp;</tspan>
+    <tspan x="785" dy="18">Accountability</tspan>
   </text>
 
-  <text x="830" y="675" class="label">
+  <!-- Bottom Right -->
+  <text x="785" y="675" text-anchor="start" class="label">
     Governance by Design
   </text>
 
-  <text x="500" y="845" class="label">
+  <!-- Bottom -->
+  <text x="500" y="830" text-anchor="middle" class="label">
     Systemic Integration
   </text>
 
-  <text x="170" y="675" class="label">
-    Continuous Learning &amp; Feedback
+  <!-- Bottom Left -->
+  <text x="215" y="675" text-anchor="end" class="label">
+    <tspan x="215">Continuous Learning</tspan>
+    <tspan x="215" dy="18">&amp; Feedback</tspan>
   </text>
 
-  <text x="170" y="345" class="label">
+  <!-- Top Left -->
+  <text x="215" y="345" text-anchor="end" class="label">
     Adaptive Execution
   </text>
 
