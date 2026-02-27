@@ -1,0 +1,17 @@
+/* ==========================================================
+   Guide Surface Refinement Layer
+   Scope: Visual proportion only
+   Structural impact: None
+   ========================================================== */
+
+#diagram .diagram-container img {
+  max-width: 780px;   /* institutional balance */
+  width: 100%;
+  height: auto;
+  margin: 40px auto;
+  display: block;
+}
+
+#diagram {
+  text-align: center;
+}
