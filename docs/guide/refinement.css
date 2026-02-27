@@ -1,17 +1,57 @@
 /* ==========================================================
-   Guide Surface Refinement Layer
-   Scope: Visual proportion only
+   Guide Refinement Layer
+   Scope: Visual proportion & rhythm only
    Structural impact: None
    ========================================================== */
 
+
+/* ----------------------------------------------------------
+   SECTION RHYTHM (Constitutional Spacing)
+   ---------------------------------------------------------- */
+
+main.container section {
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+
+main.container section:first-of-type {
+  margin-top: 60px;
+}
+
+main.container h2 {
+  margin-bottom: 28px;
+}
+
+main.container p,
+main.container ul {
+  margin-bottom: 22px;
+}
+
+
+/* ----------------------------------------------------------
+   DIAGRAM PROPORTION
+   ---------------------------------------------------------- */
+
 #diagram .diagram-container img {
-  max-width: 780px;   /* institutional balance */
+  max-width: 760px;
   width: 100%;
   height: auto;
-  margin: 40px auto;
+  margin: 60px auto 40px auto;
   display: block;
 }
 
 #diagram {
   text-align: center;
+}
+
+
+/* ----------------------------------------------------------
+   APPENDIX HEADING SOFTENING
+   ---------------------------------------------------------- */
+
+#diagram h2 {
+  font-size: 1.5rem;        /* slightly smaller */
+  font-weight: 500;         /* softer weight */
+  letter-spacing: 0.5px;    /* quiet institutional tone */
+  opacity: 0.85;            /* subtle visual demotion */
 }
