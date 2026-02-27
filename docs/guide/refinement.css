@@ -69,11 +69,15 @@ main.container ul li strong {
    ---------------------------------------------------------- */
 
 #diagram .diagram-container img {
-  max-width: 640px;   /* reduced from 720px */
+  max-width: 640px;
   width: 100%;
   height: auto;
   margin: 50px auto 35px auto;
-  display: block;
+}
+
+/* Center container instead */
+#diagram .diagram-container {
+  text-align: center;
 }
 
 #diagram {
@@ -82,34 +86,41 @@ main.container ul li strong {
 
 
 /* ----------------------------------------------------------
-   THEME-AWARE DIAGRAM SWITCHING
+   THEME-AWARE DIAGRAM SWITCHING (Clean Cascade)
    ---------------------------------------------------------- */
 
-/* Default (Light) */
+/* Default: Light */
 .diagram-light {
   display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .diagram-dark {
   display: none;
 }
 
-/* Explicit Dark Theme */
+/* Explicit Dark */
 :root[data-theme="dark"] .diagram-light {
   display: none;
 }
 
 :root[data-theme="dark"] .diagram-dark {
   display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* System Dark (when no manual override) */
+/* System Dark (no override) */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) .diagram-light {
     display: none;
   }
+
   :root:not([data-theme]) .diagram-dark {
     display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
