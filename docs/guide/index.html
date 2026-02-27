@@ -23,6 +23,20 @@
   <meta name="author" content="Agile AI Foundation" />
   <meta name="publisher" content="Agile AI Foundation" />
 
+  <!-- ======================================================
+       PRE-RENDER THEME INITIALIZATION (Prevents Flicker)
+       ====================================================== -->
+  <script>
+    (function () {
+      try {
+        const saved = localStorage.getItem("agileAITheme");
+        if (saved === "light" || saved === "dark") {
+          document.documentElement.setAttribute("data-theme", saved);
+        }
+      } catch (e) {}
+    })();
+  </script>
+
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="refinement.css" />
 
@@ -211,7 +225,6 @@
       <h2>Appendix — Canonical Structural Architecture</h2>
 
       <div class="diagram-container">
-
         <img src="v1.0/diagram-light.svg"
              class="diagram-light"
              alt="Hexagonal systemic representation of the Six Agile AI Functional Elements" />
@@ -219,7 +232,6 @@
         <img src="v1.0/diagram-dark.svg"
              class="diagram-dark"
              alt="Hexagonal systemic representation of the Six Agile AI Functional Elements" />
-
       </div>
 
       <p class="authority-micro">
