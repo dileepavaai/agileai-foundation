@@ -1,21 +1,43 @@
 /* =========================================================
    Institutional Header — Refinement Layer
-   Non-Destructive Enhancement
-   Sticky Implementation (Theme-Safe)
-   + Active Navigation Highlighting
-   + Subtle Underline Animation (No Layout Shift)
-   + Scroll Shadow Activation
+   Stable Shared Header Authority (3–5 Year Safe Architecture)
+   Sticky handled at wrapper level
    ========================================================= */
 
 /* ---------------------------------------------------------
-   Header Container
+   Sticky Wrapper (Injection Container)
    --------------------------------------------------------- */
 
-.site-header {
+#site-header {
   position: sticky;
   top: 0;
   z-index: 1000;
+}
 
+/* Scroll shadow applied to wrapper */
+
+#site-header.is-scrolled {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.25s ease;
+}
+
+/* Dark mode shadow adjustment */
+
+:root[data-theme="dark"] #site-header.is-scrolled {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) #site-header.is-scrolled {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  }
+}
+
+/* ---------------------------------------------------------
+   Header Container (Visual Only — Not Sticky)
+   --------------------------------------------------------- */
+
+.site-header {
   width: 100%;
   box-sizing: border-box;
 
@@ -30,26 +52,7 @@
 
   transition:
     background 0.25s ease,
-    border-color 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-/* Scroll shadow (activated via JS class) */
-
-.site-header.is-scrolled {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-}
-
-/* Dark mode shadow adjustment */
-
-:root[data-theme="dark"] .site-header.is-scrolled {
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) .site-header.is-scrolled {
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
-  }
+    border-color 0.25s ease;
 }
 
 /* ---------------------------------------------------------
@@ -125,17 +128,19 @@
   transform: scaleX(1);
 }
 
-/* Active state (based on body data attribute) */
+/* ---------------------------------------------------------
+   Active State (Root-Relative Matching)
+   --------------------------------------------------------- */
 
-body[data-page="elements"] .site-nav a[href="index.html"]::after,
-body[data-page="guide"] .site-nav a[href="guide/index.html"]::after,
-body[data-page="governance"] .site-nav a[href="governance/index.html"]::after {
+body[data-page="elements"] .site-nav a[href="/index.html"]::after,
+body[data-page="guide"] .site-nav a[href="/guide/index.html"]::after,
+body[data-page="governance"] .site-nav a[href="/governance/index.html"]::after {
   transform: scaleX(1);
 }
 
-body[data-page="elements"] .site-nav a[href="index.html"],
-body[data-page="guide"] .site-nav a[href="guide/index.html"],
-body[data-page="governance"] .site-nav a[href="governance/index.html"] {
+body[data-page="elements"] .site-nav a[href="/index.html"],
+body[data-page="guide"] .site-nav a[href="/guide/index.html"],
+body[data-page="governance"] .site-nav a[href="/governance/index.html"] {
   opacity: 1;
   font-weight: 600;
 }

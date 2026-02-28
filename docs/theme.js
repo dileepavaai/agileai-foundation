@@ -1,8 +1,9 @@
 /* =========================================================
    AGILE AI UNIVERSITY
-   Institutional Theme Controller — v1.0
-   Extended for Agile AI Foundation Navigation Authority
-   Stable 3–5 Year Architecture
+   Institutional Theme Controller — v1.1
+   Foundation Navigation Authority Stabilized
+   Sticky + Scroll Shadow Wrapper Architecture
+   3–5 Year Safe Implementation
    ========================================================= */
 
 (function () {
@@ -22,12 +23,6 @@
     } else {
       root.removeAttribute("data-theme"); // system
     }
-  }
-
-  function getSystemTheme() {
-    return window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
   }
 
   function initializeTheme() {
@@ -61,12 +56,13 @@
   initializeTheme();
 
   /* =========================================================
-     SHARED HEADER INJECTION (FOUNDATION)
+     SHARED HEADER INJECTION
      ========================================================= */
 
   function injectHeader() {
 
     const container = document.getElementById("site-header");
+
     if (!container) {
       initializeHeaderBehavior();
       return;
@@ -90,22 +86,23 @@
 
   function initializeHeaderBehavior() {
 
-    const header = document.querySelector(".site-header");
-    if (!header) return;
+    const wrapper = document.getElementById("site-header");
+    if (!wrapper) return;
 
     /* -----------------------------------------
        Scroll Shadow (activates after 1px)
+       Applied to wrapper (sticky container)
        ----------------------------------------- */
 
     function handleScroll() {
       if (window.scrollY > 1) {
-        header.classList.add("is-scrolled");
+        wrapper.classList.add("is-scrolled");
       } else {
-        header.classList.remove("is-scrolled");
+        wrapper.classList.remove("is-scrolled");
       }
     }
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
 
     /* -----------------------------------------
@@ -115,7 +112,7 @@
     const page = document.body.dataset.page;
     if (!page) return;
 
-    const navLinks = document.querySelectorAll(".site-nav a");
+    const navLinks = wrapper.querySelectorAll(".site-nav a");
 
     navLinks.forEach(link => {
 
@@ -133,7 +130,7 @@
   }
 
   /* =========================================================
-     EXECUTE HEADER LOGIC
+     EXECUTION
      ========================================================= */
 
   injectHeader();
