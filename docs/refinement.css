@@ -146,6 +146,30 @@ body[data-page="governance"] .site-nav a[href="/governance/index.html"] {
 }
 
 /* ---------------------------------------------------------
+   Official Public Artifact Section (Non-Structural Addition)
+   --------------------------------------------------------- */
+
+#official-artifact {
+  margin-top: 4rem;
+  padding: 2rem;
+  border: 1px solid var(--color-border-subtle);
+  background: var(--color-bg-primary);
+}
+
+#official-artifact h2 {
+  margin-top: 0;
+}
+
+#official-artifact a {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+#official-artifact a:hover {
+  text-decoration: none;
+}
+
+/* ---------------------------------------------------------
    Responsive Adjustment
    --------------------------------------------------------- */
 
@@ -157,6 +181,10 @@ body[data-page="governance"] .site-nav a[href="/governance/index.html"] {
 
   .site-nav a {
     margin-left: 18px;
+  }
+
+  #official-artifact {
+    padding: 1.5rem;
   }
 
 }
