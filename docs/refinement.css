@@ -1,0 +1,36 @@
+/* =========================================================
+   Institutional Header — Refinement Layer
+   Non-Destructive Enhancement
+   ========================================================= */
+
+.site-header {
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-border-subtle);
+  box-sizing: border-box;
+  position: relative;
+  z-index: 10;
+}
+
+.site-title {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.site-nav a {
+  margin-left: 28px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--color-text-primary);
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+}
+
+.site-nav a:hover {
+  opacity: 1;
+}

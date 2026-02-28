@@ -15,10 +15,6 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    /* Governance Note:
-       Analytics instrumentation does NOT modify canonical content,
-       versioning logic, or structural authority boundaries.
-    */
     gtag('config', 'G-B7RTGWC99E', { anonymize_ip: true });
   </script>
 
@@ -33,29 +29,24 @@
 
   <title>Agile AI Functional Elements v1.0</title>
 
-  <!-- Canonical Authority (Root Canonical Page) -->
   <link rel="canonical" href="https://agileai.foundation/" />
 
-  <!-- Core Metadata -->
   <meta
     name="description"
     content="Canonical definition of Agile AI Functional Elements v1.0. Stable, neutral, governance-controlled, and structurally frozen."
   />
   <meta name="robots" content="index, follow" />
 
-  <!-- Publisher & Classification -->
   <meta name="author" content="Agile AI Foundation" />
   <meta name="publisher" content="Agile AI Foundation" />
   <meta name="classification" content="Reference, Standard, Framework Definition" />
   <meta name="application-name" content="Agile AI Functional Elements" />
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Agile AI Functional Elements v1.0" />
   <meta property="og:description" content="Canonical definition of Agile AI Functional Elements v1.0." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://agileai.foundation/" />
 
-  <!-- Structured Semantic Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -83,9 +74,27 @@
   </script>
 
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="refinement.css" />
+
 </head>
 
 <body>
+
+  <!-- ===================== -->
+  <!-- Institutional Header  -->
+  <!-- ===================== -->
+
+  <header class="site-header">
+    <div class="site-title">
+      Agile AI Foundation
+    </div>
+
+    <nav class="site-nav">
+      <a href="index.html">Functional Elements</a>
+      <a href="guide/index.html">Guide</a>
+      <a href="governance/index.html">Governance</a>
+    </nav>
+  </header>
 
   <main class="container">
 
@@ -267,9 +276,6 @@
       </p>
     </section>
 
-    <!-- ===================== -->
-    <!-- Footer -->
-    <!-- ===================== -->
     <footer>
       <p>
         © Agile AI Foundation — Agile AI Functional Elements v1.0
