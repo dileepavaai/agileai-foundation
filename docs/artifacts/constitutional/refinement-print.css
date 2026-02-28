@@ -1,0 +1,42 @@
+/* ======================================
+   PRINT REFINEMENT LAYER — v1.1
+   Constitutional Artifact Only
+   ====================================== */
+
+@page {
+  size: A4;
+  margin: 25mm;
+}
+
+/* Reset any inherited spacing hacks */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Footer in natural document flow */
+.footer {
+  position: static;
+  margin-top: 35mm;
+  text-align: center;
+  font-size: 9pt;
+  color: #555;
+}
+
+/* Improve vertical rhythm */
+h2 {
+  margin-top: 28pt;
+}
+
+h3 {
+  margin-top: 20pt;
+}
+
+/* Prevent awkward page breaks */
+h2, h3 {
+  page-break-after: avoid;
+}
+
+p {
+  page-break-inside: avoid;
+}
