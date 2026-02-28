@@ -3,25 +3,39 @@
    Constitutional Artifact Only
    ====================================== */
 
+/* ==============================
+   PAGE CONFIGURATION
+   ============================== */
+
 @page {
   size: A4;
   margin: 25mm;
 }
+
+/* ==============================
+   BASE RESET
+   ============================== */
 
 body {
   margin: 0;
   padding: 0;
 }
 
-/* Footer — minimal spacing only */
+/* ==============================
+   FOOTER (Natural Document Flow)
+   ============================== */
+
 .footer {
   margin-top: 10pt;
   text-align: center;
   font-size: 9pt;
-  color: #555;
+  color: #555555;
 }
 
-/* Balanced heading rhythm */
+/* ==============================
+   VERTICAL RHYTHM ADJUSTMENT
+   ============================== */
+
 h2 {
   margin-top: 22pt;
 }
@@ -30,12 +44,17 @@ h3 {
   margin-top: 16pt;
 }
 
-/* Prevent heading orphaning */
-h2, h3 {
+/* ==============================
+   PAGINATION SAFEGUARDS
+   ============================== */
+
+/* Prevent headings from being orphaned */
+h2,
+h3 {
   page-break-after: avoid;
 }
 
-/* Allow paragraph flow */
+/* Allow paragraphs to paginate naturally */
 p {
   page-break-inside: auto;
 }
