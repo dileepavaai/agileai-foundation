@@ -13,9 +13,9 @@ body {
   padding: 0;
 }
 
-/* Footer in normal flow */
+/* Footer in natural flow */
 .footer {
-  margin-top: 30mm;
+  margin-top: 18mm;   /* reduced from 30mm */
   text-align: center;
   font-size: 9pt;
   color: #555;
@@ -23,19 +23,19 @@ body {
 
 /* Improve vertical rhythm */
 h2 {
-  margin-top: 26pt;
+  margin-top: 22pt;   /* slightly reduced */
 }
 
 h3 {
-  margin-top: 18pt;
+  margin-top: 16pt;   /* slightly reduced */
 }
 
-/* Prevent bad breaks only for headings */
+/* Prevent headings from orphaning */
 h2, h3 {
   page-break-after: avoid;
 }
 
-/* Allow paragraphs to flow naturally */
+/* Allow paragraph flow */
 p {
   page-break-inside: auto;
 }
