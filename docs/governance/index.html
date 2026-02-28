@@ -81,11 +81,16 @@
   }
   </script>
 
-  <link rel="stylesheet" href="../styles.css" />
+  <!-- Root-relative styles -->
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/refinement.css" />
 
 </head>
 
-<body class="governance-page">
+<body data-page="governance" class="governance-page">
+
+  <!-- Shared Header Injection -->
+  <div id="site-header"></div>
 
   <main class="container">
 
@@ -140,19 +145,19 @@
 
       <h3>Constitutional Governance</h3>
       <ul>
-        <li><a href="charter.html">Governance Charter</a></li>
-        <li><a href="positioning.html">Institutional Positioning Statement</a></li>
+        <li><a href="/governance/charter.html">Governance Charter</a></li>
+        <li><a href="/governance/positioning.html">Institutional Positioning Statement</a></li>
       </ul>
 
       <h3>Reference & Usage Standards</h3>
       <ul>
-        <li><a href="citation.html">Official Citation Policy</a></li>
-        <li><a href="intellectual-property.html">Intellectual Property & Usage Policy</a></li>
+        <li><a href="/governance/citation.html">Official Citation Policy</a></li>
+        <li><a href="/governance/intellectual-property.html">Intellectual Property & Usage Policy</a></li>
       </ul>
 
       <h3>Institutional Communication</h3>
       <ul>
-        <li><a href="contact-protocol.html">Institutional Contact Protocol</a></li>
+        <li><a href="/governance/contact-protocol.html">Institutional Contact Protocol</a></li>
       </ul>
 
       <p class="authority-micro">
@@ -168,7 +173,7 @@
 
       <ul>
         <li>
-          <a href="../release-note-v1.html">
+          <a href="/release-note-v1.html">
             Public Release Declaration — Agile AI Functional Elements v1.0
           </a>
         </li>
@@ -187,7 +192,7 @@
 
       <ul>
         <li>
-          <a href="../index.html">
+          <a href="/index.html">
             Agile AI Functional Elements v1.0 (Canonical)
           </a>
         </li>
@@ -205,7 +210,7 @@
       <h2>Version Archive</h2>
 
       <ul>
-        <li><a href="archive/v1.0/">v1.0 Archive Snapshot</a></li>
+        <li><a href="/governance/archive/v1.0/">v1.0 Archive Snapshot</a></li>
         <li>v1.1 (Planned — Non-Structural Clarifications Only)</li>
         <li>v2.0 (Reserved for Structural Revision)</li>
       </ul>
@@ -223,7 +228,7 @@
 
       <ul>
         <li>
-          <a href="roadmap-v1.1.html">
+          <a href="/governance/roadmap-v1.1.html">
             v1.1 Governance Roadmap
           </a>
         </li>
@@ -262,8 +267,7 @@
 
   </main>
 
-  <!-- Correct Script Path for docs/governance/ -->
-  <script src="../../theme.js"></script>
+  <script src="/theme.js"></script>
 
 </body>
 </html>

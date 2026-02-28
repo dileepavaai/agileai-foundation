@@ -29,7 +29,7 @@
   <script>
     (function () {
       try {
-        const saved = localStorage.getItem("agileAITheme");
+        const saved = localStorage.getItem("agileai-theme");
         if (saved === "light" || saved === "dark") {
           document.documentElement.setAttribute("data-theme", saved);
         }
@@ -37,12 +37,16 @@
     })();
   </script>
 
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="refinement.css" />
+  <!-- Root-relative assets -->
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/refinement.css" />
 
 </head>
 
-<body class="guide-page">
+<body data-page="guide" class="guide-page">
+
+  <!-- Shared Header Injection -->
+  <div id="site-header"></div>
 
   <main class="container">
 
@@ -225,11 +229,11 @@
       <h2>Appendix — Canonical Structural Architecture</h2>
 
       <div class="diagram-container">
-        <img src="v1.0/diagram-light.svg"
+        <img src="/guide/v1.0/diagram-light.svg"
              class="diagram-light"
              alt="Hexagonal systemic representation of the Six Agile AI Functional Elements" />
 
-        <img src="v1.0/diagram-dark.svg"
+        <img src="/guide/v1.0/diagram-dark.svg"
              class="diagram-dark"
              alt="Hexagonal systemic representation of the Six Agile AI Functional Elements" />
       </div>
@@ -256,6 +260,6 @@
 
   </main>
 
-  <script src="../theme.js"></script>
+  <script src="/theme.js"></script>
 </body>
 </html>

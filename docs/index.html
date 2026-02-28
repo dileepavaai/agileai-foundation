@@ -72,33 +72,18 @@
   }
   </script>
 
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="refinement.css" />
+  <!-- Root-relative assets -->
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/refinement.css" />
 
 </head>
 
 <body data-page="elements">
 
-  <!-- ===================== -->
-  <!-- Institutional Header  -->
-  <!-- ===================== -->
-
-  <header class="site-header">
-    <div class="site-title">
-      Agile AI Foundation
-    </div>
-    <nav class="site-nav">
-      <a href="index.html">Functional Elements</a>
-      <a href="guide/index.html">Guide</a>
-      <a href="governance/index.html">Governance</a>
-    </nav>
-  </header>
+  <!-- Shared Header Injection -->
+  <div id="site-header"></div>
 
   <main class="container">
-
-    <!-- ===================== -->
-    <!-- Canonical Header -->
-    <!-- ===================== -->
 
     <section id="intro">
 
@@ -147,10 +132,6 @@
 
     </section>
 
-    <!-- ===================== -->
-    <!-- Functional Elements -->
-    <!-- ===================== -->
-
     <section id="elements">
       <h2>The Six Agile AI Functional Elements</h2>
 
@@ -194,10 +175,6 @@
       </p>
     </section>
 
-    <!-- ===================== -->
-    <!-- Authority Model -->
-    <!-- ===================== -->
-
     <section id="authority-model">
       <h2>Authority, Usage, and Interpretation Boundaries</h2>
 
@@ -225,20 +202,12 @@
         qualification, or modification of the Functional Elements.
       </p>
 
-      <p>
-        The authority flow is intentionally one-directional:
-      </p>
-
       <ul>
         <li><strong>Foundation</strong> — defines and governs the Functional Elements</li>
         <li><strong>Learning</strong> — supports understanding and application</li>
         <li><strong>Assessment</strong> — provides reflective evaluation of alignment</li>
       </ul>
     </section>
-
-    <!-- ===================== -->
-    <!-- Governance & Versioning -->
-    <!-- ===================== -->
 
     <section id="governance">
       <h2>Governance &amp; Versioning</h2>
@@ -255,16 +224,12 @@
       </p>
 
       <ul>
-        <li><a href="governance/index.html">Governance Index</a></li>
-        <li><a href="governance/archive/v1.0/index.html">v1.0 Canonical Archive</a></li>
-        <li><a href="governance/roadmap-v1.1.html">v1.1 Roadmap</a></li>
-        <li><a href="CHANGELOG.md">Version History (Changelog)</a></li>
+        <li><a href="/governance/index.html">Governance Index</a></li>
+        <li><a href="/governance/archive/v1.0/index.html">v1.0 Canonical Archive</a></li>
+        <li><a href="/governance/roadmap-v1.1.html">v1.1 Roadmap</a></li>
+        <li><a href="/CHANGELOG.md">Version History (Changelog)</a></li>
       </ul>
     </section>
-
-    <!-- ===================== -->
-    <!-- About -->
-    <!-- ===================== -->
 
     <section id="about">
       <h2>About the Agile AI Foundation</h2>
@@ -303,30 +268,13 @@
       </p>
 
       <p>
-        <a href="site-notice.html">About this site</a>
+        <a href="/site-notice.html">About this site</a>
       </p>
     </footer>
 
   </main>
 
-  <script src="theme.js"></script>
-
-  <script>
-    (function() {
-      const header = document.querySelector('.site-header');
-      if (!header) return;
-
-      function handleScroll() {
-        if (window.scrollY > 1) {
-          header.classList.add('is-scrolled');
-        } else {
-          header.classList.remove('is-scrolled');
-        }
-      }
-
-      window.addEventListener('scroll', handleScroll);
-    })();
-  </script>
+  <script src="/theme.js"></script>
 
 </body>
 </html>
