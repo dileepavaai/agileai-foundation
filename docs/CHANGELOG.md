@@ -78,3 +78,18 @@ and does not modify authority boundaries, version semantics,
 or Functional Element definitions.
 
 This layer is frozen under v1.0 governance unless formally revised.
+
+## v1.1.0 — Official PDF Artifact Release
+Date: 2026-02-28
+
+### Added
+- Official archival PDF of Agile AI Functional Elements v1.0
+- Printable source HTML used for artifact generation
+- Official Public Artifact section on canonical page
+- Formal Release Declaration document
+
+### Structural Impact
+None.
+
+This release does not modify the Agile AI Functional Elements.
+The canonical structural definition remains v1.0.
