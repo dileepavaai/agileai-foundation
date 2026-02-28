@@ -23,15 +23,19 @@ html, body {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 12pt;
   line-height: 1.45;
-}
-
-body {
   margin: 0;
-  padding-bottom: 20mm; /* Prevent footer collision */
 }
 
 /* ==============================
-   TYPOGRAPHY SYSTEM (Aligned with Guide)
+   CONTENT WRAPPER
+   ============================== */
+
+.content-wrapper {
+  padding-bottom: 35mm; /* Structural space for footer */
+}
+
+/* ==============================
+   TYPOGRAPHY SYSTEM
    ============================== */
 
 h1, h2 {
@@ -84,12 +88,12 @@ p {
 }
 
 /* ==============================
-   FOOTER (Stabilized)
+   FOOTER (Aligned to @page margin)
    ============================== */
 
 .footer {
   position: fixed;
-  bottom: 15mm;
+  bottom: 28mm; /* Exactly matches @page bottom margin */
   left: 25mm;
   right: 25mm;
   font-size: 9pt;
@@ -102,82 +106,86 @@ p {
 
 <body>
 
-<div class="cover">
+<div class="content-wrapper">
 
-  <div><strong>Agile AI Foundation</strong></div>
+  <div class="cover">
 
-  <h1>Agile AI Functional Elements v1.1</h1>
+    <div><strong>Agile AI Foundation</strong></div>
 
-  <p>Canonical Institutional Release</p>
+    <h1>Agile AI Functional Elements v1.1</h1>
 
-  <p class="small">
-    Reference ID: AAF-FAE-1.1-2026<br/>
-    Issued: 2026<br/>
-    Canonical Source: https://agileai.foundation
+    <p>Canonical Institutional Release</p>
+
+    <p class="small">
+      Reference ID: AAF-FAE-1.1-2026<br/>
+      Issued: 2026<br/>
+      Canonical Source: https://agileai.foundation
+    </p>
+
+  </div>
+
+  <h2>Authority Declaration</h2>
+
+  <p>
+  This document constitutes the official PDF artifact of Agile AI Functional Elements v1.1.
+  Canonical authority resides exclusively at https://agileai.foundation.
+  </p>
+
+  <p>
+  Version 1.1 formalizes the framework under the signed institutional
+  governance baseline declared in February 2026. All subsequent revisions
+  must advance the version number and be issued through a signed release.
+  </p>
+
+  <h2>The Six Agile AI Functional Elements</h2>
+
+  <h3>1. Intent & Outcome Alignment</h3>
+  <p>
+  Agile AI systems must be explicitly aligned to clear intent and desired outcomes.
+  AI capability exists to serve outcomes, not isolated outputs.
+  </p>
+
+  <h3>2. Human Judgment & Accountability</h3>
+  <p>
+  Agile AI requires deliberate human judgment and clear accountability.
+  Humans remain responsible for direction, constraints, and ethical decisions,
+  even as automation and autonomy increase.
+  </p>
+
+  <h3>3. Adaptive Execution</h3>
+  <p>
+  Agile AI systems must continuously adapt based on feedback, learning,
+  and emerging signals. Change is treated as a constant condition.
+  </p>
+
+  <h3>4. Continuous Learning & Feedback</h3>
+  <p>
+  Agile AI systems must learn continuously from outcomes, signals,
+  and impacts across individual, team, system, and system-of-systems levels.
+  </p>
+
+  <h3>5. Governance by Design</h3>
+  <p>
+  Governance is embedded intentionally into Agile AI systems.
+  Ethical boundaries, constraints, and escalation paths are designed
+  upfront and evolve with capability.
+  </p>
+
+  <h3>6. Systemic Integration</h3>
+  <p>
+  Agile AI operates as part of a broader socio-technical system.
+  Interdependencies and second-order effects are considered
+  to avoid fragmentation and local optimization.
+  </p>
+
+  <h2>Suggested Citation</h2>
+
+  <p>
+  Agile AI Foundation. (2026). <em>Agile AI Functional Elements v1.1</em>.
+  https://agileai.foundation
   </p>
 
 </div>
-
-<h2>Authority Declaration</h2>
-
-<p>
-This document constitutes the official PDF artifact of Agile AI Functional Elements v1.1.
-Canonical authority resides exclusively at https://agileai.foundation.
-</p>
-
-<p>
-Version 1.1 formalizes the framework under the signed institutional
-governance baseline declared in February 2026. All subsequent revisions
-must advance the version number and be issued through a signed release.
-</p>
-
-<h2>The Six Agile AI Functional Elements</h2>
-
-<h3>1. Intent & Outcome Alignment</h3>
-<p>
-Agile AI systems must be explicitly aligned to clear intent and desired outcomes.
-AI capability exists to serve outcomes, not isolated outputs.
-</p>
-
-<h3>2. Human Judgment & Accountability</h3>
-<p>
-Agile AI requires deliberate human judgment and clear accountability.
-Humans remain responsible for direction, constraints, and ethical decisions,
-even as automation and autonomy increase.
-</p>
-
-<h3>3. Adaptive Execution</h3>
-<p>
-Agile AI systems must continuously adapt based on feedback, learning,
-and emerging signals. Change is treated as a constant condition.
-</p>
-
-<h3>4. Continuous Learning & Feedback</h3>
-<p>
-Agile AI systems must learn continuously from outcomes, signals,
-and impacts across individual, team, system, and system-of-systems levels.
-</p>
-
-<h3>5. Governance by Design</h3>
-<p>
-Governance is embedded intentionally into Agile AI systems.
-Ethical boundaries, constraints, and escalation paths are designed
-upfront and evolve with capability.
-</p>
-
-<h3>6. Systemic Integration</h3>
-<p>
-Agile AI operates as part of a broader socio-technical system.
-Interdependencies and second-order effects are considered
-to avoid fragmentation and local optimization.
-</p>
-
-<h2>Suggested Citation</h2>
-
-<p>
-Agile AI Foundation. (2026). <em>Agile AI Functional Elements v1.1</em>.
-https://agileai.foundation
-</p>
 
 <div class="footer">
 Agile AI Functional Elements v1.1 — Canonical Source: https://agileai.foundation
