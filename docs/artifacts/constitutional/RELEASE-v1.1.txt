@@ -11,21 +11,21 @@ Release Date:
 28 February 2026
 
 Canonical Source:
-https://agileai.foundation
+https://agileai.foundation/artifacts/constitutional/functional-elements-v1.1-print.html
 
 Integrity Statement:
 This document constitutes the official constitutional artifact of
 Agile AI Functional Elements v1.1. The canonical version resides
-exclusively at the above source.
+exclusively at the source above.
 
 Any copy of this PDF may be verified using the SHA256 checksum below.
 
 SHA256 Checksum:
-<PASTE HASH HERE>
+7BACE47970BAC79285935517321E2DDD252F411CD2AB3158B3FE99BD49D623B0
 
 Verification Method (Windows PowerShell):
-Get-FileHash .\Agile-AI-Functional-Elements-v1.1.pdf -Algorithm SHA256
+Get-FileHash ".\Agile AI Functional Elements v1.1.pdf" -Algorithm SHA256
 
 Governance Notice:
 Subsequent revisions must advance the version number and be issued
-through a formally recorded release under governance authority.
+through a formally recorded release under institutional governance authority.
