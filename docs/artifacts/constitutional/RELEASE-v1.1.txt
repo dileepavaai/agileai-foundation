@@ -1,0 +1,31 @@
+Agile AI Foundation
+Constitutional Artifact Release Record
+
+Artifact Title:
+Agile AI Functional Elements v1.1
+
+Reference ID:
+AAF-FAE-1.1-2026
+
+Release Date:
+28 February 2026
+
+Canonical Source:
+https://agileai.foundation
+
+Integrity Statement:
+This document constitutes the official constitutional artifact of
+Agile AI Functional Elements v1.1. The canonical version resides
+exclusively at the above source.
+
+Any copy of this PDF may be verified using the SHA256 checksum below.
+
+SHA256 Checksum:
+<PASTE HASH HERE>
+
+Verification Method (Windows PowerShell):
+Get-FileHash .\Agile-AI-Functional-Elements-v1.1.pdf -Algorithm SHA256
+
+Governance Notice:
+Subsequent revisions must advance the version number and be issued
+through a formally recorded release under governance authority.

@@ -9,7 +9,6 @@
 <style>
 
 /* A4 Base Setup */
-
 @page {
   size: A4;
   margin: 25mm;
@@ -25,7 +24,6 @@ html, body {
 }
 
 /* Typography */
-
 h1, h2 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
 }
@@ -63,12 +61,17 @@ p {
   color: #555;
 }
 
-/* Footer minimal — spacing controlled by refinement layer */
+/* Controlled Page Break */
+.page-break {
+  page-break-before: always;
+}
 
+/* Footer */
 .footer {
   text-align: center;
   font-size: 9pt;
   color: #555;
+  margin-top: 12pt;
 }
 
 </style>
@@ -116,6 +119,9 @@ must advance the version number and be issued through a signed release.
 
 <h3>4. Continuous Learning & Feedback</h3>
 <p>Systems must learn continuously from outcomes and signals.</p>
+
+<!-- Controlled break after Element 4 -->
+<div class="page-break"></div>
 
 <h3>5. Governance by Design</h3>
 <p>Governance is embedded intentionally into Agile AI systems.</p>
