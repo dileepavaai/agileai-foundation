@@ -7,8 +7,9 @@
   <!-- Scope: Structural Interpretation (Non-Authoritative)    -->
   <!-- Canonical Authority: Governance Archive v1.0            -->
   <!--                                                           -->
-  <!-- Rendering Stabilization Applied:                        -->
-  <!-- - Diagram switching moved to <picture> element          -->
+  <!-- Rendering Stabilization (data-theme driven)             -->
+  <!-- - Removed <picture> OS-based switching                  -->
+  <!-- - Deterministic dual-image control restored             -->
   <!-- - No textual or structural change                       -->
   <!-- - Archive integrity preserved                           -->
   <!-- ====================================================== -->
@@ -185,17 +186,22 @@
       </p>
     </section>
 
-    <!-- APPENDIX (Rendering Stabilized Only) -->
+    <!-- APPENDIX -->
     <section id="diagram">
       <h2>Appendix — Canonical Structural Architecture</h2>
 
       <div class="diagram-container">
-        <picture>
-          <source srcset="/guide/v1.0/diagram-dark.svg"
-                  media="(prefers-color-scheme: dark)">
-          <img src="/guide/v1.0/diagram-light.svg"
-               alt="Hexagonal systemic representation of the Six Agile AI Functional Elements" />
-        </picture>
+
+        <!-- Light Theme Diagram -->
+        <img src="/guide/v1.0/diagram-light.svg"
+             class="diagram-light"
+             alt="Hexagonal systemic representation of the Six Agile AI Functional Elements" />
+
+        <!-- Dark Theme Diagram -->
+        <img src="/guide/v1.0/diagram-dark.svg"
+             class="diagram-dark"
+             alt="Hexagonal systemic representation of the Six Agile AI Functional Elements" />
+
       </div>
 
       <p class="authority-micro">

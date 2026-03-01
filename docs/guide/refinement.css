@@ -2,11 +2,12 @@
    Guide Refinement Layer
    Scope: Visual proportion & constitutional rhythm only
    Structural impact: None
+   Deterministic Diagram Control (data-theme driven)
    ========================================================== */
 
 
 /* ----------------------------------------------------------
-   SECTION RHYTHM (Aligned with Foundation Density)
+   SECTION RHYTHM
    ---------------------------------------------------------- */
 
 main.container section {
@@ -65,8 +66,7 @@ main.container ul li strong {
 
 
 /* ----------------------------------------------------------
-   DIAGRAM PROPORTION (Stable Archival Alignment)
-   Now uses <picture> element (no theme CSS switching needed)
+   DIAGRAM PROPORTION
    ---------------------------------------------------------- */
 
 #diagram {
@@ -79,11 +79,44 @@ main.container ul li strong {
   margin-bottom: 30px;
 }
 
-#diagram .diagram-container picture img {
+#diagram .diagram-container img {
   max-width: 620px;
   width: 100%;
   height: auto;
   display: block;
+}
+
+
+/* ----------------------------------------------------------
+   DIAGRAM THEME CONTROL (Single Source of Truth)
+   Controlled ONLY by data-theme attribute
+   ---------------------------------------------------------- */
+
+/* Default (light) */
+#diagram .diagram-light {
+  display: block;
+}
+
+#diagram .diagram-dark {
+  display: none;
+}
+
+/* Explicit Dark */
+html[data-theme="dark"] #diagram .diagram-light {
+  display: none;
+}
+
+html[data-theme="dark"] #diagram .diagram-dark {
+  display: block;
+}
+
+/* Explicit Light */
+html[data-theme="light"] #diagram .diagram-light {
+  display: block;
+}
+
+html[data-theme="light"] #diagram .diagram-dark {
+  display: none;
 }
 
 

@@ -22,7 +22,6 @@
 
   <title>Agile AI Guide v1.1 — Constitutional Format</title>
 
-  <!-- Canonical URL for this version -->
   <link rel="canonical" href="https://agileai.foundation/guide/v1.1/" />
 
   <meta name="description"
@@ -46,26 +45,18 @@
     })();
   </script>
 
-  <!-- Core design system (locked) -->
   <link rel="stylesheet" href="/styles.css" />
-
-  <!-- Visual refinement layer (additive, non-structural) -->
   <link rel="stylesheet" href="/refinement.css" />
 
 </head>
 
 <body data-page="guide" class="guide-page">
 
-  <!-- ======================================================
-       Shared Header Injection
-       ====================================================== -->
   <div id="site-header"></div>
 
   <main class="container">
 
-    <!-- ======================================================
-         PAGE 1 — COVER
-         ====================================================== -->
+    <!-- PAGE 1 — COVER -->
     <section id="cover">
 
       <p class="identity-line">
@@ -85,7 +76,6 @@
         </a>.
       </p>
 
-      <!-- Theme Switcher (non-print, user preference only) -->
       <nav class="theme-switcher no-print">
         <a href="#" onclick="setAgileAITheme('light'); return false;">Light</a>
         ·
@@ -96,9 +86,7 @@
 
     </section>
 
-    <!-- ======================================================
-         PAGE 2 — AUTHORITY & SCOPE
-         ====================================================== -->
+    <!-- AUTHORITY & SCOPE -->
     <section id="authority-scope">
       <h2>2. Authority & Scope Declaration</h2>
 
@@ -124,9 +112,7 @@
       </p>
     </section>
 
-    <!-- ======================================================
-         PAGE 3 — STRUCTURAL OVERVIEW
-         ====================================================== -->
+    <!-- STRUCTURAL OVERVIEW -->
     <section id="structural-overview">
       <h2>3. Structural Overview</h2>
 
@@ -150,33 +136,17 @@
       </ul>
     </section>
 
-    <!-- ======================================================
-         PAGE 4 — SYSTEMIC LOGIC
-         ====================================================== -->
+    <!-- SYSTEMIC LOGIC -->
     <section id="systemic-logic">
       <h2>4. Systemic Logic</h2>
-
-      <p>
-        The Functional Elements exist in defined interrelation.
-        They are systemic rather than sequential.
-      </p>
-
-      <p>
-        Structural validity emerges from coordinated interaction,
-        not procedural ordering.
-      </p>
-
-      <p>
-        Partial adoption constitutes structural fragmentation.
-      </p>
+      <p>The Functional Elements exist in defined interrelation. They are systemic rather than sequential.</p>
+      <p>Structural validity emerges from coordinated interaction, not procedural ordering.</p>
+      <p>Partial adoption constitutes structural fragmentation.</p>
     </section>
 
-    <!-- ======================================================
-         PAGE 5 — INTERPRETATION PRINCIPLES
-         ====================================================== -->
+    <!-- INTERPRETATION PRINCIPLES -->
     <section id="interpretation-principles">
       <h2>5. Interpretation Principles</h2>
-
       <ul>
         <li>Systemic Coherence</li>
         <li>Non-Substitution</li>
@@ -186,16 +156,10 @@
       </ul>
     </section>
 
-    <!-- ======================================================
-         PAGE 6 — BOUNDARY CONDITIONS
-         ====================================================== -->
+    <!-- BOUNDARY CONDITIONS -->
     <section id="boundary-conditions">
       <h2>6. Boundary Conditions</h2>
-
-      <p>
-        Agile AI defines structural capabilities. It is not:
-      </p>
-
+      <p>Agile AI defines structural capabilities. It is not:</p>
       <ul>
         <li>A tool stack</li>
         <li>A transformation program</li>
@@ -205,67 +169,43 @@
       </ul>
     </section>
 
-    <!-- ======================================================
-         PAGE 7 — APPLICATION DOMAINS
-         ====================================================== -->
+    <!-- APPLICATION DOMAINS -->
     <section id="application-domains">
       <h2>7. Application Domains</h2>
-
-      <p>
-        Agile AI applies wherever AI systems influence enterprise operations,
-        product ecosystems, or decision architectures.
-      </p>
-
-      <p>
-        Context affects application; it does not alter structure.
-      </p>
+      <p>Agile AI applies wherever AI systems influence enterprise operations, product ecosystems, or decision architectures.</p>
+      <p>Context affects application; it does not alter structure.</p>
     </section>
 
-    <!-- ======================================================
-         PAGE 8 — GOVERNANCE
-         ====================================================== -->
+    <!-- GOVERNANCE -->
     <section id="governance">
       <h2>8. Governance & Version Control</h2>
-
-      <p>
-        Structural definitions are fixed within each major version.
-        Amendments require formal version increment and archival preservation.
-      </p>
-
+      <p>Structural definitions are fixed within each major version.</p>
+      <p>Amendments require formal version increment and archival preservation.</p>
       <p>No silent modification is permitted.</p>
     </section>
 
-    <!-- ======================================================
-         PAGE 9 — GLOSSARY
-         ====================================================== -->
+    <!-- GLOSSARY -->
     <section id="glossary">
       <h2>9. Glossary Reference</h2>
-
-      <p>
-        Canonical terms are defined exclusively within
-        Agile AI Functional Elements v1.1.
-      </p>
+      <p>Canonical terms are defined exclusively within Agile AI Functional Elements v1.1.</p>
     </section>
 
-    <!-- ======================================================
-         APPENDIX — STRUCTURAL DIAGRAM
-         ====================================================== -->
+    <!-- APPENDIX — STRUCTURAL DIAGRAM -->
     <section id="diagram">
       <h2>Appendix — Canonical Structural Architecture</h2>
 
-      <!-- 
-        Theme-stable rendering:
-        - Uses <picture> for deterministic light/dark switching
-        - No duplicate DOM rendering
-        - No CSS display toggling required
-      -->
       <div class="diagram-container">
-        <picture>
-          <source srcset="/guide/v1.1/diagram-dark.svg"
-                  media="(prefers-color-scheme: dark)">
-          <img src="/guide/v1.1/diagram-light.svg"
-               alt="Hexagonal systemic representation of the Six Agile AI Functional Elements" />
-        </picture>
+
+        <!-- Light Theme Diagram -->
+        <img src="/guide/v1.1/diagram-light.svg"
+             class="diagram-light"
+             alt="Hexagonal systemic representation of the Six Agile AI Functional Elements" />
+
+        <!-- Dark Theme Diagram -->
+        <img src="/guide/v1.1/diagram-dark.svg"
+             class="diagram-dark"
+             alt="Hexagonal systemic representation of the Six Agile AI Functional Elements" />
+
       </div>
 
       <p class="authority-micro">
@@ -290,9 +230,7 @@
       </p>
     </section>
 
-    <!-- ======================================================
-         FOOTER
-         ====================================================== -->
+    <!-- FOOTER -->
     <footer>
       <hr />
       <p>© 2026 Agile AI Foundation — Agile AI Guide v1.1</p>
@@ -306,7 +244,6 @@
 
   </main>
 
-  <!-- Shared theme logic -->
   <script src="/theme.js"></script>
 
 </body>

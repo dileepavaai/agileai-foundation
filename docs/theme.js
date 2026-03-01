@@ -1,8 +1,8 @@
 /* =========================================================
    AGILE AI FOUNDATION
-   Institutional Theme Controller — v1.1 (Frozen)
+   Institutional Theme Controller — v1.2 (Stabilized)
    Navigation Stabilized for Versioned Structure
-   3–5 Year Safe Implementation
+   Deterministic Theme Control (Single Source of Truth)
    ========================================================= */
 
 (function () {
@@ -11,16 +11,18 @@
   const root = document.documentElement;
 
   /* =========================================================
-     THEME LOGIC
+     THEME LOGIC (Deterministic & Stable)
      ========================================================= */
 
+  function detectSystemTheme() {
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+  }
+
   function applyTheme(theme) {
-    if (theme === "light") {
-      root.setAttribute("data-theme", "light");
-    } else if (theme === "dark") {
-      root.setAttribute("data-theme", "dark");
-    } else {
-      root.removeAttribute("data-theme"); // system
+    if (theme === "light" || theme === "dark") {
+      root.setAttribute("data-theme", theme);
     }
   }
 
@@ -30,14 +32,15 @@
     if (saved === "light" || saved === "dark") {
       applyTheme(saved);
     } else {
-      applyTheme("system");
+      // System mode — explicitly set detected theme
+      applyTheme(detectSystemTheme());
     }
   }
 
   window.setAgileAITheme = function (theme) {
     if (theme === "system") {
       localStorage.removeItem(STORAGE_KEY);
-      applyTheme("system");
+      applyTheme(detectSystemTheme());
     } else {
       localStorage.setItem(STORAGE_KEY, theme);
       applyTheme(theme);
@@ -48,7 +51,7 @@
     .addEventListener("change", function () {
       const saved = localStorage.getItem(STORAGE_KEY);
       if (!saved) {
-        applyTheme("system");
+        applyTheme(detectSystemTheme());
       }
     });
 
