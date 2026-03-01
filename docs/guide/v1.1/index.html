@@ -3,9 +3,16 @@
 <head>
 
   <!-- ====================================================== -->
-  <!-- Agile AI Guide v1.1 — Constitutional Interpretive Guide -->
-  <!-- Scope: Structural Interpretation (Non-Authoritative)    -->
-  <!-- Canonical Authority: Agile AI Functional Elements v1.1  -->
+  <!-- AGILE AI GUIDE v1.1                                   -->
+  <!-- Constitutional Interpretive Companion                  -->
+  <!--                                                         -->
+  <!-- Scope: Structural Interpretation (Non-Authoritative)   -->
+  <!-- Canonical Authority: Agile AI Functional Elements v1.1 -->
+  <!--                                                         -->
+  <!-- Governance Rule:                                       -->
+  <!-- - This document is interpretive only                   -->
+  <!-- - Structural authority resides in Functional Elements  -->
+  <!-- - No silent structural mutation permitted              -->
   <!-- ====================================================== -->
 
   <meta charset="UTF-8" />
@@ -15,6 +22,7 @@
 
   <title>Agile AI Guide v1.1 — Constitutional Format</title>
 
+  <!-- Canonical URL for this version -->
   <link rel="canonical" href="https://agileai.foundation/guide/v1.1/" />
 
   <meta name="description"
@@ -23,7 +31,10 @@
   <meta name="author" content="Agile AI Foundation" />
   <meta name="publisher" content="Agile AI Foundation" />
 
-  <!-- PRE-RENDER THEME INITIALIZATION -->
+  <!-- ======================================================
+       PRE-RENDER THEME INITIALIZATION
+       Prevents theme flicker before CSS loads
+       ====================================================== -->
   <script>
     (function () {
       try {
@@ -35,18 +46,26 @@
     })();
   </script>
 
+  <!-- Core design system (locked) -->
   <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Visual refinement layer (additive, non-structural) -->
   <link rel="stylesheet" href="/refinement.css" />
 
 </head>
 
 <body data-page="guide" class="guide-page">
 
+  <!-- ======================================================
+       Shared Header Injection
+       ====================================================== -->
   <div id="site-header"></div>
 
   <main class="container">
 
-    <!-- COVER -->
+    <!-- ======================================================
+         PAGE 1 — COVER
+         ====================================================== -->
     <section id="cover">
 
       <p class="identity-line">
@@ -66,6 +85,7 @@
         </a>.
       </p>
 
+      <!-- Theme Switcher (non-print, user preference only) -->
       <nav class="theme-switcher no-print">
         <a href="#" onclick="setAgileAITheme('light'); return false;">Light</a>
         ·
@@ -76,7 +96,9 @@
 
     </section>
 
-    <!-- AUTHORITY & SCOPE -->
+    <!-- ======================================================
+         PAGE 2 — AUTHORITY & SCOPE
+         ====================================================== -->
     <section id="authority-scope">
       <h2>2. Authority & Scope Declaration</h2>
 
@@ -102,7 +124,9 @@
       </p>
     </section>
 
-    <!-- STRUCTURAL OVERVIEW -->
+    <!-- ======================================================
+         PAGE 3 — STRUCTURAL OVERVIEW
+         ====================================================== -->
     <section id="structural-overview">
       <h2>3. Structural Overview</h2>
 
@@ -126,7 +150,9 @@
       </ul>
     </section>
 
-    <!-- SYSTEMIC LOGIC -->
+    <!-- ======================================================
+         PAGE 4 — SYSTEMIC LOGIC
+         ====================================================== -->
     <section id="systemic-logic">
       <h2>4. Systemic Logic</h2>
 
@@ -145,7 +171,9 @@
       </p>
     </section>
 
-    <!-- INTERPRETATION PRINCIPLES -->
+    <!-- ======================================================
+         PAGE 5 — INTERPRETATION PRINCIPLES
+         ====================================================== -->
     <section id="interpretation-principles">
       <h2>5. Interpretation Principles</h2>
 
@@ -158,7 +186,9 @@
       </ul>
     </section>
 
-    <!-- BOUNDARY CONDITIONS -->
+    <!-- ======================================================
+         PAGE 6 — BOUNDARY CONDITIONS
+         ====================================================== -->
     <section id="boundary-conditions">
       <h2>6. Boundary Conditions</h2>
 
@@ -175,7 +205,9 @@
       </ul>
     </section>
 
-    <!-- APPLICATION DOMAINS -->
+    <!-- ======================================================
+         PAGE 7 — APPLICATION DOMAINS
+         ====================================================== -->
     <section id="application-domains">
       <h2>7. Application Domains</h2>
 
@@ -189,7 +221,9 @@
       </p>
     </section>
 
-    <!-- GOVERNANCE -->
+    <!-- ======================================================
+         PAGE 8 — GOVERNANCE
+         ====================================================== -->
     <section id="governance">
       <h2>8. Governance & Version Control</h2>
 
@@ -201,7 +235,9 @@
       <p>No silent modification is permitted.</p>
     </section>
 
-    <!-- GLOSSARY -->
+    <!-- ======================================================
+         PAGE 9 — GLOSSARY
+         ====================================================== -->
     <section id="glossary">
       <h2>9. Glossary Reference</h2>
 
@@ -211,10 +247,18 @@
       </p>
     </section>
 
-    <!-- APPENDIX -->
+    <!-- ======================================================
+         APPENDIX — STRUCTURAL DIAGRAM
+         ====================================================== -->
     <section id="diagram">
       <h2>Appendix — Canonical Structural Architecture</h2>
 
+      <!-- 
+        Theme-stable rendering:
+        - Uses <picture> for deterministic light/dark switching
+        - No duplicate DOM rendering
+        - No CSS display toggling required
+      -->
       <div class="diagram-container">
         <picture>
           <source srcset="/guide/v1.1/diagram-dark.svg"
@@ -225,10 +269,30 @@
       </div>
 
       <p class="authority-micro">
-        Diagrammatic representation is interpretive and does not alter canonical structure.
+        The outer hexagon represents the six co-foundational Functional Elements of Agile AI.
+        Each vertex signifies one essential structural capability.
+      </p>
+
+      <p class="authority-micro">
+        The inner circle represents the zone of systemic coherence —
+        the equilibrium space within which the six elements operate in integrated balance.
+      </p>
+
+      <p class="authority-micro">
+        The connecting lines reflect structural interdependence.
+        No element functions independently; validity emerges only through coordinated systemic interaction.
+      </p>
+
+      <p class="authority-micro">
+        Diagrammatic representation is interpretive and explanatory in nature.
+        Canonical authority resides exclusively in the formal textual definition
+        of Agile AI Functional Elements v1.1.
       </p>
     </section>
 
+    <!-- ======================================================
+         FOOTER
+         ====================================================== -->
     <footer>
       <hr />
       <p>© 2026 Agile AI Foundation — Agile AI Guide v1.1</p>
@@ -242,6 +306,8 @@
 
   </main>
 
+  <!-- Shared theme logic -->
   <script src="/theme.js"></script>
+
 </body>
 </html>
