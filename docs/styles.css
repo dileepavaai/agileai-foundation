@@ -1,9 +1,10 @@
 /* =========================================================
    AGILE AI FOUNDATION
-   Institutional CSS Token Contract — v1.6
+   Institutional CSS Token Contract — v1.7
    Unified Adaptive Token Model
    Canonical Surface Implementation
    Governance Enhancements — Scoped & Non-Destructive
+   Diagram Logic Stabilized (Deterministic Fallback Safe)
    ========================================================= */
 
 /* =========================================================
@@ -12,19 +13,14 @@
 
 :root {
 
-  /* Core Surface */
   --color-bg-primary: #ffffff;
   --color-text-primary: #111111;
   --color-text-secondary: #555555;
 
-  /* Structural */
   --color-border-subtle: #dddddd;
   --color-border-footer: #eeeeee;
 
-  /* Links */
   --color-link: #111111;
-
-  /* Governance Semantic Tokens */
 
   --color-watermark: rgba(0, 0, 0, 0.035);
   --color-seal-stroke: rgba(0, 0, 0, 0.55);
@@ -32,7 +28,6 @@
   --seal-opacity: 0.85;
   --color-authority-muted: rgba(0, 0, 0, 0.6);
 
-  /* Typography */
   --font-sans: system-ui, -apple-system, BlinkMacSystemFont,
                "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
                "Helvetica Neue", Arial, sans-serif;
@@ -97,8 +92,7 @@ body {
 }
 
 /* =========================================================
-   Root Canonical Watermark (Definition Layer)
-   Non-DOM Decorative Implementation
+   Root Canonical Watermark
    ========================================================= */
 
 body::before {
@@ -259,7 +253,7 @@ a:hover {
 }
 
 /* =========================================================
-   Governance Enhancements (Scoped)
+   Governance Enhancements
    ========================================================= */
 
 .governance-page h1 {
@@ -275,10 +269,6 @@ a:hover {
 .governance-page h3 {
   opacity: 0.9;
 }
-
-/* =========================================================
-   Governance Constitutional Watermark
-   ========================================================= */
 
 .governance-page::before {
   content: "CONSTITUTIONAL GOVERNANCE";
@@ -305,10 +295,6 @@ a:hover {
     right: -80px;
   }
 }
-
-/* =========================================================
-   Governance Seal
-   ========================================================= */
 
 .governance-seal {
   width: 140px;
@@ -362,4 +348,38 @@ a:hover {
   .no-print {
     display: none !important;
   }
+}
+
+/* =========================================================
+   Canonical Diagram Theme Control
+   Deterministic + Fallback Safe
+   ========================================================= */
+
+/* Base sizing */
+.diagram-container img {
+  width: 100%;
+  height: auto;
+}
+
+/* DEFAULT FALLBACK (Light First) */
+.diagram-light { display: block; }
+.diagram-dark  { display: none; }
+
+/* Explicit Light */
+html[data-theme="light"] .diagram-light { display: block; }
+html[data-theme="light"] .diagram-dark  { display: none; }
+
+/* Explicit Dark */
+html[data-theme="dark"] .diagram-light { display: none; }
+html[data-theme="dark"] .diagram-dark  { display: block; }
+
+/* System Mode */
+@media (prefers-color-scheme: dark) {
+  html[data-theme="system"] .diagram-light { display: none; }
+  html[data-theme="system"] .diagram-dark  { display: block; }
+}
+
+@media (prefers-color-scheme: light) {
+  html[data-theme="system"] .diagram-light { display: block; }
+  html[data-theme="system"] .diagram-dark  { display: none; }
 }

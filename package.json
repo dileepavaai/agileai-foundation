@@ -1,0 +1,26 @@
+{
+  "name": "agileai-foundation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dileepavaai/agileai-foundation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dileepavaai/agileai-foundation/issues"
+  },
+  "homepage": "https://github.com/dileepavaai/agileai-foundation#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2"
+  }
+}
