@@ -1,0 +1,108 @@
+<svg width="1000" height="900" viewBox="0 0 1000 900" xmlns="http://www.w3.org/2000/svg">
+
+  <style>
+    .title {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 28px;
+      font-weight: 600;
+      fill: #EAEAEA;
+    }
+
+    .hex-line {
+      stroke: #FFFFFF;
+      stroke-width: 2;
+      fill: none;
+    }
+
+    .radial-line {
+      stroke: #FFFFFF;
+      stroke-width: 1;
+      opacity: 0.45;
+    }
+
+    .inner-circle {
+      stroke: #FFFFFF;
+      stroke-width: 1;
+      fill: none;
+      opacity: 0.2;
+    }
+
+    .dot {
+      fill: #FFFFFF;
+    }
+
+    .label {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      fill: #EAEAEA;
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#0B1220"/>
+
+  <!-- Title -->
+  <text x="500" y="80" text-anchor="middle" class="title">
+    Agile AI v1.0 — Canonical Structural Architecture
+  </text>
+
+  <!-- Outer Hexagon -->
+  <polygon class="hex-line"
+    points="500,200 759,350 759,650 500,800 241,650 241,350"/>
+
+  <!-- Inner Circle -->
+  <circle cx="500" cy="500" r="220" class="inner-circle"/>
+
+  <!-- Radial Lines -->
+  <line x1="500" y1="500" x2="500" y2="200" class="radial-line"/>
+  <line x1="500" y1="500" x2="759" y2="350" class="radial-line"/>
+  <line x1="500" y1="500" x2="759" y2="650" class="radial-line"/>
+  <line x1="500" y1="500" x2="500" y2="800" class="radial-line"/>
+  <line x1="500" y1="500" x2="241" y2="650" class="radial-line"/>
+  <line x1="500" y1="500" x2="241" y2="350" class="radial-line"/>
+
+  <!-- Vertex Dots -->
+  <circle cx="500" cy="200" r="6" class="dot"/>
+  <circle cx="759" cy="350" r="6" class="dot"/>
+  <circle cx="759" cy="650" r="6" class="dot"/>
+  <circle cx="500" cy="800" r="6" class="dot"/>
+  <circle cx="241" cy="650" r="6" class="dot"/>
+  <circle cx="241" cy="350" r="6" class="dot"/>
+
+  <!-- Labels positioned close to respective dots -->
+
+  <!-- Top -->
+  <text x="500" y="175" text-anchor="middle" class="label">
+    <tspan x="500">Intent &amp; Outcome</tspan>
+    <tspan x="500" dy="18">Alignment</tspan>
+  </text>
+
+  <!-- Top Right -->
+  <text x="785" y="345" text-anchor="start" class="label">
+    <tspan x="785">Human Judgment &amp;</tspan>
+    <tspan x="785" dy="18">Accountability</tspan>
+  </text>
+
+  <!-- Bottom Right -->
+  <text x="785" y="675" text-anchor="start" class="label">
+    Governance by Design
+  </text>
+
+  <!-- Bottom -->
+  <text x="500" y="830" text-anchor="middle" class="label">
+    Systemic Integration
+  </text>
+
+  <!-- Bottom Left -->
+  <text x="215" y="675" text-anchor="end" class="label">
+    <tspan x="215">Continuous Learning</tspan>
+    <tspan x="215" dy="18">&amp; Feedback</tspan>
+  </text>
+
+  <!-- Top Left -->
+  <text x="215" y="345" text-anchor="end" class="label">
+    Adaptive Execution
+  </text>
+
+</svg>
