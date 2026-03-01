@@ -88,36 +88,34 @@ main.container ul li strong {
 
 /* ----------------------------------------------------------
    THEME-AWARE DIAGRAM SWITCHING
-   Absolute deterministic rendering
+   Deterministic & Long-Term Stable
    ---------------------------------------------------------- */
 
-/* 1. Always hide both first */
-#diagram .diagram-light,
+/* Default = Light */
+#diagram .diagram-light {
+  display: block;
+}
+
 #diagram .diagram-dark {
-  display: none !important;
+  display: none;
 }
 
-/* 2. Explicit manual light */
-:root[data-theme="light"] #diagram .diagram-light {
-  display: block !important;
+/* Manual Dark Mode */
+html[data-theme="dark"] #diagram .diagram-light {
+  display: none;
 }
 
-/* 3. Explicit manual dark */
-:root[data-theme="dark"] #diagram .diagram-dark {
-  display: block !important;
+html[data-theme="dark"] #diagram .diagram-dark {
+  display: block;
 }
 
-/* 4. System light (only when no manual override) */
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme]) #diagram .diagram-light {
-    display: block !important;
-  }
-}
-
-/* 5. System dark (only when no manual override) */
+/* System Dark (only when no manual override exists) */
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) #diagram .diagram-dark {
-    display: block !important;
+  html:not([data-theme]) #diagram .diagram-light {
+    display: none;
+  }
+  html:not([data-theme]) #diagram .diagram-dark {
+    display: block;
   }
 }
 

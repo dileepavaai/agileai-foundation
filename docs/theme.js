@@ -1,8 +1,7 @@
 /* =========================================================
-   AGILE AI UNIVERSITY
-   Institutional Theme Controller — v1.1
-   Foundation Navigation Authority Stabilized
-   Sticky + Scroll Shadow Wrapper Architecture
+   AGILE AI FOUNDATION
+   Institutional Theme Controller — v1.1 (Frozen)
+   Navigation Stabilized for Versioned Structure
    3–5 Year Safe Implementation
    ========================================================= */
 
@@ -12,7 +11,7 @@
   const root = document.documentElement;
 
   /* =========================================================
-     THEME LOGIC (UNCHANGED CORE)
+     THEME LOGIC
      ========================================================= */
 
   function applyTheme(theme) {
@@ -90,8 +89,7 @@
     if (!wrapper) return;
 
     /* -----------------------------------------
-       Scroll Shadow (activates after 1px)
-       Applied to wrapper (sticky container)
+       Scroll Shadow
        ----------------------------------------- */
 
     function handleScroll() {
@@ -107,6 +105,7 @@
 
     /* -----------------------------------------
        Active Navigation Highlight
+       Version-Aware & Future-Safe
        ----------------------------------------- */
 
     const page = document.body.dataset.page;
@@ -120,8 +119,8 @@
 
       if (
         (page === "elements" && href === "/index.html") ||
-        (page === "guide" && href === "/guide/index.html") ||
-        (page === "governance" && href === "/governance/index.html")
+        (page === "guide" && href.startsWith("/guide/")) ||
+        (page === "governance" && href === "/governance.html")
       ) {
         link.classList.add("is-active");
       }
