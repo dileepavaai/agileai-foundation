@@ -11,7 +11,7 @@
 #site-header {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 2000; /* Elevated to guarantee header dominance */
 }
 
 /* Scroll shadow applied to wrapper */
@@ -122,8 +122,6 @@
   transition: transform 0.25s ease;
 }
 
-/* Hover animation */
-
 .site-nav a:hover::after {
   transform: scaleX(1);
 }
@@ -143,6 +141,17 @@ body[data-page="guide"] .site-nav a[href="/guide/index.html"],
 body[data-page="governance"] .site-nav a[href="/governance/index.html"] {
   opacity: 1;
   font-weight: 600;
+}
+
+/* ---------------------------------------------------------
+   Defensive Layering Protection (Prevents Watermark Bleed)
+   --------------------------------------------------------- */
+
+.hero-bg-text,
+.watermark,
+.background-text {
+  z-index: 0 !important;
+  pointer-events: none;
 }
 
 /* ---------------------------------------------------------
