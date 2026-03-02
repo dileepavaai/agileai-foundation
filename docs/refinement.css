@@ -1,4 +1,4 @@
-/* =========================================================
+/* ========================================================= 
    Institutional Header — Refinement Layer
    Stable Shared Header Authority (3–5 Year Safe Architecture)
    Sticky handled at wrapper level
@@ -34,7 +34,7 @@
 }
 
 /* ---------------------------------------------------------
-   Header Container (Visual Only — Not Sticky)
+   Header Container (Visually Aligned With Content Width)
    --------------------------------------------------------- */
 
 .site-header {
@@ -46,6 +46,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  max-width: 1100px;
+  margin: 0 auto;
 
   background: var(--color-bg-primary);
   border-bottom: 1px solid var(--color-border-subtle);
