@@ -4,12 +4,6 @@ const baseURL = 'http://localhost:8080';
 
 test.describe('Canonical Diagram Rendering', () => {
 
-  test.beforeEach(async ({ page }) => {
-    await page.addInitScript(() => {
-      localStorage.removeItem('agileai-theme');
-    });
-  });
-
   test('Light mode shows correct diagram', async ({ page }) => {
 
     await page.addInitScript(() => {
@@ -18,8 +12,8 @@ test.describe('Canonical Diagram Rendering', () => {
 
     await page.goto(`${baseURL}/guide/v1.1/index.html`);
 
-    // Wait for theme to apply
-    await page.waitForSelector('.diagram-light');
+    // Wait until theme is applied to <html>
+    await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
 
     await expect(page.locator('.diagram-light')).toBeVisible();
     await expect(page.locator('.diagram-dark')).not.toBeVisible();
@@ -33,8 +27,8 @@ test.describe('Canonical Diagram Rendering', () => {
 
     await page.goto(`${baseURL}/guide/v1.1/index.html`);
 
-    // Wait for theme to apply
-    await page.waitForSelector('.diagram-dark');
+    // Wait until theme is applied to <html>
+    await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
 
     await expect(page.locator('.diagram-dark')).toBeVisible();
     await expect(page.locator('.diagram-light')).not.toBeVisible();
