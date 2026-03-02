@@ -56,23 +56,23 @@
 }
 
 /* ---------------------------------------------------------
-   Title
+   Title (Institutional Authority Calibration)
    --------------------------------------------------------- */
 
 .site-title {
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
 
   text-decoration: none;
-  color: var(--color-text-secondary);
+  color: var(--color-text-primary);
 
-  transition: color 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 
 .site-title:hover {
-  color: var(--color-text-primary);
+  opacity: 0.85;
 }
 
 /* ---------------------------------------------------------
