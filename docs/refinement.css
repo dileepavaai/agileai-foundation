@@ -1,4 +1,4 @@
-/* ========================================================= 
+/* =========================================================  
    Institutional Header — Refinement Layer
    Stable Shared Header Authority (3–5 Year Safe Architecture)
    Sticky handled at wrapper level
@@ -34,7 +34,7 @@
    --------------------------------------------------------- */
 
 .site-header {
-  position: relative; /* Important for mobile dropdown anchoring */
+  position: relative;
   width: 100%;
   box-sizing: border-box;
 
@@ -98,7 +98,7 @@
 }
 
 /* ---------------------------------------------------------
-   Animated Underline
+   Animated Underline (Hover Baseline)
    --------------------------------------------------------- */
 
 .site-nav a::after {
@@ -121,7 +121,9 @@
   transform: scaleX(1);
 }
 
-/* Active State */
+/* ---------------------------------------------------------
+   Active State — Legacy data-page Support (Preserved)
+   --------------------------------------------------------- */
 
 body[data-page="elements"] .site-nav a[href="/index.html"]::after,
 body[data-page="guide"] .site-nav a[href="/guide/index.html"]::after,
@@ -134,6 +136,53 @@ body[data-page="guide"] .site-nav a[href="/guide/index.html"],
 body[data-page="governance"] .site-nav a[href="/governance/index.html"] {
   opacity: 1;
   font-weight: 600;
+}
+
+/* ---------------------------------------------------------
+   Active State — New Section-Based Model (Additive)
+   Uses: body[data-section] + data-nav + nav-active class
+   --------------------------------------------------------- */
+
+/* Explicit nav-active class (JS-driven) */
+.site-nav a.nav-active {
+  opacity: 1;
+  font-weight: 600;
+}
+
+/* Ensure underline visible */
+.site-nav a.nav-active::after {
+  transform: scaleX(1);
+}
+
+/* Subtle Underline Reveal Animation on Page Load */
+.site-nav a.nav-active::after {
+  animation: navUnderlineReveal 0.35s ease forwards;
+}
+
+/* Keyframes */
+@keyframes navUnderlineReveal {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Body-declared section fallback (if nav-active not applied) */
+body[data-section="standards"] .site-nav a[data-nav="standards"],
+body[data-section="guide"] .site-nav a[data-nav="guide"],
+body[data-section="governance"] .site-nav a[data-nav="governance"],
+body[data-section="university"] .site-nav a[data-nav="university"] {
+  opacity: 1;
+  font-weight: 600;
+}
+
+body[data-section="standards"] .site-nav a[data-nav="standards"]::after,
+body[data-section="guide"] .site-nav a[data-nav="guide"]::after,
+body[data-section="governance"] .site-nav a[data-nav="governance"]::after,
+body[data-section="university"] .site-nav a[data-nav="university"]::after {
+  transform: scaleX(1);
 }
 
 /* ---------------------------------------------------------
