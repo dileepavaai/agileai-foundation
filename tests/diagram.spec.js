@@ -4,7 +4,7 @@ test.describe('Canonical Diagram Rendering', () => {
 
   test('Light mode shows correct diagram', async ({ page }) => {
 
-    await page.goto('/guide/v1.1/index.html');
+    await page.goto('/guide/v1.1/');
 
     await page.evaluate(() => {
       document.documentElement.setAttribute('data-theme', 'light');
@@ -16,7 +16,7 @@ test.describe('Canonical Diagram Rendering', () => {
 
   test('Dark mode shows correct diagram', async ({ page }) => {
 
-    await page.goto('/guide/v1.1/index.html');
+    await page.goto('/guide/v1.1/');
 
     await page.evaluate(() => {
       document.documentElement.setAttribute('data-theme', 'dark');
