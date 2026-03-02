@@ -172,3 +172,38 @@ body.guide-page strong {
   font-weight: 600;
   letter-spacing: 0.01em;
 }
+
+/* =========================================================
+   Guide Diagram Visual Refinement (Non-Structural)
+   Purpose: Reduce visual dominance, preserve interpretive role
+   ========================================================= */
+
+.guide-page #diagram {
+  margin-top: 4rem;
+}
+
+.guide-page .diagram-container {
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 620px; /* Reduced dominance */
+}
+
+.guide-page .diagram-container img {
+  width: 100%;
+  height: auto;
+  opacity: 0.88; /* Slightly softened */
+  transition: opacity 0.3s ease;
+}
+
+/* Subtle hover reinforcement */
+.guide-page .diagram-container img:hover {
+  opacity: 1;
+}
+
+/* Soft frame to feel appendix-like */
+.guide-page .diagram-container {
+  padding: 1.5rem;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 8px;
+  background: var(--color-bg-secondary);
+}
