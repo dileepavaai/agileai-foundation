@@ -4,8 +4,14 @@
 // + Section-Based Active Navigation Highlight
 // ======================================================
 
-fetch("shared/header.html")
-  .then(response => response.text())
+// Always load from site root (prevents subdirectory breakage)
+fetch("/shared/header.html")
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("Header fetch failed with status " + response.status);
+    }
+    return response.text();
+  })
   .then(data => {
     const headerContainer = document.getElementById("site-header");
     if (!headerContainer) return;
