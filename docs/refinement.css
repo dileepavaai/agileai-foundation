@@ -197,3 +197,11 @@ body[data-page="governance"] .site-nav a[href="/governance/index.html"] {
   }
 
 }
+
+/* ---------------------------------------------------------
+   Sticky Header Offset Protection
+   --------------------------------------------------------- */
+
+body {
+  padding-top: 72px; /* Match approximate header height */
+}
