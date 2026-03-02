@@ -207,3 +207,30 @@ body.guide-page strong {
   border-radius: 8px;
   background: var(--color-bg-secondary);
 }
+
+/* =========================================================
+   Guide Diagram Refinement — Institutional Tone
+   Purpose: Reduce dominance, align with constitutional text
+   ========================================================= */
+
+.guide-page #diagram {
+  margin-top: 2.5rem;
+}
+
+.guide-page .diagram-container {
+  text-align: left;          /* Left aligned */
+  margin: 1.5rem 0;          /* Reduced spacing */
+  max-width: 520px;          /* Further reduced scale */
+}
+
+.guide-page .diagram-container img {
+  width: 100%;
+  height: auto;
+  opacity: 0.82;             /* Softer presence */
+  transition: opacity 0.3s ease;
+}
+
+/* Subtle hover clarity */
+.guide-page .diagram-container img:hover {
+  opacity: 0.95;
+}
