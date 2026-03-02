@@ -1,14 +1,11 @@
 const { test, expect } = require('@playwright/test');
 
-const baseURL = 'http://localhost:8080';
-
 test.describe('Canonical Diagram Rendering', () => {
 
   test('Light mode shows correct diagram', async ({ page }) => {
 
-    await page.goto(`${baseURL}/guide/v1.1/index.html`);
+    await page.goto('/guide/v1.1/index.html');
 
-    // Force light theme deterministically
     await page.evaluate(() => {
       document.documentElement.setAttribute('data-theme', 'light');
     });
@@ -19,9 +16,8 @@ test.describe('Canonical Diagram Rendering', () => {
 
   test('Dark mode shows correct diagram', async ({ page }) => {
 
-    await page.goto(`${baseURL}/guide/v1.1/index.html`);
+    await page.goto('/guide/v1.1/index.html');
 
-    // Force dark theme deterministically
     await page.evaluate(() => {
       document.documentElement.setAttribute('data-theme', 'dark');
     });
