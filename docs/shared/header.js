@@ -1,14 +1,30 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  const toggle = document.querySelector(".nav-toggle");
-  const nav = document.querySelector(".site-nav");
+  // Inject header HTML
+  fetch("shared/header.html")
+    .then(response => response.text())
+    .then(data => {
+      const headerContainer = document.getElementById("site-header");
+      if (headerContainer) {
+        headerContainer.innerHTML = data;
+        initializeNavigation();
+      }
+    })
+    .catch(error => {
+      console.error("Header load failed:", error);
+    });
 
-  if (!toggle || !nav) return;
+  function initializeNavigation() {
+    const toggle = document.querySelector(".nav-toggle");
+    const nav = document.querySelector(".site-nav");
 
-  toggle.addEventListener("click", function () {
-    const isOpen = nav.classList.toggle("open");
-    toggle.classList.toggle("active");
-    toggle.setAttribute("aria-expanded", isOpen);
-  });
+    if (!toggle || !nav) return;
+
+    toggle.addEventListener("click", function () {
+      const isOpen = nav.classList.toggle("open");
+      toggle.classList.toggle("active");
+      toggle.setAttribute("aria-expanded", isOpen);
+    });
+  }
 
 });
