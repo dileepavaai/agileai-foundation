@@ -11,17 +11,13 @@
 #site-header {
   position: sticky;
   top: 0;
-  z-index: 2000; /* Elevated to guarantee header dominance */
+  z-index: 2000;
 }
-
-/* Scroll shadow applied to wrapper */
 
 #site-header.is-scrolled {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   transition: box-shadow 0.25s ease;
 }
-
-/* Dark mode shadow adjustment */
 
 :root[data-theme="dark"] #site-header.is-scrolled {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
@@ -34,14 +30,15 @@
 }
 
 /* ---------------------------------------------------------
-   Header Container (Full-Width Institutional Band)
+   Header Container
    --------------------------------------------------------- */
 
 .site-header {
+  position: relative; /* Important for mobile dropdown anchoring */
   width: 100%;
   box-sizing: border-box;
 
-  padding: 12px 40px; /* Tightened institutional density */
+  padding: 12px 40px;
 
   display: flex;
   justify-content: space-between;
@@ -56,7 +53,7 @@
 }
 
 /* ---------------------------------------------------------
-   Title (Institutional Authority Calibration)
+   Title
    --------------------------------------------------------- */
 
 .site-title {
@@ -76,7 +73,7 @@
 }
 
 /* ---------------------------------------------------------
-   Navigation
+   Navigation (Desktop Default)
    --------------------------------------------------------- */
 
 .site-nav {
@@ -86,7 +83,6 @@
 
 .site-nav a {
   position: relative;
-
   margin-left: 28px;
   font-size: 0.9rem;
 
@@ -94,7 +90,6 @@
   color: var(--color-text-primary);
 
   opacity: 0.75;
-
   transition: opacity 0.2s ease;
 }
 
@@ -103,7 +98,7 @@
 }
 
 /* ---------------------------------------------------------
-   Animated Underline (Hover + Active)
+   Animated Underline
    --------------------------------------------------------- */
 
 .site-nav a::after {
@@ -126,9 +121,7 @@
   transform: scaleX(1);
 }
 
-/* ---------------------------------------------------------
-   Active State (Root-Relative Matching)
-   --------------------------------------------------------- */
+/* Active State */
 
 body[data-page="elements"] .site-nav a[href="/index.html"]::after,
 body[data-page="guide"] .site-nav a[href="/guide/index.html"]::after,
@@ -144,7 +137,7 @@ body[data-page="governance"] .site-nav a[href="/governance/index.html"] {
 }
 
 /* ---------------------------------------------------------
-   Defensive Layering Protection (Prevents Watermark Bleed)
+   Defensive Layering Protection
    --------------------------------------------------------- */
 
 .hero-bg-text,
@@ -155,7 +148,7 @@ body[data-page="governance"] .site-nav a[href="/governance/index.html"] {
 }
 
 /* ---------------------------------------------------------
-   Official Public Artifact Section (Non-Structural Addition)
+   Official Artifact Section
    --------------------------------------------------------- */
 
 #official-artifact {
@@ -179,38 +172,16 @@ body[data-page="governance"] .site-nav a[href="/governance/index.html"] {
 }
 
 /* ---------------------------------------------------------
-   Responsive Adjustment
-   --------------------------------------------------------- */
-
-@media (max-width: 768px) {
-
-  .site-header {
-    padding: 10px 20px; /* Proportional mobile density */
-  }
-
-  .site-nav a {
-    margin-left: 18px;
-  }
-
-  #official-artifact {
-    padding: 1.5rem;
-  }
-
-}
-
-/* ---------------------------------------------------------
    Sticky Header Offset Protection
    --------------------------------------------------------- */
 
 body {
-  padding-top: 64px; /* Adjusted to match tightened header height */
+  padding-top: 64px;
 }
 
 /* =========================================================
    Mobile Navigation — Institutional Drop-Down
    ========================================================= */
-
-/* Toggle Button */
 
 .nav-toggle {
   display: none;
@@ -244,9 +215,15 @@ body {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Mobile Layout */
+/* ---------------------------------------------------------
+   Responsive
+   --------------------------------------------------------- */
 
 @media (max-width: 768px) {
+
+  .site-header {
+    padding: 10px 20px;
+  }
 
   .nav-toggle {
     display: flex;
@@ -255,7 +232,7 @@ body {
   .site-nav {
     position: absolute;
     top: 100%;
-    right: 0;
+    left: 0;
     width: 100%;
 
     background: var(--color-bg-primary);
@@ -275,5 +252,9 @@ body {
 
   .site-nav.open {
     display: flex;
+  }
+
+  #official-artifact {
+    padding: 1.5rem;
   }
 }
