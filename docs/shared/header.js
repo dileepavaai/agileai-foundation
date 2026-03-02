@@ -37,13 +37,20 @@ function initializeNavigation() {
 }
 
 // ======================================================
-// Section-Based Active Navigation Highlight
-// Requires: <body data-section="...">
-// Requires: nav links with data-nav="..."
+// Active Navigation Highlight (Dual-Mode Compatible)
+// Supports both:
+//   <body data-section="...">
+//   <body data-page="...">
 // ======================================================
 
 function applyActiveNavigation() {
-  const section = document.body.getAttribute("data-section");
+  let section = document.body.getAttribute("data-section");
+
+  // Fallback to legacy model
+  if (!section) {
+    section = document.body.getAttribute("data-page");
+  }
+
   if (!section) return;
 
   const activeLink = document.querySelector(`[data-nav="${section}"]`);
