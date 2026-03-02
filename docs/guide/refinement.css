@@ -66,31 +66,67 @@ main.container ul li strong {
 
 
 /* ----------------------------------------------------------
-   DIAGRAM PROPORTION
+   MICRO TYPOGRAPHIC POLISH
    ---------------------------------------------------------- */
 
-#diagram {
+body.guide-page main.container {
+  max-width: 780px;
+}
+
+body.guide-page p {
+  max-width: 70ch;
+}
+
+body.guide-page section p + p {
+  margin-top: 14px;
+}
+
+body.guide-page strong {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+
+/* ==========================================================
+   DIAGRAM — APPENDIX SCALE CONTROL
+   Purpose: Supportive, Non-Dominant, Institutional
+   ========================================================== */
+
+.guide-page #diagram {
+  margin-top: 2.5rem;
   text-align: left;
 }
 
-#diagram .diagram-container {
-  text-align: left;
-  margin-top: 40px;
-  margin-bottom: 30px;
+.guide-page #diagram h2 {
+  font-size: 1.45rem;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  opacity: 0.85;
 }
 
-#diagram .diagram-container img {
-  max-width: 620px;
-  width: 100%;
+.guide-page .diagram-container {
+  margin: 1.5rem 0;
+  text-align: left;
+}
+
+.guide-page .diagram-container img {
+  width: 400px;          /* Controlled scale */
+  max-width: 100%;
   height: auto;
   display: block;
+  opacity: 0.85;         /* Soft presence */
+  transition: opacity 0.25s ease;
+}
+
+.guide-page .diagram-container img:hover {
+  opacity: 0.95;
 }
 
 
-/* ----------------------------------------------------------
+/* ==========================================================
    DIAGRAM THEME CONTROL (Single Source of Truth)
    Controlled ONLY by data-theme attribute
-   ---------------------------------------------------------- */
+   ========================================================== */
 
 /* Default (light) */
 #diagram .diagram-light {
@@ -121,18 +157,6 @@ html[data-theme="light"] #diagram .diagram-dark {
 
 
 /* ----------------------------------------------------------
-   APPENDIX HEADING SOFTENING
-   ---------------------------------------------------------- */
-
-#diagram h2 {
-  font-size: 1.45rem;
-  font-weight: 500;
-  letter-spacing: 0.4px;
-  opacity: 0.85;
-}
-
-
-/* ----------------------------------------------------------
    THEME TOGGLE — Subtle for Thinking Surface
    ---------------------------------------------------------- */
 
@@ -149,88 +173,4 @@ body.guide-page .theme-switcher a {
 
 body.guide-page .theme-switcher:hover {
   opacity: 0.85;
-}
-
-
-/* ----------------------------------------------------------
-   MICRO TYPOGRAPHIC POLISH
-   ---------------------------------------------------------- */
-
-body.guide-page main.container {
-  max-width: 780px;
-}
-
-body.guide-page p {
-  max-width: 70ch;
-}
-
-body.guide-page section p + p {
-  margin-top: 14px;
-}
-
-body.guide-page strong {
-  font-weight: 600;
-  letter-spacing: 0.01em;
-}
-
-/* =========================================================
-   Guide Diagram Visual Refinement (Non-Structural)
-   Purpose: Reduce visual dominance, preserve interpretive role
-   ========================================================= */
-
-.guide-page #diagram {
-  margin-top: 4rem;
-}
-
-.guide-page .diagram-container {
-  text-align: center;
-  margin: 2rem auto;
-  max-width: 620px; /* Reduced dominance */
-}
-
-.guide-page .diagram-container img {
-  width: 100%;
-  height: auto;
-  opacity: 0.88; /* Slightly softened */
-  transition: opacity 0.3s ease;
-}
-
-/* Subtle hover reinforcement */
-.guide-page .diagram-container img:hover {
-  opacity: 1;
-}
-
-/* Soft frame to feel appendix-like */
-.guide-page .diagram-container {
-  padding: 1.5rem;
-  border: 1px solid var(--color-border-subtle);
-  border-radius: 8px;
-  background: var(--color-bg-secondary);
-}
-
-/* =========================================================
-   Guide Diagram Refinement — Institutional Tone
-   Purpose: Reduce dominance, align with constitutional text
-   ========================================================= */
-
-.guide-page #diagram {
-  margin-top: 2.5rem;
-}
-
-.guide-page .diagram-container {
-  text-align: left;          /* Left aligned */
-  margin: 1.5rem 0;          /* Reduced spacing */
-  max-width: 520px;          /* Further reduced scale */
-}
-
-.guide-page .diagram-container img {
-  width: 100%;
-  height: auto;
-  opacity: 0.82;             /* Softer presence */
-  transition: opacity 0.3s ease;
-}
-
-/* Subtle hover clarity */
-.guide-page .diagram-container img:hover {
-  opacity: 0.95;
 }
