@@ -41,7 +41,7 @@
   width: 100%;
   box-sizing: border-box;
 
-  padding: 18px 40px;
+  padding: 12px 40px; /* Tightened institutional density */
 
   display: flex;
   justify-content: space-between;
@@ -110,7 +110,7 @@
   content: "";
   position: absolute;
   left: 0;
-  bottom: -6px;
+  bottom: -5px;
 
   width: 100%;
   height: 2px;
@@ -185,7 +185,7 @@ body[data-page="governance"] .site-nav a[href="/governance/index.html"] {
 @media (max-width: 768px) {
 
   .site-header {
-    padding: 16px 20px;
+    padding: 10px 20px; /* Proportional mobile density */
   }
 
   .site-nav a {
@@ -203,5 +203,5 @@ body[data-page="governance"] .site-nav a[href="/governance/index.html"] {
    --------------------------------------------------------- */
 
 body {
-  padding-top: 72px; /* Match approximate header height */
+  padding-top: 64px; /* Adjusted to match tightened header height */
 }
