@@ -1,11 +1,12 @@
 /* =========================================================
    AGILE AI FOUNDATION
-   Institutional CSS Token Contract — v1.7
+   Institutional CSS Token Contract — v1.8
    Unified Adaptive Token Model
    Canonical Surface Implementation
    Governance Enhancements — Scoped & Non-Destructive
-   Diagram Logic Stabilized (Deterministic Fallback Safe)
+   Diagram Logic — Deterministic & Cascade-Safe
    ========================================================= */
+
 
 /* =========================================================
    Root Design Tokens — Light (Default Authority Surface)
@@ -35,6 +36,7 @@
   --line-height-base: 1.6;
 }
 
+
 /* =========================================================
    Explicit Dark Theme Override
    ========================================================= */
@@ -54,6 +56,7 @@
   --seal-opacity: 0.95;
   --color-authority-muted: rgba(255, 255, 255, 0.75);
 }
+
 
 /* =========================================================
    System Dark Mode (When No Explicit Theme)
@@ -77,6 +80,7 @@
   }
 }
 
+
 /* =========================================================
    Base Layout
    ========================================================= */
@@ -90,6 +94,7 @@ body {
   transition: background 0.25s ease, color 0.25s ease;
   position: relative;
 }
+
 
 /* =========================================================
    Root Canonical Watermark
@@ -111,6 +116,7 @@ body::before {
   text-align: center;
 }
 
+
 /* =========================================================
    Container
    ========================================================= */
@@ -122,6 +128,7 @@ body::before {
   position: relative;
   z-index: 1;
 }
+
 
 /* =========================================================
    Typography Hierarchy
@@ -155,6 +162,7 @@ article {
   margin-top: 1.5rem;
 }
 
+
 /* =========================================================
    Identity Layer
    ========================================================= */
@@ -184,6 +192,7 @@ article {
   max-width: 75ch;
 }
 
+
 /* =========================================================
    Footer
    ========================================================= */
@@ -197,6 +206,7 @@ footer {
   line-height: 1.6;
 }
 
+
 /* =========================================================
    Links
    ========================================================= */
@@ -209,6 +219,7 @@ a {
 a:hover {
   text-decoration: none;
 }
+
 
 /* =========================================================
    Theme Switcher
@@ -231,6 +242,7 @@ a:hover {
   text-decoration: underline;
 }
 
+
 /* =========================================================
    Authority Breadcrumb
    ========================================================= */
@@ -251,6 +263,7 @@ a:hover {
 .authority-breadcrumb span {
   margin: 0 0.5rem;
 }
+
 
 /* =========================================================
    Governance Enhancements
@@ -311,6 +324,7 @@ a:hover {
   fill: var(--color-seal-fill);
 }
 
+
 /* =========================================================
    Print / PDF Styles
    ========================================================= */
@@ -350,9 +364,10 @@ a:hover {
   }
 }
 
+
 /* =========================================================
    Canonical Diagram Theme Control
-   Deterministic + Fallback Safe
+   Deterministic — Explicit State Control
    ========================================================= */
 
 /* Base sizing */
@@ -361,25 +376,31 @@ a:hover {
   height: auto;
 }
 
-/* DEFAULT FALLBACK (Light First) */
-.diagram-light { display: block; }
-.diagram-dark  { display: none; }
+/* Explicit base state (no browser defaults) */
+.diagram-light,
+.diagram-dark {
+  display: none;
+}
 
-/* Explicit Light */
-html[data-theme="light"] .diagram-light { display: block; }
-html[data-theme="light"] .diagram-dark  { display: none; }
+/* Light mode */
+html[data-theme="light"] .diagram-light {
+  display: block;
+}
 
-/* Explicit Dark */
-html[data-theme="dark"] .diagram-light { display: none; }
-html[data-theme="dark"] .diagram-dark  { display: block; }
+/* Dark mode */
+html[data-theme="dark"] .diagram-dark {
+  display: block;
+}
 
-/* System Mode */
+/* System mode */
 @media (prefers-color-scheme: dark) {
-  html[data-theme="system"] .diagram-light { display: none; }
-  html[data-theme="system"] .diagram-dark  { display: block; }
+  html[data-theme="system"] .diagram-dark {
+    display: block;
+  }
 }
 
 @media (prefers-color-scheme: light) {
-  html[data-theme="system"] .diagram-light { display: block; }
-  html[data-theme="system"] .diagram-dark  { display: none; }
+  html[data-theme="system"] .diagram-light {
+    display: block;
+  }
 }

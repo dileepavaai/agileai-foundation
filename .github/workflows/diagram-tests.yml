@@ -25,14 +25,5 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
-      - name: Install http-server and wait-on
-        run: npm install -g http-server wait-on
-
-      - name: Start local server
-        run: http-server . -p 8080 &
-
-      - name: Wait for server
-        run: wait-on http://localhost:8080
-
       - name: Run Playwright tests
         run: npx playwright test
