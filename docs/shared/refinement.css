@@ -10,10 +10,14 @@
   font-size: 0.9rem;
 }
 
+/* 
+   IMPORTANT:
+   Width, centering, and horizontal padding are now inherited
+   from the shared .container class applied in footer.html.
+   This prevents grid duplication and ensures canonical alignment.
+*/
 .site-footer-inner {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 0 1.5rem; /* Match .container horizontal grid */
+  padding: 0;
 }
 
 .footer-title {
