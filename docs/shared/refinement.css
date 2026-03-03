@@ -1,5 +1,6 @@
 /* =========================================================
    Institutional Footer — Shared Authority Layer
+   Non-Structural · Refinement Only
    ========================================================= */
 
 #site-footer {
@@ -25,6 +26,7 @@
   max-width: 75ch;
   margin-bottom: 2rem;
   color: var(--color-text-secondary);
+  line-height: 1.6;
 }
 
 .footer-links {
@@ -37,6 +39,7 @@
 .footer-links a {
   text-decoration: none;
   opacity: 0.8;
+  transition: opacity 0.2s ease;
 }
 
 .footer-links a:hover {
@@ -47,4 +50,5 @@
 .footer-meta {
   font-size: 0.85rem;
   color: var(--color-text-secondary);
+  line-height: 1.6;
 }
