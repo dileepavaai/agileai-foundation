@@ -1,13 +1,6 @@
-<svg width="1000" height="900" viewBox="0 0 1000 900" xmlns="http://www.w3.org/2000/svg">
+<svg width="400" height="360" viewBox="0 120 1000 780" xmlns="http://www.w3.org/2000/svg">
 
   <style>
-    .title {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 28px;
-      font-weight: 600;
-      fill: #EAEAEA;
-    }
-
     .hex-line {
       stroke: #FFFFFF;
       stroke-width: 2;
@@ -39,14 +32,6 @@
     }
   </style>
 
-  <!-- Background -->
-  <rect width="100%" height="100%" fill="#0B1220"/>
-
-  <!-- Title -->
-  <text x="500" y="80" text-anchor="middle" class="title">
-    Agile AI v1.0 — Canonical Structural Architecture
-  </text>
-
   <!-- Outer Hexagon -->
   <polygon class="hex-line"
     points="500,200 759,350 759,650 500,800 241,650 241,350"/>
@@ -70,37 +55,30 @@
   <circle cx="241" cy="650" r="6" class="dot"/>
   <circle cx="241" cy="350" r="6" class="dot"/>
 
-  <!-- Labels positioned close to respective dots -->
-
-  <!-- Top -->
+  <!-- Labels -->
   <text x="500" y="175" text-anchor="middle" class="label">
     <tspan x="500">Intent &amp; Outcome</tspan>
     <tspan x="500" dy="18">Alignment</tspan>
   </text>
 
-  <!-- Top Right -->
   <text x="785" y="345" text-anchor="start" class="label">
     <tspan x="785">Human Judgment &amp;</tspan>
     <tspan x="785" dy="18">Accountability</tspan>
   </text>
 
-  <!-- Bottom Right -->
   <text x="785" y="675" text-anchor="start" class="label">
     Governance by Design
   </text>
 
-  <!-- Bottom -->
   <text x="500" y="830" text-anchor="middle" class="label">
     Systemic Integration
   </text>
 
-  <!-- Bottom Left -->
   <text x="215" y="675" text-anchor="end" class="label">
     <tspan x="215">Continuous Learning</tspan>
     <tspan x="215" dy="18">&amp; Feedback</tspan>
   </text>
 
-  <!-- Top Left -->
   <text x="215" y="345" text-anchor="end" class="label">
     Adaptive Execution
   </text>
