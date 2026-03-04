@@ -429,3 +429,52 @@ Specification Layout (Sticky Sidebar TOC)
   font-weight: 600;
   color: var(--color-text-primary);
 }
+
+/* =========================================================
+   Specification Navigation Enhancements
+   Added: Sticky TOC Layout Fix + Mobile Collapse
+   Governance Rule: Additive Only (No Existing Rules Modified)
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   Fix Desktop Sidebar Layout
+   --------------------------------------------------------- */
+
+@media (min-width: 1024px) {
+
+  .spec-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .spec-sidebar {
+    min-width: 240px;
+  }
+
+}
+
+/* ---------------------------------------------------------
+   Mobile TOC Collapse Behaviour
+   --------------------------------------------------------- */
+
+@media (max-width: 1023px) {
+
+  .spec-toc ul ul {
+    display: none;
+  }
+
+  .spec-toc li.toc-open > ul {
+    display: block;
+  }
+
+}
+
+/* ---------------------------------------------------------
+   Active Section Highlight
+   --------------------------------------------------------- */
+
+.spec-toc a.toc-active {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
