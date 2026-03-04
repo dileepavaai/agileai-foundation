@@ -332,3 +332,25 @@ body {
   font-weight: 500;
   color: var(--color-text-secondary);
 }
+
+/* =========================================================
+   Section Anchor Links (Specification Navigation)
+   W3C / RFC Style
+   ========================================================= */
+
+.section-anchor {
+  margin-left: 0.4rem;
+  text-decoration: none;
+  opacity: 0;
+  font-size: 0.9rem;
+  transition: opacity 0.15s ease;
+}
+
+h2:hover .section-anchor,
+h3:hover .section-anchor {
+  opacity: 0.6;
+}
+
+.section-anchor:hover {
+  opacity: 1;
+}
