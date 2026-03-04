@@ -370,9 +370,15 @@ Specification Layout (Sticky Sidebar TOC)
 
 .spec-toc {
   position: sticky;
-  top: 120px;
+  top: calc(64px + 24px); /* header height + visual breathing space */
+
   width: 260px;
   font-size: 0.9rem;
+
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+
+  box-sizing: border-box;
 }
 
 .toc-title {
@@ -415,6 +421,20 @@ Specification Layout (Sticky Sidebar TOC)
   .spec-sidebar {
     display: block;
     margin-right: 40px;
+  }
+
+  /* ---------------------------------------------------------
+   Specification Sidebar Divider
+   Visual separation between TOC and content
+   --------------------------------------------------------- */
+
+  @media (min-width: 1024px) {
+
+  .spec-sidebar {
+    padding-right: 24px;
+    border-right: 1px solid var(--color-border-subtle);
+    }
+
   }
 
   .spec-content {
@@ -470,11 +490,32 @@ Specification Layout (Sticky Sidebar TOC)
 
 }
 
-/* ---------------------------------------------------------
-   Active Section Highlight
-   --------------------------------------------------------- */
+/* =========================================================
+   Automatic Specification Section Numbering
+   W3C-style numbering using CSS counters
+   ========================================================= */
 
-.spec-toc a.toc-active {
+.spec-content {
+  counter-reset: section;
+}
+
+.spec-content h2 {
+  counter-increment: section;
+}
+
+.spec-content h2::before {
+  content: counter(section) ". ";
   font-weight: 600;
-  color: var(--color-text-primary);
+}
+
+.spec-content h3 {
+  counter-increment: subsection;
+}
+
+.spec-content h3::before {
+  content: counter(section) "." counter(subsection) " ";
+}
+
+.spec-content h2 {
+  counter-reset: subsection;
 }
