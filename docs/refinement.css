@@ -354,3 +354,71 @@ h3:hover .section-anchor {
 .section-anchor:hover {
   opacity: 1;
 }
+
+/* =========================================================
+Specification Layout (Sticky Sidebar TOC)
+========================================================= */
+
+.spec-layout {
+  display: flex;
+  justify-content: center;
+}
+
+.spec-sidebar {
+  display: none;
+}
+
+.spec-toc {
+  position: sticky;
+  top: 120px;
+  width: 260px;
+  font-size: 0.9rem;
+}
+
+.toc-title {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.spec-toc ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.spec-toc li {
+  margin-bottom: 0.35rem;
+}
+
+.spec-toc ul ul {
+  padding-left: 1rem;
+}
+
+.spec-toc a {
+  text-decoration: none;
+  color: var(--color-text-secondary);
+}
+
+.spec-toc a:hover {
+  text-decoration: underline;
+}
+
+
+/* Desktop Only */
+
+@media (min-width: 1024px) {
+
+  .spec-layout {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .spec-sidebar {
+    display: block;
+    margin-right: 40px;
+  }
+
+  .spec-content {
+    max-width: 760px;
+  }
+
+}
