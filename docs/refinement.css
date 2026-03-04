@@ -422,3 +422,10 @@ Specification Layout (Sticky Sidebar TOC)
   }
 
 }
+
+/* Active section in specification TOC */
+
+.spec-toc a.toc-active {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
