@@ -4,520 +4,437 @@
    Sticky handled at wrapper level
    ========================================================= */
 
-/* ---------------------------------------------------------
-   Sticky Wrapper (Injection Container)
-   --------------------------------------------------------- */
-
-#site-header {
-  position: sticky;
-  top: 0;
-  z-index: 2000;
+#site-header{
+  position:sticky;
+  top:0;
+  z-index:2000;
 }
 
-#site-header.is-scrolled {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  transition: box-shadow 0.25s ease;
+#site-header.is-scrolled{
+  box-shadow:0 4px 12px rgba(0,0,0,.06);
+  transition:box-shadow .25s ease;
 }
 
-:root[data-theme="dark"] #site-header.is-scrolled {
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+:root[data-theme="dark"] #site-header.is-scrolled{
+  box-shadow:0 4px 14px rgba(0,0,0,.35);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) #site-header.is-scrolled {
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
-  }
+@media(prefers-color-scheme:dark){
+:root:not([data-theme]) #site-header.is-scrolled{
+  box-shadow:0 4px 14px rgba(0,0,0,.35);
+}
 }
 
-/* ---------------------------------------------------------
+/* =========================================================
    Header Container
-   --------------------------------------------------------- */
+   ========================================================= */
 
-.site-header {
-  position: relative;
-  width: 100%;
-  box-sizing: border-box;
+.site-header{
+  position:relative;
+  width:100%;
+  box-sizing:border-box;
 
-  padding: 12px 40px;
+  padding:12px 40px;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 
-  background: var(--color-bg-primary);
-  border-bottom: 1px solid var(--color-border-subtle);
+  background:var(--color-bg-primary);
+  border-bottom:1px solid var(--color-border-subtle);
 
-  transition:
-    background 0.25s ease,
-    border-color 0.25s ease;
+  transition:background .25s ease,border-color .25s ease;
 }
 
-/* ---------------------------------------------------------
+/* =========================================================
    Title
-   --------------------------------------------------------- */
+   ========================================================= */
 
-.site-title {
-  font-size: 1rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-weight: 700;
+.site-title{
+  font-size:1rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  font-weight:700;
 
-  text-decoration: none;
-  color: var(--color-text-primary);
+  text-decoration:none;
+  color:var(--color-text-primary);
 
-  transition: opacity 0.2s ease;
+  transition:opacity .2s ease;
 }
 
-.site-title:hover {
-  opacity: 0.85;
+.site-title:hover{
+  opacity:.85;
 }
 
-/* ---------------------------------------------------------
-   Navigation (Desktop Default)
-   --------------------------------------------------------- */
+/* =========================================================
+   Navigation
+   ========================================================= */
 
-.site-nav {
-  display: flex;
-  align-items: center;
+.site-nav{
+  display:flex;
+  align-items:center;
 }
 
-.site-nav a {
-  position: relative;
-  margin-left: 28px;
-  font-size: 0.9rem;
+.site-nav a{
+  position:relative;
+  margin-left:28px;
+  font-size:.9rem;
 
-  text-decoration: none;
-  color: var(--color-text-primary);
+  text-decoration:none;
+  color:var(--color-text-primary);
 
-  opacity: 0.75;
-  transition: opacity 0.2s ease;
+  opacity:.75;
+  transition:opacity .2s ease;
 }
 
-.site-nav a:hover {
-  opacity: 1;
+.site-nav a:hover{
+  opacity:1;
 }
 
-/* ---------------------------------------------------------
-   Underline System (Hover + Active Baseline)
-   --------------------------------------------------------- */
+/* =========================================================
+   Underline System
+   ========================================================= */
 
-.site-nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px;
+.site-nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-5px;
 
-  width: 100%;
-  height: 2px;
+  width:100%;
+  height:2px;
 
-  background: var(--color-text-primary);
+  background:var(--color-text-primary);
 
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.25s ease;
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .25s ease;
 }
 
-.site-nav a:hover::after {
-  transform: scaleX(1);
+.site-nav a:hover::after{
+  transform:scaleX(1);
 }
 
-/* ---------------------------------------------------------
-   Legacy Active Support (data-page model)
-   Preserved for backward compatibility
-   --------------------------------------------------------- */
-
-body[data-page="elements"] .site-nav a[href="/"]::after,
-body[data-page="guide"] .site-nav a[href="/guide/"]::after,
-body[data-page="governance"] .site-nav a[href="/governance/"]::after {
-  transform: scaleX(1);
-}
+/* =========================================================
+   Legacy Active Support
+   ========================================================= */
 
 body[data-page="elements"] .site-nav a[href="/"],
 body[data-page="guide"] .site-nav a[href="/guide/"],
-body[data-page="governance"] .site-nav a[href="/governance/"] {
-  opacity: 1;
-  font-weight: 600;
+body[data-page="governance"] .site-nav a[href="/governance/"]{
+  opacity:1;
+  font-weight:600;
 }
 
-/* ---------------------------------------------------------
-   Section-Based Active Model (Primary)
-   Requires:
-   - <body data-section="...">
-   - nav links with data-nav="..."
-   - JS applies .nav-active
-   --------------------------------------------------------- */
-
-.site-nav a.nav-active {
-  opacity: 1;
-  font-weight: 600;
+body[data-page="elements"] .site-nav a[href="/"]::after,
+body[data-page="guide"] .site-nav a[href="/guide/"]::after,
+body[data-page="governance"] .site-nav a[href="/governance/"]::after{
+  transform:scaleX(1);
 }
 
-/* Animated reveal only for nav-active (JS-driven) */
-.site-nav a.nav-active::after {
-  animation: navUnderlineReveal 0.35s ease forwards;
+/* =========================================================
+   Section Based Active Model
+   ========================================================= */
+
+.site-nav a.nav-active{
+  opacity:1;
+  font-weight:600;
 }
 
-/* Fallback if JS not applied */
-body[data-section="standards"] .site-nav a[data-nav="standards"],
-body[data-section="guide"] .site-nav a[data-nav="guide"],
-body[data-section="governance"] .site-nav a[data-nav="governance"],
-body[data-section="university"] .site-nav a[data-nav="university"] {
-  opacity: 1;
-  font-weight: 600;
+.site-nav a.nav-active::after{
+  animation:navUnderlineReveal .35s ease forwards;
 }
 
-body[data-section="standards"] .site-nav a[data-nav="standards"]::after,
-body[data-section="guide"] .site-nav a[data-nav="guide"]::after,
-body[data-section="governance"] .site-nav a[data-nav="governance"]::after,
-body[data-section="university"] .site-nav a[data-nav="university"]::after {
-  transform: scaleX(1);
+@keyframes navUnderlineReveal{
+from{transform:scaleX(0)}
+to{transform:scaleX(1)}
 }
 
-/* Underline animation keyframes */
-@keyframes navUnderlineReveal {
-  from {
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
-  }
-}
-
-/* ---------------------------------------------------------
-   Defensive Layering Protection
-   --------------------------------------------------------- */
+/* =========================================================
+   Layering Protection
+   ========================================================= */
 
 .hero-bg-text,
 .watermark,
-.background-text {
-  z-index: 0 !important;
-  pointer-events: none;
-}
-
-/* ---------------------------------------------------------
-   Official Artifact Section
-   --------------------------------------------------------- */
-
-#official-artifact {
-  margin-top: 4rem;
-  padding: 2rem;
-  border: 1px solid var(--color-border-subtle);
-  background: var(--color-bg-primary);
-}
-
-#official-artifact h2 {
-  margin-top: 0;
-}
-
-#official-artifact a {
-  font-weight: 600;
-  text-decoration: underline;
-}
-
-#official-artifact a:hover {
-  text-decoration: none;
-}
-
-/* ---------------------------------------------------------
-   Sticky Header Offset Protection
-   --------------------------------------------------------- */
-
-body {
-  padding-top: 64px;
+.background-text{
+  z-index:0!important;
+  pointer-events:none;
 }
 
 /* =========================================================
-   Mobile Navigation — Institutional Drop-Down
+   Artifact Block
    ========================================================= */
 
-.nav-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-
-  background: none;
-  border: none;
-  cursor: pointer;
+#official-artifact{
+  margin-top:4rem;
+  padding:2rem;
+  border:1px solid var(--color-border-subtle);
+  background:var(--color-bg-primary);
 }
 
-.nav-toggle span {
-  width: 22px;
-  height: 2px;
-  background: var(--color-text-primary);
-  transition: all 0.3s ease;
+#official-artifact h2{
+  margin-top:0;
 }
 
-/* Hamburger → X */
-
-.nav-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+#official-artifact a{
+  font-weight:600;
+  text-decoration:underline;
 }
 
-.nav-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.nav-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-
-/* ---------------------------------------------------------
-   Responsive
-   --------------------------------------------------------- */
-
-@media (max-width: 768px) {
-
-  .site-header {
-    padding: 10px 20px;
-  }
-
-  .nav-toggle {
-    display: flex;
-  }
-
-  .site-nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-
-    background: var(--color-bg-primary);
-    border-bottom: 1px solid var(--color-border-subtle);
-
-    flex-direction: column;
-    align-items: flex-start;
-
-    padding: 1rem 20px;
-
-    display: none;
-  }
-
-  .site-nav a {
-    margin: 12px 0;
-  }
-
-  .site-nav.open {
-    display: flex;
-  }
-
-  #official-artifact {
-    padding: 1.5rem;
-  }
+#official-artifact a:hover{
+  text-decoration:none;
 }
 
 /* =========================================================
-   Specification Metadata Block
-   Institutional Standards Presentation
+   Sticky Header Offset
    ========================================================= */
 
-.spec-meta {
-  margin: 2rem 0 2.5rem 0;
-}
-
-.spec-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1rem;
-}
-
-.spec-table td {
-  padding: 0.65rem 0;
-  border-bottom: 1px solid var(--color-border-footer);
-  vertical-align: top;
-}
-
-.spec-table td:first-child {
-  width: 220px;
-  font-weight: 500;
-  color: var(--color-text-secondary);
+body{
+  padding-top:64px;
 }
 
 /* =========================================================
-   Section Anchor Links (Specification Navigation)
-   W3C / RFC Style
+   Mobile Navigation
    ========================================================= */
 
-.section-anchor {
-  margin-left: 0.4rem;
-  text-decoration: none;
-  opacity: 0;
-  font-size: 0.9rem;
-  transition: opacity 0.15s ease;
+.nav-toggle{
+  display:none;
+  flex-direction:column;
+  gap:5px;
+  background:none;
+  border:none;
+  cursor:pointer;
+}
+
+.nav-toggle span{
+  width:22px;
+  height:2px;
+  background:var(--color-text-primary);
+  transition:.3s;
+}
+
+.nav-toggle.active span:nth-child(1){
+  transform:rotate(45deg) translate(5px,5px);
+}
+
+.nav-toggle.active span:nth-child(2){
+  opacity:0;
+}
+
+.nav-toggle.active span:nth-child(3){
+  transform:rotate(-45deg) translate(5px,-5px);
+}
+
+@media(max-width:768px){
+
+.site-header{
+  padding:10px 20px;
+}
+
+.nav-toggle{
+  display:flex;
+}
+
+.site-nav{
+  position:absolute;
+  top:100%;
+  left:0;
+  width:100%;
+
+  background:var(--color-bg-primary);
+  border-bottom:1px solid var(--color-border-subtle);
+
+  flex-direction:column;
+  align-items:flex-start;
+
+  padding:1rem 20px;
+  display:none;
+}
+
+.site-nav.open{
+  display:flex;
+}
+
+.site-nav a{
+  margin:12px 0;
+}
+
+#official-artifact{
+  padding:1.5rem;
+}
+
+}
+
+/* =========================================================
+   Specification Metadata
+   ========================================================= */
+
+.spec-meta{
+  margin:2rem 0 2.5rem 0;
+}
+
+.spec-table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:1rem;
+}
+
+.spec-table td{
+  padding:.65rem 0;
+  border-bottom:1px solid var(--color-border-footer);
+}
+
+.spec-table td:first-child{
+  width:220px;
+  font-weight:500;
+  color:var(--color-text-secondary);
+}
+
+/* =========================================================
+   Anchor Links
+   ========================================================= */
+
+.section-anchor{
+  margin-left:.4rem;
+  text-decoration:none;
+  opacity:0;
+  font-size:.9rem;
+  transition:opacity .15s ease;
 }
 
 h2:hover .section-anchor,
-h3:hover .section-anchor {
-  opacity: 0.6;
+h3:hover .section-anchor{
+  opacity:.6;
 }
 
-.section-anchor:hover {
-  opacity: 1;
-}
-
-/* =========================================================
-Specification Layout (Sticky Sidebar TOC)
-========================================================= */
-
-.spec-layout {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
-}
-
-.spec-sidebar {
-  display: none;
-}
-
-.spec-toc {
-  position: sticky;
-  top: calc(64px + 24px); /* header height + visual breathing space */
-
-  width: 260px;
-  font-size: 0.9rem;
-
-  max-height: calc(100vh - 120px);
-  overflow-y: auto;
-
-  box-sizing: border-box;
-}
-
-.toc-title {
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-}
-
-.spec-toc ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.spec-toc li {
-  margin-bottom: 0.35rem;
-}
-
-.spec-toc ul ul {
-  padding-left: 1rem;
-}
-
-.spec-toc a {
-  text-decoration: none;
-  color: var(--color-text-secondary);
-}
-
-.spec-toc a:hover {
-  text-decoration: underline;
-}
-
-
-/* Desktop Only */
-
-@media (min-width: 1024px) {
-
-  .spec-layout {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .spec-sidebar {
-    display: block;
-    margin-right: 40px;
-  }
-
-  /* ---------------------------------------------------------
-   Specification Sidebar Divider
-   Visual separation between TOC and content
-   --------------------------------------------------------- */
-
-  @media (min-width: 1024px) {
-
-  .spec-sidebar {
-    padding-right: 24px;
-    border-right: 1px solid var(--color-border-subtle);
-    }
-
-  }
-
-  .spec-content {
-    max-width: 760px;
-  }
-
-}
-
-/* Active section in specification TOC */
-
-.spec-toc a.toc-active {
-  font-weight: 600;
-  color: var(--color-text-primary);
+.section-anchor:hover{
+  opacity:1;
 }
 
 /* =========================================================
-   Specification Navigation Enhancements
-   Added: Sticky TOC Layout Fix + Mobile Collapse
-   Governance Rule: Additive Only (No Existing Rules Modified)
+   Specification Layout
    ========================================================= */
 
-/* ---------------------------------------------------------
-   Fix Desktop Sidebar Layout
-   --------------------------------------------------------- */
-
-@media (min-width: 1024px) {
-
-  .spec-layout {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  .spec-sidebar {
-    min-width: 240px;
-  }
-
+.spec-layout{
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  gap:40px;
 }
 
-/* ---------------------------------------------------------
-   Mobile TOC Collapse Behaviour
-   --------------------------------------------------------- */
+.spec-sidebar{
+  flex-shrink:0;
+  align-self:flex-start;
+}
 
-@media (max-width: 1023px) {
+.spec-toc{
+  position:sticky;
+  top:calc(64px + 24px);
 
-  .spec-toc ul ul {
-    display: none;
-  }
+  width:260px;
+  font-size:.9rem;
 
-  .spec-toc li.toc-open > ul {
-    display: block;
-  }
+  max-height:calc(100vh - 120px);
+  overflow-y:auto;
+}
+
+.toc-title{
+  font-weight:600;
+  margin-bottom:.75rem;
+}
+
+.spec-toc ul{
+  list-style:none;
+  padding-left:0;
+}
+
+.spec-toc ul ul{
+  padding-left:1rem;
+}
+
+.spec-toc li{
+  margin-bottom:.35rem;
+}
+
+.spec-toc a{
+  text-decoration:none;
+  color:var(--color-text-secondary);
+}
+
+.spec-toc a:hover{
+  text-decoration:underline;
+}
+
+.spec-toc a.toc-active{
+  font-weight:600;
+  color:var(--color-text-primary);
+}
+
+/* =========================================================
+   Desktop Spec Layout
+   ========================================================= */
+
+@media(min-width:1024px){
+
+.spec-layout{
+  max-width:1200px;
+  margin:0 auto;
+}
+
+.spec-sidebar{
+  margin-right:40px;
+  padding-right:24px;
+  border-right:1px solid var(--color-border-subtle);
+}
+
+.spec-content{
+  max-width:760px;
+}
 
 }
 
 /* =========================================================
-   Automatic Specification Section Numbering
-   W3C-style numbering using CSS counters
+   Mobile Behaviour
    ========================================================= */
 
-.spec-content {
-  counter-reset: section;
+@media(max-width:1023px){
+
+.spec-sidebar{
+  display:none;
 }
 
-.spec-content h2 {
-  counter-increment: section;
+.spec-toc ul ul{
+  display:none;
 }
 
-.spec-content h2::before {
-  content: counter(section) ". ";
-  font-weight: 600;
+.spec-toc li.toc-open > ul{
+  display:block;
 }
 
-.spec-content h3 {
-  counter-increment: subsection;
 }
 
-.spec-content h3::before {
-  content: counter(section) "." counter(subsection) " ";
+/* =========================================================
+   CSS Section Numbering
+   ========================================================= */
+
+.spec-content{
+  counter-reset:section;
 }
 
-.spec-content h2 {
-  counter-reset: subsection;
+.spec-content h2{
+  counter-increment:section;
+  counter-reset:subsection;
+}
+
+.spec-content h2::before{
+  content:counter(section) ". ";
+  font-weight:600;
+}
+
+.spec-content h3{
+  counter-increment:subsection;
+}
+
+.spec-content h3::before{
+  content:counter(section) "." counter(subsection) " ";
 }
