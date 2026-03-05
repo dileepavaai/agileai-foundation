@@ -362,6 +362,7 @@ Specification Layout (Sticky Sidebar TOC)
 .spec-layout {
   display: flex;
   justify-content: center;
+  align-items: flex-start; /* REQUIRED for sticky sidebar stability */
 }
 
 .spec-sidebar {
