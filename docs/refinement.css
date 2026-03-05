@@ -1,7 +1,6 @@
 /* =========================================================
    Institutional Header — Refinement Layer
-   Stable Shared Header Authority (3–5 Year Safe Architecture)
-   Sticky handled at wrapper level
+   Stable Shared Header Authority
    ========================================================= */
 
 #site-header{
@@ -30,10 +29,8 @@
    ========================================================= */
 
 .site-header{
-  position:relative;
   width:100%;
   box-sizing:border-box;
-
   padding:12px 40px;
 
   display:flex;
@@ -55,11 +52,8 @@
   letter-spacing:.08em;
   text-transform:uppercase;
   font-weight:700;
-
   text-decoration:none;
   color:var(--color-text-primary);
-
-  transition:opacity .2s ease;
 }
 
 .site-title:hover{
@@ -79,12 +73,9 @@
   position:relative;
   margin-left:28px;
   font-size:.9rem;
-
   text-decoration:none;
   color:var(--color-text-primary);
-
   opacity:.75;
-  transition:opacity .2s ease;
 }
 
 .site-nav a:hover{
@@ -100,12 +91,9 @@
   position:absolute;
   left:0;
   bottom:-5px;
-
   width:100%;
   height:2px;
-
   background:var(--color-text-primary);
-
   transform:scaleX(0);
   transform-origin:left;
   transition:transform .25s ease;
@@ -115,50 +103,13 @@
   transform:scaleX(1);
 }
 
-/* =========================================================
-   Legacy Active Support
-   ========================================================= */
-
-body[data-page="elements"] .site-nav a[href="/"],
-body[data-page="guide"] .site-nav a[href="/guide/"],
-body[data-page="governance"] .site-nav a[href="/governance/"]{
-  opacity:1;
-  font-weight:600;
-}
-
-body[data-page="elements"] .site-nav a[href="/"]::after,
-body[data-page="guide"] .site-nav a[href="/guide/"]::after,
-body[data-page="governance"] .site-nav a[href="/governance/"]::after{
-  transform:scaleX(1);
-}
-
-/* =========================================================
-   Section Based Active Model
-   ========================================================= */
-
 .site-nav a.nav-active{
   opacity:1;
   font-weight:600;
 }
 
 .site-nav a.nav-active::after{
-  animation:navUnderlineReveal .35s ease forwards;
-}
-
-@keyframes navUnderlineReveal{
-from{transform:scaleX(0)}
-to{transform:scaleX(1)}
-}
-
-/* =========================================================
-   Layering Protection
-   ========================================================= */
-
-.hero-bg-text,
-.watermark,
-.background-text{
-  z-index:0!important;
-  pointer-events:none;
+  transform:scaleX(1);
 }
 
 /* =========================================================
@@ -176,15 +127,6 @@ to{transform:scaleX(1)}
   margin-top:0;
 }
 
-#official-artifact a{
-  font-weight:600;
-  text-decoration:underline;
-}
-
-#official-artifact a:hover{
-  text-decoration:none;
-}
-
 /* =========================================================
    Sticky Header Offset
    ========================================================= */
@@ -199,30 +141,6 @@ body{
 
 .nav-toggle{
   display:none;
-  flex-direction:column;
-  gap:5px;
-  background:none;
-  border:none;
-  cursor:pointer;
-}
-
-.nav-toggle span{
-  width:22px;
-  height:2px;
-  background:var(--color-text-primary);
-  transition:.3s;
-}
-
-.nav-toggle.active span:nth-child(1){
-  transform:rotate(45deg) translate(5px,5px);
-}
-
-.nav-toggle.active span:nth-child(2){
-  opacity:0;
-}
-
-.nav-toggle.active span:nth-child(3){
-  transform:rotate(-45deg) translate(5px,-5px);
 }
 
 @media(max-width:768px){
@@ -240,13 +158,9 @@ body{
   top:100%;
   left:0;
   width:100%;
-
   background:var(--color-bg-primary);
   border-bottom:1px solid var(--color-border-subtle);
-
   flex-direction:column;
-  align-items:flex-start;
-
   padding:1rem 20px;
   display:none;
 }
@@ -257,10 +171,6 @@ body{
 
 .site-nav a{
   margin:12px 0;
-}
-
-#official-artifact{
-  padding:1.5rem;
 }
 
 }
@@ -276,7 +186,6 @@ body{
 .spec-table{
   width:100%;
   border-collapse:collapse;
-  margin-top:1rem;
 }
 
 .spec-table td{
@@ -299,7 +208,6 @@ body{
   text-decoration:none;
   opacity:0;
   font-size:.9rem;
-  transition:opacity .15s ease;
 }
 
 h2:hover .section-anchor,
@@ -330,10 +238,8 @@ h3:hover .section-anchor{
 .spec-toc{
   position:sticky;
   top:calc(64px + 24px);
-
   width:260px;
   font-size:.9rem;
-
   max-height:calc(100vh - 120px);
   overflow-y:auto;
 }
@@ -364,6 +270,8 @@ h3:hover .section-anchor{
 .spec-toc a:hover{
   text-decoration:underline;
 }
+
+/* Active section */
 
 .spec-toc a.toc-active{
   font-weight:600;
