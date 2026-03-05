@@ -2,18 +2,58 @@
    Specification Navigation Controller
    Scope: Standards / Specification Pages Only
    Governance: Additive, Non-Invasive
+   Features:
+   - Auto-generate TOC if empty
+   - Scroll spy highlight
+   - Mobile expand / collapse
+   - Auto-scroll TOC to active section
    ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
 
   const toc = document.querySelector(".spec-toc");
-  if (!toc) return; // Safe exit for non-spec pages
+  const content = document.querySelector(".spec-content");
+
+  if (!toc || !content) return;
+
+  let tocList = toc.querySelector("ul");
+
+  /* ---------------------------------------------------------
+     Auto-Generate TOC (only if empty)
+     --------------------------------------------------------- */
+
+  if (!tocList || tocList.children.length === 0) {
+
+    tocList = document.createElement("ul");
+
+    const headings = content.querySelectorAll("h2[id], h3[id]");
+
+    headings.forEach(heading => {
+
+      const li = document.createElement("li");
+      const link = document.createElement("a");
+
+      link.href = "#" + heading.id;
+      link.textContent = heading.textContent;
+
+      li.appendChild(link);
+
+      if (heading.tagName === "H3") {
+        li.style.paddingLeft = "1rem";
+      }
+
+      tocList.appendChild(li);
+
+    });
+
+    toc.appendChild(tocList);
+  }
 
   const tocLinks = toc.querySelectorAll("a[href^='#']");
   const sections = [];
 
   /* ---------------------------------------------------------
-     Map TOC links to real sections
+     Map TOC links to sections
      --------------------------------------------------------- */
 
   tocLinks.forEach(link => {
@@ -22,11 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const section = document.getElementById(id);
 
     if (section) {
-      sections.push({
-        id: id,
-        section: section,
-        link: link
-      });
+      sections.push({ id, section, link });
     }
 
   });
@@ -53,10 +89,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const target = link.getAttribute("href");
 
-      if (target === `#${currentId}`) {
+      if (target === "#" + currentId) {
+
         link.classList.add("toc-active");
+
+        /* -------------------------------------------------
+           Auto scroll TOC to keep active item visible
+           ------------------------------------------------- */
+
+        link.scrollIntoView({
+          block: "center",
+          behavior: "smooth"
+        });
+
       } else {
+
         link.classList.remove("toc-active");
+
       }
 
     });
@@ -67,9 +116,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   updateActiveSection();
 
-
   /* ---------------------------------------------------------
-     Mobile Collapse / Expand (≤1023px)
+     Mobile Expand / Collapse
      --------------------------------------------------------- */
 
   function isMobile() {
@@ -84,8 +132,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const parentLi = link.parentElement;
       if (!parentLi) return;
-
-      /* Close other open sections */
 
       toc.querySelectorAll("li.toc-open").forEach(li => {
         if (li !== parentLi) li.classList.remove("toc-open");
