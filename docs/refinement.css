@@ -235,13 +235,15 @@ h3:hover .section-anchor{
   align-self:flex-start;
 }
 
+/* ===== FIXED STICKY TOC ===== */
+
 .spec-toc{
   position:sticky;
-  top:calc(64px + 24px);
+  top:90px;
   width:260px;
   font-size:.9rem;
   max-height:calc(100vh - 120px);
-  overflow-y:auto;
+  overflow:auto;
 }
 
 .toc-title{
@@ -345,9 +347,9 @@ h3:hover .section-anchor{
   content:counter(section) "." counter(subsection) " ";
 }
 
-/* ============================= */
-/* Foundation Structure Layout   */
-/* ============================= */
+/* =============================
+   Foundation Structure Layout
+   ============================= */
 
 #foundation-structure ul{
   list-style:none;
@@ -365,9 +367,9 @@ h3:hover .section-anchor{
   font-weight:600;
 }
 
-/* ============================= */
-/* Homepage Authority Refinement */
-/* ============================= */
+/* =============================
+   Homepage Authority Refinement
+   ============================= */
 
 #standards-authority{
   border-left:4px solid var(--color-border-subtle);
@@ -425,8 +427,10 @@ Specification anchor offset
 
 .spec-content h2,
 .spec-content h3{
-  scroll-margin-top:80px;
+  scroll-margin-top:90px;
 }
+
+/* Smooth scrolling */
 
 html{
   scroll-behavior:smooth;

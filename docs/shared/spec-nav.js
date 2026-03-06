@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const rect = section.getBoundingClientRect();
 
-      if (rect.top <= 140 && rect.bottom > 140) {
+      if (rect.top <= 120 && rect.bottom > 120) {
         newActive = id;
       }
 
@@ -98,10 +98,6 @@ document.addEventListener("DOMContentLoaded", function () {
       if (target === "#" + currentActive) {
 
         link.classList.add("toc-active");
-
-        /* -------------------------------------------------
-           Auto scroll TOC to keep active item visible
-           ------------------------------------------------- */
 
         link.scrollIntoView({
           block: "nearest"
