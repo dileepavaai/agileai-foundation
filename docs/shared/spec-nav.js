@@ -71,25 +71,31 @@ document.addEventListener("DOMContentLoaded", function () {
      Scroll Spy — Highlight Active Section
      --------------------------------------------------------- */
 
+  let currentActive = null;
+
   function updateActiveSection() {
 
-    let currentId = null;
+    let newActive = null;
 
     sections.forEach(({ id, section }) => {
 
       const rect = section.getBoundingClientRect();
 
       if (rect.top <= 140 && rect.bottom > 140) {
-        currentId = id;
+        newActive = id;
       }
 
     });
+
+    if (newActive === currentActive) return;
+
+    currentActive = newActive;
 
     tocLinks.forEach(link => {
 
       const target = link.getAttribute("href");
 
-      if (target === "#" + currentId) {
+      if (target === "#" + currentActive) {
 
         link.classList.add("toc-active");
 
@@ -98,8 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
            ------------------------------------------------- */
 
         link.scrollIntoView({
-          block: "center",
-          behavior: "smooth"
+          block: "nearest"
         });
 
       } else {
