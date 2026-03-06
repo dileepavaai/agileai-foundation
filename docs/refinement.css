@@ -271,8 +271,6 @@ h3:hover .section-anchor{
   text-decoration:underline;
 }
 
-/* Active section */
-
 .spec-toc a.toc-active{
   font-weight:600;
   color:var(--color-text-primary);
@@ -431,4 +429,17 @@ margin-bottom:4px;
 .header-title{
 margin-top:6px;
 margin-bottom:12px;
+}
+
+/* =====================================
+Specification anchor offset
+===================================== */
+
+.spec-content h2,
+.spec-content h3 {
+  scroll-margin-top: 120px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
