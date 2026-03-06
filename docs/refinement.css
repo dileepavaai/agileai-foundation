@@ -113,21 +113,6 @@
 }
 
 /* =========================================================
-   Artifact Block
-   ========================================================= */
-
-#official-artifact{
-  margin-top:4rem;
-  padding:2rem;
-  border:1px solid var(--color-border-subtle);
-  background:var(--color-bg-primary);
-}
-
-#official-artifact h2{
-  margin-top:0;
-}
-
-/* =========================================================
    Sticky Header Offset
    ========================================================= */
 
@@ -200,26 +185,6 @@ body{
 }
 
 /* =========================================================
-   Anchor Links
-   ========================================================= */
-
-.section-anchor{
-  margin-left:.4rem;
-  text-decoration:none;
-  opacity:0;
-  font-size:.9rem;
-}
-
-h2:hover .section-anchor,
-h3:hover .section-anchor{
-  opacity:.6;
-}
-
-.section-anchor:hover{
-  opacity:1;
-}
-
-/* =========================================================
    Specification Layout
    ========================================================= */
 
@@ -234,8 +199,6 @@ h3:hover .section-anchor{
   flex-shrink:0;
   align-self:flex-start;
 }
-
-/* ===== FIXED STICKY TOC ===== */
 
 .spec-toc{
   position:sticky;
@@ -347,121 +310,64 @@ h3:hover .section-anchor{
   content:counter(section) "." counter(subsection) " ";
 }
 
-/* =============================
-   Foundation Structure Layout
-   ============================= */
-
-#foundation-structure ul{
-  list-style:none;
-  padding:0;
-  margin-top:1.5rem;
-}
-
-#foundation-structure li{
-  border-left:3px solid var(--color-border-subtle);
-  padding-left:1rem;
-  margin-bottom:1.25rem;
-}
-
-#foundation-structure strong{
-  font-weight:600;
-}
-
-/* =============================
-   Homepage Authority Refinement
-   ============================= */
-
-#standards-authority{
-  border-left:4px solid var(--color-border-subtle);
-  padding-left:1rem;
-  margin:2rem 0;
-}
-
-#canonical-reference{
-  border-top:1px solid var(--color-border-subtle);
-  margin-top:2rem;
-  padding-top:1rem;
-}
-
-/* Institutional heading authority refinement */
+/* =========================================================
+   Institutional Heading Refinement
+   ========================================================= */
 
 #institutional-identity h1{
-font-size:3rem;
-letter-spacing:-0.5px;
-margin-bottom:0.6rem;
+  font-size:3rem;
+  letter-spacing:-0.5px;
+  margin-bottom:0.6rem;
 }
 
 .identity-line{
-text-transform:uppercase;
-letter-spacing:1.6px;
-opacity:0.75;
-}
-
-.std-badge{
-background:var(--color-border-subtle);
-color:var(--color-text-primary);
-padding:2px 8px;
-border-radius:4px;
-font-size:.85em;
-margin-left:6px;
+  text-transform:uppercase;
+  letter-spacing:1.6px;
+  opacity:0.75;
 }
 
 .doc-type{
-font-size:.75rem;
-letter-spacing:.08em;
-opacity:.7;
-margin-bottom:6px;
+  font-size:.75rem;
+  letter-spacing:.08em;
+  opacity:.7;
+  margin-bottom:6px;
 }
 
 .header-tight{
-margin-bottom:4px;
+  margin-bottom:4px;
 }
 
 .header-title{
-margin-top:6px;
-margin-bottom:12px;
-}
-
-/* =====================================
-Specification anchor offset
-===================================== */
-
-.spec-content h2,
-.spec-content h3{
-  scroll-margin-top:90px;
-}
-
-/* Smooth scrolling */
-
-html{
-  scroll-behavior:smooth;
+  margin-top:6px;
+  margin-bottom:12px;
 }
 
 /* =========================================================
-   Header Controls Layout Fix
+   Version Badge — Specification Style
+   ========================================================= */
+
+.std-badge{
+  background:var(--color-border-subtle);
+  color:var(--color-text-secondary);
+
+  font-size:.75rem;
+  font-weight:600;
+  letter-spacing:.04em;
+
+  padding:1px 6px;
+  border-radius:4px;
+
+  vertical-align:middle;
+}
+
+/* =========================================================
+   Theme Toggle
    ========================================================= */
 
 .header-controls{
   display:flex;
   align-items:center;
 }
-
-.theme-toggle{
-  margin-left:18px;
-  background:none;
-  border:none;
-  font-size:.95rem;
-  cursor:pointer;
-  color:var(--color-text-secondary);
-}
-
-.theme-toggle:hover{
-  color:var(--color-text-primary);
-}
-
-/* =========================================================
-   Theme Toggle — Documentation Style
-   ========================================================= */
 
 .theme-toggle{
   width:36px;
@@ -486,30 +392,12 @@ html{
   border-color:var(--color-text-secondary);
 }
 
-/* icon size */
-
 .theme-toggle span{
   font-size:1rem;
   line-height:1;
 }
 
-/* icon switching */
-
-.theme-icon-dark{
-  display:none;
-}
-
-html[data-theme="dark"] .theme-icon-light{
-  display:none;
-}
-
-html[data-theme="dark"] .theme-icon-dark{
-  display:block;
-}
-
-/* =========================================================
-   Theme Toggle Icon Switching
-   ========================================================= */
+/* Theme icon switching */
 
 .theme-icon-light{
   display:inline;
@@ -528,53 +416,17 @@ html[data-theme="dark"] .theme-icon-dark{
 }
 
 /* =========================================================
-   Version Badge (Theme Safe)
+   Header polish
    ========================================================= */
-
-.version-badge,
-.std-badge {
-  background: var(--color-border-subtle);
-  color: var(--color-text-primary);
-  padding: 2px 8px;
-  border-radius: 6px;
-  font-size: .82em;
-  margin-left: 6px;
-  font-weight: 500;
-}
-
-/* =========================================================
-   Version Badge — Theme Safe Override
-   ========================================================= */
-
-.std-badge{
-  background: var(--color-border-subtle) !important;
-  color: var(--color-text-primary) !important;
-  padding: 2px 8px;
-  border-radius: 6px;
-  font-size: .82em;
-  margin-left: 6px;
-  font-weight: 500;
-}
-
-/* =========================================================
-   Specification Version Marker (W3C-style)
-   ========================================================= */
-
-.std-badge{
-  background: var(--color-border-subtle);
-  color: var(--color-text-secondary);
-
-  font-size: .75rem;
-  font-weight: 600;
-  letter-spacing: .04em;
-
-  padding: 1px 6px;
-  border-radius: 4px;
-
-  vertical-align: middle;
-}
 
 .site-header{
-  border-bottom: 1px solid var(--color-border-subtle);
-  backdrop-filter: blur(6px);
+  backdrop-filter:blur(6px);
+}
+
+/* =========================================================
+   Smooth Scrolling
+   ========================================================= */
+
+html{
+  scroll-behavior:smooth;
 }
