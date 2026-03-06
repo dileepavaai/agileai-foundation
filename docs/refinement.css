@@ -541,3 +541,17 @@ html[data-theme="dark"] .theme-icon-dark{
   margin-left: 6px;
   font-weight: 500;
 }
+
+/* =========================================================
+   Version Badge — Theme Safe Override
+   ========================================================= */
+
+.std-badge{
+  background: var(--color-border-subtle) !important;
+  color: var(--color-text-primary) !important;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: .82em;
+  margin-left: 6px;
+  font-weight: 500;
+}
