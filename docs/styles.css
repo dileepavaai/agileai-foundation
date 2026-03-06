@@ -404,3 +404,34 @@ html[data-theme="dark"] .diagram-dark {
     display: block;
   }
 }
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.theme-toggle:hover {
+  color: var(--color-text-primary);
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+}
+
+.theme-toggle:hover {
+  color: var(--color-text-primary);
+}
