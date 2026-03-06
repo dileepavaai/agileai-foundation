@@ -476,15 +476,3 @@ html[data-theme="dark"] .diagram-dark {
   padding: 1rem 1.5rem;
 }
 
-html, body {
-  height: 100%;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 1;
-}
