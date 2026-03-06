@@ -526,3 +526,18 @@ html[data-theme="dark"] .theme-icon-light{
 html[data-theme="dark"] .theme-icon-dark{
   display:inline;
 }
+
+/* =========================================================
+   Version Badge (Theme Safe)
+   ========================================================= */
+
+.version-badge,
+.std-badge {
+  background: var(--color-border-subtle);
+  color: var(--color-text-primary);
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: .82em;
+  margin-left: 6px;
+  font-weight: 500;
+}
