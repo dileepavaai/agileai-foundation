@@ -1,165 +1,241 @@
 /* =========================================================
    AGILE AI FOUNDATION
-   Institutional CSS Token Contract — v1.8
+   Institutional CSS Token Contract — v1.10
    Unified Adaptive Token Model
    Canonical Surface Implementation
-   Governance Enhancements — Scoped & Non-Destructive
-   Diagram Logic — Deterministic & Cascade-Safe
    ========================================================= */
 
 
 /* =========================================================
-   Root Design Tokens — Light (Default Authority Surface)
+   Root Design Tokens — Light
    ========================================================= */
 
-:root {
+:root{
 
-  --color-bg-primary: #ffffff;
-  --color-text-primary: #111111;
-  --color-text-secondary: #555555;
+--color-bg-primary:#ffffff;
+--color-text-primary:#111111;
+--color-text-secondary:#555555;
 
-  --color-border-subtle: #dddddd;
-  --color-border-footer: #eeeeee;
+--color-border-subtle:#dddddd;
+--color-border-footer:#eeeeee;
 
-  --color-link: #111111;
+--color-link:#111111;
 
-  --color-watermark: rgba(0, 0, 0, 0.035);
-  --color-seal-stroke: rgba(0, 0, 0, 0.55);
-  --color-seal-fill: rgba(0, 0, 0, 0.85);
-  --seal-opacity: 0.85;
-  --color-authority-muted: rgba(0, 0, 0, 0.6);
+--color-watermark:rgba(0,0,0,0.035);
+--color-seal-stroke:rgba(0,0,0,0.55);
+--color-seal-fill:rgba(0,0,0,0.85);
 
-  --font-sans: system-ui, -apple-system, BlinkMacSystemFont,
-               "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
-               "Helvetica Neue", Arial, sans-serif;
+--seal-opacity:.85;
 
-  --line-height-base: 1.6;
+--color-authority-muted:rgba(0,0,0,0.6);
+
+--font-sans:system-ui,-apple-system,BlinkMacSystemFont,
+"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,
+"Helvetica Neue",Arial,sans-serif;
+
+--line-height-base:1.6;
+
 }
 
 
 /* =========================================================
-   Explicit Dark Theme Override
+   Explicit Dark Theme
    ========================================================= */
 
-:root[data-theme="dark"] {
+:root[data-theme="dark"]{
 
-  --color-bg-primary: #0f1115;
-  --color-text-primary: #f2f2f2;
-  --color-text-secondary: #c9c9c9;
-  --color-border-subtle: #2a2f3a;
-  --color-border-footer: #2a2f3a;
-  --color-link: #ffffff;
+--color-bg-primary:#0f1115;
+--color-text-primary:#f2f2f2;
+--color-text-secondary:#c9c9c9;
 
-  --color-watermark: rgba(255, 255, 255, 0.045);
-  --color-seal-stroke: rgba(255, 255, 255, 0.65);
-  --color-seal-fill: rgba(255, 255, 255, 0.9);
-  --seal-opacity: 0.95;
-  --color-authority-muted: rgba(255, 255, 255, 0.75);
+--color-border-subtle:#2a2f3a;
+--color-border-footer:#2a2f3a;
+
+--color-link:#ffffff;
+
+--color-watermark:rgba(255,255,255,0.045);
+
+--color-seal-stroke:rgba(255,255,255,0.65);
+--color-seal-fill:rgba(255,255,255,0.9);
+
+--seal-opacity:.95;
+
+--color-authority-muted:rgba(255,255,255,0.75);
+
 }
 
 
 /* =========================================================
-   System Dark Mode (When No Explicit Theme)
+   System Dark Mode
    ========================================================= */
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) {
+@media(prefers-color-scheme:dark){
 
-    --color-bg-primary: #0f1115;
-    --color-text-primary: #f2f2f2;
-    --color-text-secondary: #c9c9c9;
-    --color-border-subtle: #2a2f3a;
-    --color-border-footer: #2a2f3a;
-    --color-link: #ffffff;
+:root:not([data-theme]){
 
-    --color-watermark: rgba(255, 255, 255, 0.045);
-    --color-seal-stroke: rgba(255, 255, 255, 0.65);
-    --color-seal-fill: rgba(255, 255, 255, 0.9);
-    --seal-opacity: 0.95;
-    --color-authority-muted: rgba(255, 255, 255, 0.75);
-  }
+--color-bg-primary:#0f1115;
+--color-text-primary:#f2f2f2;
+--color-text-secondary:#c9c9c9;
+
+--color-border-subtle:#2a2f3a;
+--color-border-footer:#2a2f3a;
+
+--color-link:#ffffff;
+
+--color-watermark:rgba(255,255,255,0.045);
+
+--color-seal-stroke:rgba(255,255,255,0.65);
+--color-seal-fill:rgba(255,255,255,0.9);
+
+--seal-opacity:.95;
+
+--color-authority-muted:rgba(255,255,255,0.75);
+
+}
+
 }
 
 
 /* =========================================================
-   Base Layout
+   Page Layout
    ========================================================= */
 
-body {
-  margin: 0;
-  font-family: var(--font-sans);
-  line-height: var(--line-height-base);
-  color: var(--color-text-primary);
-  background: var(--color-bg-primary);
-  transition: background 0.25s ease, color 0.25s ease;
-  position: relative;
+html,body{
+height:100%;
+}
+
+body{
+
+margin:0;
+
+font-family:var(--font-sans);
+
+line-height:var(--line-height-base);
+
+color:var(--color-text-primary);
+
+background:var(--color-bg-primary);
+
+display:flex;
+flex-direction:column;
+
+transition:background .25s ease,color .25s ease;
+
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+
+position:relative;
+
+}
+
+main{
+flex:1;
 }
 
 
 /* =========================================================
-   Root Canonical Watermark
+   Canonical Watermark
    ========================================================= */
 
-body::before {
-  content: "Agile AI Foundation · Canonical Definition";
-  position: fixed;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 3.5rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  color: var(--color-watermark);
-  white-space: nowrap;
-  pointer-events: none;
-  z-index: 0;
-  text-align: center;
+body::before{
+
+content:"Agile AI Foundation · Canonical Definition";
+
+position:fixed;
+
+top:45%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+font-size:3.5rem;
+
+font-weight:700;
+
+letter-spacing:.15em;
+
+color:var(--color-watermark);
+
+white-space:nowrap;
+
+pointer-events:none;
+
+z-index:0;
+
+text-align:center;
+
 }
 
 
 /* =========================================================
-   Container
+   Container — Reading Surface (Documentation Style)
    ========================================================= */
 
-.container {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 4rem 1.5rem;
-  position: relative;
-  z-index: 1;
+.container{
+
+max-width:860px;
+
+margin:0 auto;
+
+padding:4rem 1.5rem;
+
+position:relative;
+
+z-index:1;
+
+background:var(--color-bg-primary);
+
+border:1px solid var(--color-border-subtle);
+
+border-radius:6px;
+
 }
 
 
 /* =========================================================
-   Typography Hierarchy
+   Typography
    ========================================================= */
 
-h1 {
-  font-size: 2.6rem;
-  margin-bottom: 0.25rem;
-  font-weight: 600;
+h1{
+
+font-size:2.6rem;
+
+margin-bottom:.25rem;
+
+font-weight:600;
+
 }
 
-h2 {
-  margin-top: 4rem;
-  font-size: 1.8rem;
-  border-bottom: 1px solid var(--color-border-subtle);
-  padding-bottom: 0.5rem;
-  font-weight: 600;
+h2{
+
+margin-top:4rem;
+
+font-size:1.8rem;
+
+border-bottom:1px solid var(--color-border-subtle);
+
+padding-bottom:.5rem;
+
+font-weight:600;
+
 }
 
-h3 {
-  margin-top: 2rem;
-  font-size: 1.2rem;
-  font-weight: 600;
+h3{
+
+margin-top:2rem;
+
+font-size:1.2rem;
+
+font-weight:600;
+
 }
 
-p {
-  margin-top: 0.75rem;
+p{
+margin-top:.75rem;
 }
 
-article {
-  margin-top: 1.5rem;
+article{
+margin-top:1.5rem;
 }
 
 
@@ -167,43 +243,44 @@ article {
    Identity Layer
    ========================================================= */
 
-.identity-line {
-  font-size: 0.8rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--color-text-secondary);
-  margin-bottom: 1rem;
+.identity-line{
+
+font-size:.8rem;
+
+letter-spacing:.06em;
+
+text-transform:uppercase;
+
+color:var(--color-text-secondary);
+
+margin-bottom:1rem;
+
 }
 
-.version-badge {
-  font-size: 0.9rem;
-  color: var(--color-text-secondary);
-  margin-bottom: 1rem;
+.version-badge{
+
+font-size:.9rem;
+
+color:var(--color-text-secondary;
+
+margin-bottom:1rem;
+
 }
 
-.authority-micro {
-  font-size: 0.85rem;
-  color: var(--color-authority-muted);
-  line-height: 1.5;
-  margin-bottom: 2rem;
+.authority-micro{
+
+font-size:.85rem;
+
+color:var(--color-authority-muted);
+
+line-height:1.5;
+
+margin-bottom:2rem;
+
 }
 
-#intro p {
-  max-width: 75ch;
-}
-
-
-/* =========================================================
-   Footer
-   ========================================================= */
-
-footer {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--color-border-footer);
-  font-size: 0.9rem;
-  color: var(--color-text-secondary);
-  line-height: 1.6;
+#intro p{
+max-width:75ch;
 }
 
 
@@ -211,57 +288,70 @@ footer {
    Links
    ========================================================= */
 
-a {
-  color: var(--color-link);
-  text-decoration: underline;
+a{
+
+color:var(--color-link);
+
+text-decoration:underline;
+
 }
 
-a:hover {
-  text-decoration: none;
-}
+a:hover{
 
+text-decoration:none;
 
-/* =========================================================
-   Theme Switcher
-   ========================================================= */
-
-.theme-switcher {
-  font-size: 0.85rem;
-  color: var(--color-text-secondary);
-  margin-bottom: 2rem;
-  letter-spacing: 0.02em;
-}
-
-.theme-switcher a {
-  color: var(--color-text-secondary);
-  text-decoration: none;
-  margin: 0 0.25rem;
-}
-
-.theme-switcher a:hover {
-  text-decoration: underline;
 }
 
 
 /* =========================================================
-   Authority Breadcrumb
+   Footer
    ========================================================= */
 
-.authority-breadcrumb {
-  font-size: 0.85rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  margin-bottom: 2rem;
-  opacity: 0.7;
+footer{
+
+margin-top:3rem;
+
+padding-top:2rem;
+
+border-top:1px solid var(--color-border-footer);
+
+font-size:.9rem;
+
+color:var(--color-text-secondary);
+
+line-height:1.6;
+
 }
 
-.authority-breadcrumb a {
-  text-decoration: none;
-  font-weight: 600;
+
+/* =========================================================
+   Breadcrumb
+   ========================================================= */
+
+.authority-breadcrumb{
+
+font-size:.85rem;
+
+letter-spacing:.04em;
+
+text-transform:uppercase;
+
+margin-bottom:2rem;
+
+opacity:.7;
+
 }
 
-.authority-breadcrumb span {
-  margin: 0 0.5rem;
+.authority-breadcrumb a{
+
+text-decoration:none;
+
+font-weight:600;
+
+}
+
+.authority-breadcrumb span{
+margin:0 .5rem;
 }
 
 
@@ -269,209 +359,245 @@ a:hover {
    Governance Enhancements
    ========================================================= */
 
-.governance-page h1 {
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-top: 1rem;
+.governance-page h1{
+
+font-weight:700;
+
+letter-spacing:-.02em;
+
+margin-top:1rem;
+
 }
 
-.governance-page h2 {
-  margin-top: 3rem;
+.governance-page h2{
+margin-top:3rem;
 }
 
-.governance-page h3 {
-  opacity: 0.9;
+.governance-page h3{
+opacity:.9;
 }
 
-.governance-page::before {
-  content: "CONSTITUTIONAL GOVERNANCE";
-  position: fixed;
-  top: 40%;
-  right: -120px;
-  transform: rotate(-90deg);
-  font-size: 4rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  color: var(--color-watermark);
-  pointer-events: none;
-  z-index: 0;
+.governance-page::before{
+
+content:"CONSTITUTIONAL GOVERNANCE";
+
+position:fixed;
+
+top:40%;
+
+right:-120px;
+
+transform:rotate(-90deg);
+
+font-size:4rem;
+
+font-weight:700;
+
+letter-spacing:.2em;
+
+color:var(--color-watermark);
+
+pointer-events:none;
+
+z-index:0;
+
 }
 
-.governance-page main {
-  position: relative;
-  z-index: 1;
+.governance-page main{
+
+position:relative;
+
+z-index:1;
+
 }
 
-@media (max-width: 768px) {
-  .governance-page::before {
-    font-size: 2rem;
-    right: -80px;
-  }
+@media(max-width:768px){
+
+.governance-page::before{
+
+font-size:2rem;
+
+right:-80px;
+
 }
 
-.governance-seal {
-  width: 140px;
-  margin: 2rem auto 0;
-  opacity: var(--seal-opacity);
-  color: var(--color-text-primary);
 }
 
-.governance-seal svg {
-  width: 100%;
-  height: auto;
-  display: block;
-  stroke: var(--color-seal-stroke);
-  fill: var(--color-seal-fill);
+.governance-seal{
+
+width:140px;
+
+margin:2rem auto 0;
+
+opacity:var(--seal-opacity);
+
+color:var(--color-text-primary);
+
 }
 
+.governance-seal svg{
 
-/* =========================================================
-   Print / PDF Styles
-   ========================================================= */
+width:100%;
 
-@media print {
+height:auto;
 
-  * {
-    background: transparent !important;
-    color: #000 !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
+display:block;
 
-  html, body {
-    font-family: "Georgia", "Times New Roman", serif;
-    font-size: 11pt;
-    line-height: 1.45;
-  }
+stroke:var(--color-seal-stroke);
 
-  @page {
-    size: A4;
-    margin: 2.5cm;
-  }
+fill:var(--color-seal-fill);
 
-  h1, h2, h3 {
-    page-break-after: avoid;
-    page-break-inside: avoid;
-  }
-
-  section, article {
-    page-break-inside: avoid;
-  }
-
-  nav,
-  .no-print {
-    display: none !important;
-  }
 }
 
-
-/* =========================================================
-   Canonical Diagram Theme Control
-   Deterministic — Explicit State Control
-   ========================================================= */
-
-/* Base sizing */
-.diagram-container img {
-  width: 100%;
-  height: auto;
-}
-
-/* Explicit base state (no browser defaults) */
-.diagram-light,
-.diagram-dark {
-  display: none;
-}
-
-/* Light mode */
-html[data-theme="light"] .diagram-light {
-  display: block;
-}
-
-/* Dark mode */
-html[data-theme="dark"] .diagram-dark {
-  display: block;
-}
-
-/* System mode */
-@media (prefers-color-scheme: dark) {
-  html[data-theme="system"] .diagram-dark {
-    display: block;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  html[data-theme="system"] .diagram-light {
-    display: block;
-  }
-}
-
-.theme-toggle {
-  background: none;
-  border: none;
-  font-size: 1rem;
-  cursor: pointer;
-  margin-left: 0.75rem;
-  color: var(--color-text-secondary);
-}
-
-.theme-toggle:hover {
-  color: var(--color-text-primary);
-}
-
-.header-controls {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.theme-toggle {
-  background: none;
-  border: none;
-  font-size: 1rem;
-  cursor: pointer;
-  color: var(--color-text-secondary);
-}
-
-.theme-toggle:hover {
-  color: var(--color-text-primary);
-}
 
 /* =========================================================
    Header Layout
    ========================================================= */
 
-.site-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.site-header{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+max-width:1100px;
+
+margin:0 auto;
+
+padding:1rem 1.5rem;
+
 }
 
-.header-controls {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
+.site-nav{
+
+display:flex;
+
+align-items:center;
+
+gap:1.25rem;
+
 }
 
-.site-nav {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
+.header-controls{
+
+display:flex;
+
+align-items:center;
+
+gap:1rem;
+
 }
 
-.theme-toggle {
-  background: none;
-  border: none;
-  font-size: 1rem;
-  cursor: pointer;
-  color: var(--color-text-secondary);
+
+/* =========================================================
+   Theme Toggle
+   ========================================================= */
+
+.theme-toggle{
+
+background:none;
+
+border:none;
+
+font-size:1rem;
+
+cursor:pointer;
+
+color:var(--color-text-secondary);
+
 }
 
-.theme-toggle:hover {
-  color: var(--color-text-primary);
+.theme-toggle:hover{
+
+color:var(--color-text-primary);
+
 }
 
-.site-header {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 1rem 1.5rem;
+
+/* =========================================================
+   Diagram Theme Logic
+   ========================================================= */
+
+.diagram-container img{
+
+width:100%;
+
+height:auto;
+
+}
+
+.diagram-light,
+.diagram-dark{
+display:none;
+}
+
+html[data-theme="light"] .diagram-light{
+display:block;
+}
+
+html[data-theme="dark"] .diagram-dark{
+display:block;
+}
+
+@media(prefers-color-scheme:dark){
+
+html[data-theme="system"] .diagram-dark{
+display:block;
+}
+
+}
+
+@media(prefers-color-scheme:light){
+
+html[data-theme="system"] .diagram-light{
+display:block;
+}
+
+}
+
+
+/* =========================================================
+   Print Styles
+   ========================================================= */
+
+@media print{
+
+*{
+background:transparent !important;
+color:#000 !important;
+box-shadow:none !important;
+}
+
+html,body{
+
+font-family:"Georgia","Times New Roman",serif;
+
+font-size:11pt;
+
+line-height:1.45;
+
+}
+
+@page{
+
+size:A4;
+
+margin:2.5cm;
+
+}
+
+h1,h2,h3{
+page-break-after:avoid;
+}
+
+section,article{
+page-break-inside:avoid;
+}
+
+nav,.no-print{
+display:none !important;
+}
+
 }
