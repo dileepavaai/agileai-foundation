@@ -349,62 +349,50 @@ h3:hover .section-anchor{
 /* Foundation Structure Layout   */
 /* ============================= */
 
-#foundation-structure ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 1.5rem;
+#foundation-structure ul{
+  list-style:none;
+  padding:0;
+  margin-top:1.5rem;
 }
 
-#foundation-structure li {
-  border-left: 3px solid var(--color-border-subtle);
-  padding-left: 1rem;
-  margin-bottom: 1.25rem;
+#foundation-structure li{
+  border-left:3px solid var(--color-border-subtle);
+  padding-left:1rem;
+  margin-bottom:1.25rem;
 }
 
-#foundation-structure strong {
-  font-weight: 600;
+#foundation-structure strong{
+  font-weight:600;
 }
 
 /* ============================= */
 /* Homepage Authority Refinement */
 /* ============================= */
 
-#standards-authority {
-  border-left: 4px solid var(--color-border-subtle);
-  padding-left: 1rem;
-  margin: 2rem 0;
+#standards-authority{
+  border-left:4px solid var(--color-border-subtle);
+  padding-left:1rem;
+  margin:2rem 0;
 }
 
-#foundation-structure ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 1rem;
-}
-
-#foundation-structure li {
-  border-left: 3px solid var(--color-border-subtle);
-  padding-left: 1rem;
-  margin-bottom: 1.25rem;
-}
-
-#canonical-reference {
-  border-top: 1px solid var(--color-border-subtle);
-  margin-top: 2rem;
-  padding-top: 1rem;
+#canonical-reference{
+  border-top:1px solid var(--color-border-subtle);
+  margin-top:2rem;
+  padding-top:1rem;
 }
 
 /* Institutional heading authority refinement */
 
-#institutional-identity h1 {
-font-size: 3rem;
-letter-spacing: -0.5px;
-margin-bottom: 0.6rem;
+#institutional-identity h1{
+font-size:3rem;
+letter-spacing:-0.5px;
+margin-bottom:0.6rem;
 }
 
-.identity-line {
-text-transform: uppercase;
-letter-spacing: 1.6px;
-opacity: 0.75;
+.identity-line{
+text-transform:uppercase;
+letter-spacing:1.6px;
+opacity:0.75;
 }
 
 .std-badge{
@@ -436,10 +424,10 @@ Specification anchor offset
 ===================================== */
 
 .spec-content h2,
-.spec-content h3 {
-  scroll-margin-top: 120px;
+.spec-content h3{
+  scroll-margin-top:80px;
 }
 
-html {
-  scroll-behavior: smooth;
+html{
+  scroll-behavior:smooth;
 }
