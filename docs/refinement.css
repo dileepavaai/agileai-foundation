@@ -408,3 +408,27 @@ text-transform: uppercase;
 letter-spacing: 1.6px;
 opacity: 0.75;
 }
+
+.std-badge{
+background:#1e293b;
+padding:2px 8px;
+border-radius:4px;
+font-size:.85em;
+margin-left:6px;
+}
+
+.doc-type{
+font-size:.75rem;
+letter-spacing:.08em;
+opacity:.7;
+margin-bottom:6px;
+}
+
+.header-tight{
+margin-bottom:4px;
+}
+
+.header-title{
+margin-top:6px;
+margin-bottom:12px;
+}
