@@ -398,7 +398,8 @@ opacity:0.75;
 }
 
 .std-badge{
-background:#1e293b;
+background:var(--color-border-subtle);
+color:var(--color-text-primary);
 padding:2px 8px;
 border-radius:4px;
 font-size:.85em;
