@@ -555,3 +555,26 @@ html[data-theme="dark"] .theme-icon-dark{
   margin-left: 6px;
   font-weight: 500;
 }
+
+/* =========================================================
+   Specification Version Marker (W3C-style)
+   ========================================================= */
+
+.std-badge{
+  background: var(--color-border-subtle);
+  color: var(--color-text-secondary);
+
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+
+  padding: 1px 6px;
+  border-radius: 4px;
+
+  vertical-align: middle;
+}
+
+.site-header{
+  border-bottom: 1px solid var(--color-border-subtle);
+  backdrop-filter: blur(6px);
+}
