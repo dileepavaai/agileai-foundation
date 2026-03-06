@@ -435,3 +435,25 @@ Specification anchor offset
 html{
   scroll-behavior:smooth;
 }
+
+/* =========================================================
+   Header Controls Layout Fix
+   ========================================================= */
+
+.header-controls{
+  display:flex;
+  align-items:center;
+}
+
+.theme-toggle{
+  margin-left:18px;
+  background:none;
+  border:none;
+  font-size:.95rem;
+  cursor:pointer;
+  color:var(--color-text-secondary);
+}
+
+.theme-toggle:hover{
+  color:var(--color-text-primary);
+}
