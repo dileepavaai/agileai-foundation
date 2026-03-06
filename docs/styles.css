@@ -1,6 +1,6 @@
 /* =========================================================
    AGILE AI FOUNDATION
-   Institutional CSS Token Contract — v1.11.1
+   Institutional CSS Token Contract — v1.11
    Unified Adaptive Token Model
    Canonical Surface Implementation
    ========================================================= */
@@ -172,8 +172,7 @@ text-align:center;
 max-width:860px;
 margin:0 auto;
 
-/* FIXED FOOTER GAP */
-padding:3rem 1.5rem 1rem 1.5rem;
+padding:4rem 1.5rem;
 
 position:relative;
 z-index:1;
@@ -219,24 +218,38 @@ margin-top:1.5rem;
    ========================================================= */
 
 .identity-line{
+
 font-size:.8rem;
 letter-spacing:.06em;
+
 text-transform:uppercase;
+
 color:var(--color-text-secondary);
+
 margin-bottom:1rem;
+
 }
 
 .version-badge{
+
 font-size:.9rem;
+
 color:var(--color-text-secondary);
+
 margin-bottom:1rem;
+
 }
 
 .authority-micro{
+
 font-size:.85rem;
+
 color:var(--color-authority-muted);
+
 line-height:1.5;
+
 margin-bottom:2rem;
+
 }
 
 #intro p{
