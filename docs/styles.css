@@ -435,3 +435,43 @@ html[data-theme="dark"] .diagram-dark {
 .theme-toggle:hover {
   color: var(--color-text-primary);
 }
+
+/* =========================================================
+   Header Layout
+   ========================================================= */
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+}
+
+.theme-toggle:hover {
+  color: var(--color-text-primary);
+}
+
+.site-header {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+}
