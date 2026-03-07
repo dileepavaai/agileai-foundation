@@ -1,6 +1,6 @@
 /* =========================================================
    AGILE AI FOUNDATION
-   Institutional CSS Token Contract — v1.11.1
+   Institutional CSS Token Contract — v1.10
    Unified Adaptive Token Model
    Canonical Surface Implementation
    ========================================================= */
@@ -110,9 +110,11 @@ body{
 margin:0;
 
 font-family:var(--font-sans);
+
 line-height:var(--line-height-base);
 
 color:var(--color-text-primary);
+
 background:var(--color-bg-primary);
 
 display:flex;
@@ -141,6 +143,7 @@ body::before{
 content:"Agile AI Foundation · Canonical Definition";
 
 position:fixed;
+
 top:45%;
 left:50%;
 
@@ -156,6 +159,7 @@ color:var(--color-watermark);
 white-space:nowrap;
 
 pointer-events:none;
+
 z-index:0;
 
 text-align:center;
@@ -170,12 +174,13 @@ text-align:center;
 .container{
 
 max-width:860px;
+
 margin:0 auto;
 
-/* FIXED FOOTER GAP */
-padding:3rem 1.5rem 1rem 1.5rem;
+padding:4rem 1.5rem;
 
 position:relative;
+
 z-index:1;
 
 }
@@ -186,23 +191,36 @@ z-index:1;
    ========================================================= */
 
 h1{
+
 font-size:2.6rem;
 margin-bottom:.25rem;
+
 font-weight:600;
+
 }
 
 h2{
+
 margin-top:4rem;
+
 font-size:1.8rem;
+
 border-bottom:1px solid var(--color-border-subtle);
+
 padding-bottom:.5rem;
+
 font-weight:600;
+
 }
 
 h3{
+
 margin-top:2rem;
+
 font-size:1.2rem;
+
 font-weight:600;
+
 }
 
 p{
@@ -219,24 +237,39 @@ margin-top:1.5rem;
    ========================================================= */
 
 .identity-line{
+
 font-size:.8rem;
+
 letter-spacing:.06em;
+
 text-transform:uppercase;
+
 color:var(--color-text-secondary);
+
 margin-bottom:1rem;
+
 }
 
 .version-badge{
+
 font-size:.9rem;
+
 color:var(--color-text-secondary);
+
 margin-bottom:1rem;
+
 }
 
 .authority-micro{
+
 font-size:.85rem;
+
 color:var(--color-authority-muted);
+
 line-height:1.5;
+
 margin-bottom:2rem;
+
 }
 
 #intro p{
@@ -249,8 +282,11 @@ max-width:75ch;
    ========================================================= */
 
 a{
+
 color:var(--color-link);
+
 text-decoration:underline;
+
 }
 
 a:hover{
@@ -300,6 +336,7 @@ opacity:.7;
 .authority-breadcrumb a{
 
 text-decoration:none;
+
 font-weight:600;
 
 }
@@ -334,11 +371,13 @@ content:"CONSTITUTIONAL GOVERNANCE";
 position:fixed;
 
 top:40%;
+
 right:-120px;
 
 transform:rotate(-90deg);
 
 font-size:4rem;
+
 font-weight:700;
 
 letter-spacing:.2em;
@@ -346,6 +385,7 @@ letter-spacing:.2em;
 color:var(--color-watermark);
 
 pointer-events:none;
+
 z-index:0;
 
 }
@@ -358,8 +398,10 @@ z-index:1;
 @media(max-width:768px){
 
 .governance-page::before{
+
 font-size:2rem;
 right:-80px;
+
 }
 
 }
@@ -367,6 +409,7 @@ right:-80px;
 .governance-seal{
 
 width:140px;
+
 margin:2rem auto 0;
 
 opacity:var(--seal-opacity);
@@ -395,22 +438,23 @@ fill:var(--color-seal-fill);
 .site-header{
 
 display:flex;
+
 align-items:center;
+
 justify-content:space-between;
 
 max-width:1100px;
+
 margin:0 auto;
 
 padding:1rem 1.5rem;
-
-border-bottom:1px solid var(--color-border-subtle);
-backdrop-filter:blur(6px);
 
 }
 
 .site-nav{
 
 display:flex;
+
 align-items:center;
 
 gap:1.25rem;
@@ -420,6 +464,7 @@ gap:1.25rem;
 .header-controls{
 
 display:flex;
+
 align-items:center;
 
 gap:1rem;
@@ -434,6 +479,7 @@ gap:1rem;
 .theme-toggle{
 
 background:none;
+
 border:none;
 
 font-size:1rem;
