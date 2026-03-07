@@ -326,3 +326,11 @@ display:inline;
 html{
 scroll-behavior:smooth;
 }
+
+/* =========================================================
+   Specification Hero Spacing Alignment
+   ========================================================= */
+
+.spec-layout{
+margin-top:-20px;
+}
