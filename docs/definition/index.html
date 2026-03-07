@@ -15,6 +15,7 @@ content="Agile AI is a structural reference model for designing, developing, and
 
 <meta name="robots" content="index, follow" />
 
+<!-- Existing Concept Schema -->
 <script type="application/ld+json">
 {
 "@context": "https://schema.org",
@@ -28,6 +29,69 @@ content="Agile AI is a structural reference model for designing, developing, and
  "name": "Agile AI Foundation",
  "url": "https://agileai.foundation"
 }
+}
+</script>
+
+<!-- Knowledge Graph Schema -->
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@graph": [
+
+{
+ "@type": "Organization",
+ "@id": "https://agileai.foundation/#organization",
+ "name": "Agile AI Foundation",
+ "url": "https://agileai.foundation/",
+ "description": "Agile AI Foundation is an independent institutional authority responsible for defining structured frameworks and canonical standards for the Agile AI domain."
+},
+
+{
+ "@type": "CreativeWork",
+ "@id": "https://agileai.foundation/standards/current/#standard",
+ "name": "Agile AI Functional Elements v1.1",
+ "identifier": "AAF-FAE-1.1-2026",
+ "publisher": {
+   "@id": "https://agileai.foundation/#organization"
+ },
+ "url": "https://agileai.foundation/standards/current/",
+ "datePublished": "2026",
+ "description": "Canonical institutional standard defining the functional elements required for Agile AI systems."
+},
+
+{
+ "@type": "DefinedTerm",
+ "@id": "https://agileai.foundation/definition/#agile-ai",
+ "name": "Agile AI",
+ "description": "Agile AI is a structural reference model for the design, development, and operation of AI-enabled systems that deliver the right outcomes at the right time through the coordinated application of Agile practices, artificial intelligence capabilities, and human judgment supported by continuous capability development.",
+ "inDefinedTermSet": {
+   "@id": "https://agileai.foundation/standards/current/#standard"
+ },
+ "publisher": {
+   "@id": "https://agileai.foundation/#organization"
+ },
+ "url": "https://agileai.foundation/definition/"
+},
+
+{
+ "@type": "DefinedTerm",
+ "name": "Adaptive Execution",
+ "description": "Agile delivery capability enabling iterative planning, adaptive execution, and continuous outcome alignment."
+},
+
+{
+ "@type": "DefinedTerm",
+ "name": "Machine Intelligence",
+ "description": "Artificial intelligence capabilities that augment decision making, prediction, and automation within Agile AI systems."
+},
+
+{
+ "@type": "DefinedTerm",
+ "name": "Human Judgment",
+ "description": "Accountable human oversight, ethical reasoning, and contextual decision making integrated with AI-enabled systems."
+}
+
+]
 }
 </script>
 
