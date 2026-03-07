@@ -4,56 +4,121 @@
    ========================================================= */
 
 #site-footer {
+
   border-top: 1px solid var(--color-border-footer);
+
   margin-top: 6rem;
-  padding: 3rem 0; /* Vertical spacing only */
+
+  padding: 3rem 0;
+
   font-size: 0.9rem;
+
+  background: var(--color-bg-primary);
+
+  position: relative;
+  z-index: 1;
+
 }
 
-/* 
-   IMPORTANT:
-   Width, centering, and horizontal padding are now inherited
-   from the shared .container class applied in footer.html.
-   This prevents grid duplication and ensures canonical alignment.
+
+/* =========================================================
+   Footer Layout Container
+   ========================================================= */
+
+/*
+   Width, centering, and horizontal padding
+   are inherited from the shared .container class
+   used inside footer.html.
+
+   This ensures alignment with all documentation pages.
 */
+
 .site-footer-inner {
   padding: 0;
 }
 
+
+/* =========================================================
+   Footer Title
+   ========================================================= */
+
 .footer-title {
+
   font-weight: 700;
+
   letter-spacing: 0.08em;
+
   text-transform: uppercase;
+
   margin-bottom: 1rem;
+
 }
+
+
+/* =========================================================
+   Institutional Positioning Statement
+   ========================================================= */
 
 .footer-positioning {
+
   max-width: 75ch;
+
   margin-bottom: 2rem;
+
   color: var(--color-text-secondary);
+
   line-height: 1.6;
+
 }
 
+
+/* =========================================================
+   Footer Navigation Links
+   ========================================================= */
+
 .footer-links {
+
   display: flex;
+
   flex-wrap: wrap;
+
   gap: 1.5rem;
+
   margin-bottom: 1.5rem;
+
 }
 
 .footer-links a {
+
   text-decoration: none;
+
+  color: var(--color-text-primary);
+
   opacity: 0.8;
+
   transition: opacity 0.2s ease;
+
 }
 
 .footer-links a:hover {
+
   opacity: 1;
+
   text-decoration: underline;
+
 }
 
+
+/* =========================================================
+   Footer Metadata
+   ========================================================= */
+
 .footer-meta {
+
   font-size: 0.85rem;
+
   color: var(--color-text-secondary);
+
   line-height: 1.6;
+
 }
