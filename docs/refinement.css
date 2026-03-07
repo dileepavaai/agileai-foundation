@@ -369,13 +369,14 @@ main{
 
 /* =========================================================
    Specification Hero Alignment
+   (Correct selector for your HTML structure)
    ========================================================= */
 
-.spec-content > .identity-line{
+.spec-content section:first-child .identity-line{
   margin-top:-48px;
 }
 
-.spec-content h1{
+.spec-content section:first-child h1{
   margin-top:6px;
 }
 
