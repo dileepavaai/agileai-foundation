@@ -432,10 +432,14 @@ fill:var(--color-seal-fill);
 
 
 /* =========================================================
-   Header Layout
+   Header Layout (Sticky Navigation)
    ========================================================= */
 
 .site-header{
+
+position:sticky;
+top:0;
+z-index:1000;
 
 display:flex;
 
@@ -448,6 +452,11 @@ max-width:1100px;
 margin:0 auto;
 
 padding:1rem 1.5rem;
+
+border-bottom:1px solid var(--color-border-subtle);
+backdrop-filter:blur(6px);
+
+background:var(--color-bg-primary);
 
 }
 
