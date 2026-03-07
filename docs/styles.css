@@ -101,10 +101,6 @@
    Page Layout
    ========================================================= */
 
-html,body{
-height:100%;
-}
-
 body{
 
 margin:0;
@@ -124,10 +120,6 @@ transition:background .25s ease,color .25s ease;
 
 position:relative;
 
-}
-
-main{
-flex:1;
 }
 
 
