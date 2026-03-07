@@ -8,6 +8,7 @@
   top:0;
   z-index:2000;
   width:100%;
+  background:var(--color-bg-primary);
 }
 
 #site-header.is-scrolled{
@@ -56,17 +57,12 @@
    ========================================================= */
 
 .site-title{
-
   font-size:1rem;
   letter-spacing:.08em;
   text-transform:uppercase;
-
   font-weight:700;
-
   text-decoration:none;
-
   color:var(--color-text-primary);
-
 }
 
 .site-title:hover{
@@ -79,16 +75,13 @@
    ========================================================= */
 
 .site-nav{
-
   display:flex;
   align-items:center;
-
 }
 
 .site-nav a{
 
   position:relative;
-
   margin-left:28px;
 
   font-size:.9rem;
@@ -107,7 +100,7 @@
 
 
 /* =========================================================
-   Underline System
+   Navigation Underline System
    ========================================================= */
 
 .site-nav a::after{
@@ -136,10 +129,8 @@
 }
 
 .site-nav a.nav-active{
-
   opacity:1;
   font-weight:600;
-
 }
 
 .site-nav a.nav-active::after{
@@ -206,28 +197,19 @@
 }
 
 .spec-table{
-
   width:100%;
   border-collapse:collapse;
-
 }
 
 .spec-table td{
-
   padding:.65rem 0;
-
   border-bottom:1px solid var(--color-border-footer);
-
 }
 
 .spec-table td:first-child{
-
   width:220px;
-
   font-weight:500;
-
   color:var(--color-text-secondary);
-
 }
 
 
@@ -236,21 +218,15 @@
    ========================================================= */
 
 .spec-layout{
-
   display:flex;
-
   justify-content:center;
   align-items:flex-start;
-
   gap:40px;
-
 }
 
 .spec-sidebar{
-
   flex-shrink:0;
   align-self:flex-start;
-
 }
 
 .spec-toc{
@@ -270,18 +246,13 @@
 }
 
 .toc-title{
-
   font-weight:600;
-
   margin-bottom:.75rem;
-
 }
 
 .spec-toc ul{
-
   list-style:none;
   padding-left:0;
-
 }
 
 .spec-toc ul ul{
@@ -293,11 +264,8 @@
 }
 
 .spec-toc a{
-
   text-decoration:none;
-
   color:var(--color-text-secondary);
-
 }
 
 .spec-toc a:hover{
@@ -305,11 +273,8 @@
 }
 
 .spec-toc a.toc-active{
-
   font-weight:600;
-
   color:var(--color-text-primary);
-
 }
 
 
@@ -320,21 +285,14 @@
 @media(min-width:1024px){
 
 .spec-layout{
-
   max-width:1200px;
-
   margin:0 auto;
-
 }
 
 .spec-sidebar{
-
   margin-right:40px;
-
   padding-right:24px;
-
   border-right:1px solid var(--color-border-subtle);
-
 }
 
 .spec-content{
@@ -374,18 +332,13 @@
 }
 
 .spec-content h2{
-
   counter-increment:section;
   counter-reset:subsection;
-
 }
 
 .spec-content h2::before{
-
   content:counter(section) ". ";
-
   font-weight:600;
-
 }
 
 .spec-content h3{
@@ -393,9 +346,7 @@
 }
 
 .spec-content h3::before{
-
   content:counter(section) "." counter(subsection) " ";
-
 }
 
 
@@ -404,35 +355,22 @@
    ========================================================= */
 
 #institutional-identity h1{
-
   font-size:3rem;
-
   letter-spacing:-0.5px;
-
   margin-bottom:0.6rem;
-
 }
 
 .identity-line{
-
   text-transform:uppercase;
-
   letter-spacing:1.6px;
-
   opacity:0.75;
-
 }
 
 .doc-type{
-
   font-size:.75rem;
-
   letter-spacing:.08em;
-
   opacity:.7;
-
   margin-bottom:6px;
-
 }
 
 .header-tight{
@@ -440,16 +378,13 @@
 }
 
 .header-title{
-
   margin-top:6px;
-
   margin-bottom:12px;
-
 }
 
 
 /* =========================================================
-   Version Badge — Specification Style
+   Version Badge
    ========================================================= */
 
 .std-badge{
@@ -478,10 +413,8 @@
    ========================================================= */
 
 .header-controls{
-
   display:flex;
   align-items:center;
-
 }
 
 .theme-toggle{
@@ -494,7 +427,6 @@
   justify-content:center;
 
   border:1px solid var(--color-border-subtle);
-
   border-radius:8px;
 
   background:var(--color-bg-primary);
@@ -512,10 +444,8 @@
 }
 
 .theme-toggle span{
-
   font-size:1rem;
   line-height:1;
-
 }
 
 
