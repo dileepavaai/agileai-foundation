@@ -381,3 +381,12 @@ padding-top:0;
 body[data-section="specification"] .container{
 padding-top:0;
 }
+
+/* =========================================================
+   Theme Control Safety Guard
+   Prevent duplicate page-level theme switchers
+   ========================================================= */
+
+.theme-switcher{
+display:none !important;
+}
