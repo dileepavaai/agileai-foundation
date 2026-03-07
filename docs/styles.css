@@ -10,7 +10,20 @@
    Root Design Tokens — Light
    ========================================================= */
 
-:root{
+#site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background: white;
+}
+
+main {
+  margin-top: 70px;
+}
+
+   :root{
 
 --color-bg-primary:#ffffff;
 --color-text-primary:#111111;
