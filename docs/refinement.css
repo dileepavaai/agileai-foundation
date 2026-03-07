@@ -398,3 +398,11 @@ margin:20px 0 10px 0;
 font-size:.95rem;
 opacity:.9;
 }
+
+.concept-triad{
+display:flex;
+gap:28px;
+margin:18px 0 12px 0;
+font-size:.95rem;
+letter-spacing:.02em;
+}
