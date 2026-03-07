@@ -50,11 +50,17 @@ backdrop-filter:blur(6px);
 }
 
 /* =========================================================
-   Page Offset (Prevents Header Overlap)
+   Header Offset Handling
    ========================================================= */
 
-main{
+/* default pages */
+body:not([data-section="specification"]) main{
 padding-top:80px;
+}
+
+/* specification pages use natural flow */
+body[data-section="specification"] main{
+padding-top:0;
 }
 
 /* =========================================================
