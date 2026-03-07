@@ -197,7 +197,6 @@ color:var(--color-text-secondary);
 
 /* =========================================================
    Specification Content Alignment
-   Ensures spec pages use same grid as rest of site
    ========================================================= */
 
 .spec-content{
@@ -325,14 +324,6 @@ display:inline;
 
 html{
 scroll-behavior:smooth;
-}
-
-/* =========================================================
-   Specification Hero Spacing Alignment
-   ========================================================= */
-
-.spec-layout{
-margin-top:-20px;
 }
 
 /* =========================================================
