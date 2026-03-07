@@ -334,3 +334,12 @@ scroll-behavior:smooth;
 .spec-layout{
 margin-top:-20px;
 }
+
+/* =========================================================
+   Specification Header Spacing Alignment
+   ========================================================= */
+
+.spec-content > section:first-child{
+margin-top:0;
+padding-top:0;
+}
