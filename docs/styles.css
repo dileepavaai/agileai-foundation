@@ -117,9 +117,6 @@ color:var(--color-text-primary);
 
 background:var(--color-bg-primary);
 
-display:flex;
-flex-direction:column;
-
 transition:background .25s ease,color .25s ease;
 
 -webkit-font-smoothing:antialiased;
@@ -368,7 +365,6 @@ content:"CONSTITUTIONAL GOVERNANCE";
 position:fixed;
 
 top:40%;
-
 right:-120px;
 
 transform:rotate(-90deg);
