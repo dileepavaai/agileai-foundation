@@ -406,3 +406,22 @@ margin:18px 0 12px 0;
 font-size:.95rem;
 letter-spacing:.02em;
 }
+
+/* ======================================================
+Download Button (Standards Artifact)
+Visual refinement layer only
+====================================================== */
+
+.download-button {
+  display: inline-block;
+  padding: 10px 18px;
+  border: 1px solid #2e7cf6;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.download-button:hover {
+  background: #2e7cf6;
+  color: #ffffff;
+}
