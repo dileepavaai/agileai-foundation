@@ -373,3 +373,11 @@ padding-top:0;
 body[data-section="specification"] main > .container{
 padding-top:0;
 }
+
+/* =========================================================
+   Specification Header Alignment
+   ========================================================= */
+
+body[data-section="specification"] .container{
+padding-top:0;
+}
