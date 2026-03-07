@@ -465,3 +465,19 @@ html{
 .spec-layout .spec-content{
   margin-top:-40px;
 }
+
+/* =========================================================
+   Specification Page Hero Spacing Fix
+   ========================================================= */
+
+.spec-layout .spec-content section:first-child{
+  margin-top:40px;
+}
+
+.spec-layout .spec-content section:first-child .identity-line{
+  margin-top:0;
+}
+
+.spec-layout .spec-content section:first-child h1{
+  margin-top:8px;
+}
