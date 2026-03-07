@@ -453,3 +453,15 @@ html[data-theme="dark"] .theme-icon-dark{
 html{
   scroll-behavior:smooth;
 }
+
+/* =========================================================
+   Specification Page Header Offset Correction
+   ========================================================= */
+
+.spec-layout{
+  padding-top:20px;
+}
+
+.spec-layout .spec-content{
+  margin-top:-40px;
+}
