@@ -509,3 +509,15 @@ html{
 .spec-content > .identity-line{
   margin-top:-35px;
 }
+
+/* =========================================================
+   Specification Header Alignment
+   ========================================================= */
+
+.spec-content > .identity-line{
+  margin-top:-40px;
+}
+
+.spec-content h1{
+  margin-top:8px;
+}
