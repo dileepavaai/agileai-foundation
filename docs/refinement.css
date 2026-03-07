@@ -431,3 +431,15 @@ html[data-theme="dark"] .theme-icon-dark{
 html{
   scroll-behavior:smooth;
 }
+
+/* =========================================================
+   Specification Hero Spacing Adjustment
+   ========================================================= */
+
+.spec-layout{
+  margin-top:-20px;
+}
+
+.spec-content section:first-child{
+  margin-top:10px;
+}
