@@ -15,7 +15,9 @@
 }
 
 
-/* Header shadow when scrolling */
+/* =========================================================
+   Header Shadow When Scrolling
+   ========================================================= */
 
 #site-header.is-scrolled{
   box-shadow:0 4px 12px rgba(0,0,0,.06);
@@ -37,29 +39,21 @@
    ========================================================= */
 
 .site-header{
-
   width:100%;
   max-width:1200px;
-
   margin:0 auto;
-
   box-sizing:border-box;
-
   padding:12px 40px;
-
   display:flex;
   justify-content:space-between;
   align-items:center;
-
   background:var(--color-bg-primary);
-
   backdrop-filter:blur(6px);
-
 }
 
 
 /* =========================================================
-   Page Offset (Prevents header overlap)
+   Page Offset (Prevents Header Overlap)
    ========================================================= */
 
 main{
@@ -95,18 +89,12 @@ main{
 }
 
 .site-nav a{
-
   position:relative;
   margin-left:28px;
-
   font-size:.9rem;
-
   text-decoration:none;
-
   color:var(--color-text-primary);
-
   opacity:.75;
-
   transition:opacity .2s ease;
 }
 
@@ -120,24 +108,16 @@ main{
    ========================================================= */
 
 .site-nav a::after{
-
   content:"";
-
   position:absolute;
-
   left:0;
   bottom:-5px;
-
   width:100%;
   height:2px;
-
   background:var(--color-text-primary);
-
   transform:scaleX(0);
   transform-origin:left;
-
   transition:transform .25s ease;
-
 }
 
 .site-nav a:hover::after{
@@ -177,24 +157,15 @@ main{
 }
 
 .site-nav{
-
   position:absolute;
-
   top:100%;
   left:0;
-
   width:100%;
-
   background:var(--color-bg-primary);
-
   border-bottom:1px solid var(--color-border-subtle);
-
   flex-direction:column;
-
   padding:1rem 20px;
-
   display:none;
-
 }
 
 .site-nav.open{
@@ -250,19 +221,12 @@ main{
 }
 
 .spec-toc{
-
   position:sticky;
-
   top:120px;
-
   width:260px;
-
   font-size:.9rem;
-
   max-height:calc(100vh - 140px);
-
   overflow:auto;
-
 }
 
 .toc-title{
@@ -404,11 +368,15 @@ main{
 
 
 /* =========================================================
-   Specification Header Spacing Adjustment
+   Specification Hero Alignment
    ========================================================= */
 
 .spec-content > .identity-line{
-  margin-top:-20px;
+  margin-top:-48px;
+}
+
+.spec-content h1{
+  margin-top:6px;
 }
 
 
@@ -417,23 +385,14 @@ main{
    ========================================================= */
 
 .std-badge{
-
   background:var(--color-border-subtle);
-
   color:var(--color-text-secondary);
-
   font-size:.75rem;
-
   font-weight:600;
-
   letter-spacing:.04em;
-
   padding:1px 6px;
-
   border-radius:4px;
-
   vertical-align:middle;
-
 }
 
 
@@ -447,25 +406,17 @@ main{
 }
 
 .theme-toggle{
-
   width:36px;
   height:36px;
-
   display:flex;
   align-items:center;
   justify-content:center;
-
   border:1px solid var(--color-border-subtle);
   border-radius:8px;
-
   background:var(--color-bg-primary);
-
   cursor:pointer;
-
   transition:all .2s ease;
-
   margin-left:18px;
-
 }
 
 .theme-toggle:hover{
@@ -500,48 +451,4 @@ html[data-theme="dark"] .theme-icon-dark{
 
 html{
   scroll-behavior:smooth;
-}
-
-/* =========================================================
-   Specification Header Spacing Adjustment
-   ========================================================= */
-
-.spec-content > .identity-line{
-  margin-top:-35px;
-}
-
-/* =========================================================
-   Specification Header Alignment
-   ========================================================= */
-
-.spec-content > .identity-line{
-  margin-top:-40px;
-}
-
-.spec-content h1{
-  margin-top:8px;
-}
-
-/* =========================================================
-   Specification Hero Alignment
-   ========================================================= */
-
-.spec-content > .identity-line{
-  margin-top:-45px;
-}
-
-.spec-content h1{
-  margin-top:4px;
-}
-
-/* =========================================================
-   Specification Hero Alignment
-   ========================================================= */
-
-.spec-content > .identity-line{
-  margin-top:-48px;
-}
-
-.spec-content h1{
-  margin-top:6px;
 }
