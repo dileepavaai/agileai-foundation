@@ -134,3 +134,14 @@ function initializeThemeToggle() {
   });
 
 }
+
+window.addEventListener("scroll", () => {
+  const header = document.getElementById("site-header");
+  if (!header) return;
+
+  if (window.scrollY > 10) {
+    header.classList.add("is-scrolled");
+  } else {
+    header.classList.remove("is-scrolled");
+  }
+});
