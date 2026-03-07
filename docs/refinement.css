@@ -443,3 +443,11 @@ html{
 .spec-content section:first-child{
   margin-top:10px;
 }
+
+/* =========================================================
+   Specification Page Header Offset Correction
+   ========================================================= */
+
+main.spec-layout{
+  padding-top:40px;
+}
