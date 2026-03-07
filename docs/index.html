@@ -71,6 +71,44 @@ content="The Agile AI Foundation defines and governs the canonical structural st
 }
 </script>
 
+<!-- Knowledge Graph Entity Linking -->
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@graph": [
+
+{
+"@type": "Organization",
+"@id": "https://agileai.foundation/#organization",
+"name": "Agile AI Foundation",
+"url": "https://agileai.foundation/"
+},
+
+{
+"@type": "DefinedTerm",
+"@id": "https://agileai.foundation/definition/#agile-ai",
+"name": "Agile AI",
+"url": "https://agileai.foundation/definition/"
+},
+
+{
+"@type": "CreativeWork",
+"@id": "https://agileai.foundation/standards/current/#standard",
+"name": "Agile AI Functional Elements",
+"url": "https://agileai.foundation/standards/current/",
+"identifier": "AAF-FAE-1.1-2026",
+"about": {
+"@id": "https://agileai.foundation/definition/#agile-ai"
+},
+"publisher": {
+"@id": "https://agileai.foundation/#organization"
+}
+}
+
+]
+}
+</script>
+
 <link rel="stylesheet" href="/styles.css" />
 <link rel="stylesheet" href="/refinement.css" />
 
