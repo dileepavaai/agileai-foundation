@@ -9,7 +9,10 @@
   z-index:2000;
   width:100%;
   background:var(--color-bg-primary);
+  border-bottom:1px solid var(--color-border-subtle);
 }
+
+/* Header shadow when scrolling */
 
 #site-header.is-scrolled{
   box-shadow:0 4px 12px rgba(0,0,0,.06);
@@ -34,6 +37,10 @@
 .site-header{
 
   width:100%;
+  max-width:1200px;
+
+  margin:0 auto;
+
   box-sizing:border-box;
 
   padding:12px 40px;
@@ -43,12 +50,18 @@
   align-items:center;
 
   background:var(--color-bg-primary);
-  border-bottom:1px solid var(--color-border-subtle);
 
   backdrop-filter:blur(6px);
 
-  transition:background .25s ease,border-color .25s ease;
+}
 
+
+/* =========================================================
+   Page Offset (Prevents header overlap)
+   ========================================================= */
+
+main{
+  padding-top:80px;
 }
 
 
@@ -233,13 +246,13 @@
 
   position:sticky;
 
-  top:90px;
+  top:120px;
 
   width:260px;
 
   font-size:.9rem;
 
-  max-height:calc(100vh - 120px);
+  max-height:calc(100vh - 140px);
 
   overflow:auto;
 
@@ -448,8 +461,6 @@
   line-height:1;
 }
 
-
-/* Theme icon switching */
 
 .theme-icon-light{
   display:inline;
