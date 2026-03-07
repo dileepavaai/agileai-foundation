@@ -390,3 +390,11 @@ padding-top:0;
 .theme-switcher{
 display:none !important;
 }
+
+.concept-triad{
+display:flex;
+gap:32px;
+margin:20px 0 10px 0;
+font-size:.95rem;
+opacity:.9;
+}
