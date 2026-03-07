@@ -199,13 +199,22 @@ main{
    Specification Layout
    ========================================================= */
 
+/* =========================================================
+   Specification Layout Alignment Fix
+   Ensures specification pages use the same container grid
+   as the rest of the website
+   ========================================================= */
+
 .spec-layout{
-  display:block;
+max-width:1200px;
+margin:0 auto;
+padding:40px 40px 0 40px;
+display:block;
 }
 
-.spec-sidebar{
-  flex-shrink:0;
-  align-self:flex-start;
+.spec-content{
+max-width:760px;
+margin:0;
 }
 
 .spec-toc{
