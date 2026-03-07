@@ -200,13 +200,7 @@ main{
    ========================================================= */
 
 .spec-layout{
-  display:flex;
-  justify-content:center;
-  align-items:flex-start;
-  gap:40px;
-
-  /* Hero spacing fix */
-  margin-top:-35px;
+  display:block;
 }
 
 .spec-sidebar{
