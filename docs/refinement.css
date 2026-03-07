@@ -61,7 +61,7 @@
    ========================================================= */
 
 main{
-  margin-top:80px;
+  padding-top:80px;
 }
 
 
@@ -160,6 +160,10 @@ main{
 }
 
 @media(max-width:768px){
+
+main{
+  margin-top:60px;
+}
 
 .site-header{
   padding:10px 20px;
