@@ -204,6 +204,9 @@ main{
   justify-content:center;
   align-items:flex-start;
   gap:40px;
+
+  /* Hero spacing fix */
+  margin-top:-35px;
 }
 
 .spec-sidebar{
@@ -260,7 +263,8 @@ main{
 
 .spec-layout{
   max-width:1200px;
-  margin:0 auto;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .spec-sidebar{
@@ -354,14 +358,6 @@ main{
 }
 
 /* =========================================================
-   Specification Hero Spacing (clean rule)
-   ========================================================= */
-
-.spec-layout .spec-content section:first-child{
-  margin-top:10px;
-}
-
-/* =========================================================
    Version Badge
    ========================================================= */
 
@@ -430,24 +426,4 @@ html[data-theme="dark"] .theme-icon-dark{
 
 html{
   scroll-behavior:smooth;
-}
-
-/* =========================================================
-   Specification Hero Spacing Adjustment
-   ========================================================= */
-
-.spec-layout{
-  margin-top:-20px;
-}
-
-.spec-content section:first-child{
-  margin-top:10px;
-}
-
-/* =========================================================
-   Specification Page Header Offset Correction
-   ========================================================= */
-
-main.spec-layout{
-  padding-top:40px;
 }
