@@ -21,7 +21,7 @@
 
 --color-link:#111111;
 
---color-watermark:rgba(0,0,0,0.035);
+--color-watermark:rgba(0,0,0,0.025);
 
 --color-seal-stroke:rgba(0,0,0,0.55);
 --color-seal-fill:rgba(0,0,0,0.85);
@@ -54,7 +54,7 @@
 
 --color-link:#ffffff;
 
---color-watermark:rgba(255,255,255,0.045);
+--color-watermark:rgba(255,255,255,0.035);
 
 --color-seal-stroke:rgba(255,255,255,0.65);
 --color-seal-fill:rgba(255,255,255,0.9);
@@ -83,7 +83,7 @@
 
 --color-link:#ffffff;
 
---color-watermark:rgba(255,255,255,0.045);
+--color-watermark:rgba(255,255,255,0.035);
 
 --color-seal-stroke:rgba(255,255,255,0.65);
 --color-seal-fill:rgba(255,255,255,0.9);
@@ -131,6 +131,7 @@ position:relative;
 
 main{
 flex:1;
+padding-top:80px;
 }
 
 
@@ -177,7 +178,7 @@ max-width:860px;
 
 margin:0 auto;
 
-padding:5rem 1.5rem 4rem 1.5rem;
+padding:4rem 1.5rem;
 
 position:relative;
 
@@ -191,12 +192,9 @@ z-index:1;
    ========================================================= */
 
 h1{
-
 font-size:2.6rem;
 margin-bottom:.25rem;
-
 font-weight:600;
-
 }
 
 h2{
