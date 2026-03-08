@@ -1,6 +1,6 @@
 /* =========================================================
    AGILE AI FOUNDATION
-   Institutional Refinement Layer — v1.13
+   Institutional Refinement Layer — v1.14
    Header / Navigation / Page UX
    ---------------------------------------------------------
    This file refines the canonical design system defined in
@@ -24,11 +24,10 @@
       Shared UX polish (footer + overlay)
 
    Version Notes
-   v1.13
-   - Aligned architecture with shared refinement layer
+   v1.14
    - Corrected hamburger → X centering
-   - Improved mobile navigation animation
-   - Preserved design token compatibility
+   - Ensured symmetric toggle animation
+   - Maintained compatibility with canonical design tokens
    ========================================================= */
 
 
@@ -198,10 +197,10 @@ transform .28s cubic-bezier(.4,0,.2,1),
 opacity .18s ease;
 }
 
-/* Hamburger position */
+/* Hamburger positions */
 
 .nav-toggle span:nth-child(1){
-transform:translate(-50%,-7px);
+transform:translate(-50%,-6px);
 }
 
 .nav-toggle span:nth-child(2){
@@ -209,10 +208,10 @@ transform:translate(-50%,0);
 }
 
 .nav-toggle span:nth-child(3){
-transform:translate(-50%,7px);
+transform:translate(-50%,6px);
 }
 
-/* Transform to X */
+/* Centered X transformation */
 
 .nav-toggle.active span:nth-child(1){
 transform:translate(-50%,0) rotate(45deg);
