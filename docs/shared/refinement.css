@@ -265,3 +265,23 @@
   }
 
 }
+
+/* =========================================================
+   MOBILE NAVIGATION AUTHORITY OVERRIDE
+   ---------------------------------------------------------
+   Ensures the shared refinement layer controls the mobile
+   navigation behavior even if root refinement.css contains
+   similar selectors.
+   ========================================================= */
+
+.nav-toggle span{
+margin:5px 0 !important;
+}
+
+.nav-toggle.active span:nth-child(1){
+transform:translateY(7px) rotate(45deg) !important;
+}
+
+.nav-toggle.active span:nth-child(3){
+transform:translateY(-7px) rotate(-45deg) !important;
+}
