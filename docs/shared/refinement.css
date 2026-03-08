@@ -1,7 +1,7 @@
 /* =========================================================
    AGILE AI FOUNDATION
    Shared Refinement Layer — Header + Footer UX
-   Version: v1.13
+   Version: v1.14
    ---------------------------------------------------------
    Responsibilities
 
@@ -196,7 +196,6 @@
 
 /* =========================================================
    Hamburger → X Animation
-   Centered transformation
    ========================================================= */
 
 .nav-toggle.active span:nth-child(1) {
@@ -226,13 +225,13 @@
 
     position: absolute;
 
-    top: 100%;
+    /* anchor menu directly under header */
+    top: 64px;
     left: 0;
 
     width: 100%;
 
     background: var(--color-bg-primary);
-
     border-bottom: 1px solid var(--color-border-subtle);
 
     flex-direction: column;
@@ -240,11 +239,13 @@
 
     padding: 20px 0;
 
+    /* keep menu inside viewport */
     max-height: calc(100vh - 64px);
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 
     opacity: 0;
-    transform: translateY(-8px);
+    transform: translateY(-6px);
     pointer-events: none;
 
     transition:
