@@ -1,22 +1,28 @@
 /* =========================================================
    AGILE AI FOUNDATION
    Shared Refinement Layer — Header + Footer UX
-   Version: v1.15
+   Version: v1.16
    ---------------------------------------------------------
    Responsibilities
 
    • Footer visual refinement
-   • Header stability improvements
-   • Mobile navigation toggle animation
-   • Mobile navigation layout corrections
-   • Mobile menu overlay behavior
+   • Header stability safeguards
+   • Mobile overlay behavior for navigation
+   • Shared UX polish
 
    GOVERNANCE
 
-   This layer provides UX and interaction refinements for
-   shared components only (header / navigation / footer).
+   This layer refines shared UX components only.
+   It does NOT implement the navigation system itself.
 
-   It intentionally DOES NOT redefine design tokens.
+   Header navigation layout, toggle animation,
+   and mobile nav behavior are defined in:
+
+   docs/refinement.css
+
+   This separation prevents cross-layer overrides
+   and preserves architectural clarity.
+
    Design tokens remain canonical in styles.css.
    ========================================================= */
 
@@ -140,8 +146,10 @@
 
 
 /* =========================================================
-   HEADER STABILITY
-   Prevent layout shift during page load
+   HEADER STABILITY SAFEGUARD
+   ---------------------------------------------------------
+   Ensures header container has stable minimum height
+   during JS header injection to prevent layout shift.
    ========================================================= */
 
 #site-header {
@@ -155,148 +163,14 @@
 
 
 /* =========================================================
-   MOBILE NAVIGATION TOGGLE
+   MOBILE NAVIGATION OVERLAY
    ---------------------------------------------------------
-   Unified definition (previous duplicate rules removed)
+   Activated when body.menu-open is set by header.js.
 
-   • 40px touch target for accessibility
-   • Consistent visual container
-   • Clean hamburger → X transformation
-   ========================================================= */
-
-.nav-toggle {
-
-  width: 40px;
-  height: 40px;
-
-  display: none;
-
-  border-radius: 10px;
-  border: 1px solid rgba(255,255,255,0.15);
-
-  background: transparent;
-
-  cursor: pointer;
-  padding: 0;
-
-  position: relative;
-
-  display: grid;
-  place-items: center;
-
-}
-
-
-/* =========================================================
-   Hamburger Lines
-   ========================================================= */
-
-.nav-toggle span {
-
-  display: block;
-
-  width: 18px;
-  height: 2px;
-
-  background: var(--color-text-primary);
-
-  margin: 5px 0;
-
-  transform-origin: center;
-
-  transition:
-    transform .28s cubic-bezier(.4,0,.2,1),
-    opacity .18s ease;
-
-}
-
-
-/* =========================================================
-   Hamburger → X Animation
-   ========================================================= */
-
-.nav-toggle.active span:nth-child(1) {
-  transform: translateY(6px) rotate(45deg);
-}
-
-.nav-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.nav-toggle.active span:nth-child(3) {
-  transform: translateY(-6px) rotate(-45deg);
-}
-
-
-
-/* =========================================================
-   MOBILE NAVIGATION LAYOUT
-   ========================================================= */
-
-@media (max-width:768px) {
-
-  .nav-toggle {
-    display: grid;
-  }
-
-  .site-nav {
-
-    position: absolute;
-
-    /* Anchor menu directly under header */
-    top: 64px;
-    left: 0;
-
-    width: 100%;
-
-    background: var(--color-bg-primary);
-    border-bottom: 1px solid var(--color-border-subtle);
-
-    flex-direction: column;
-    align-items: center;
-
-    padding: 20px 0;
-
-    /* Keep menu inside viewport */
-    max-height: calc(100vh - 64px);
-
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-
-    opacity: 0;
-    transform: translateY(-6px);
-    pointer-events: none;
-
-    transition:
-      opacity .25s ease,
-      transform .25s ease;
-
-  }
-
-  .site-nav.open {
-
-    opacity: 1;
-    transform: translateY(0);
-
-    pointer-events: auto;
-
-  }
-
-  .site-nav a {
-
-    margin: 12px 0;
-
-  }
-
-}
-
-
-
-/* =========================================================
-   MOBILE MENU OVERLAY
-   ---------------------------------------------------------
-   Prevents background scroll and provides
-   visual focus when mobile navigation is open.
+   Purpose
+   • Prevent background scroll
+   • Provide visual focus to navigation
+   • Ensure consistent interaction behavior
    ========================================================= */
 
 body.menu-open::before {
