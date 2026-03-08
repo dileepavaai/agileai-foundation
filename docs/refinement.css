@@ -1,6 +1,6 @@
 /* =========================================================
    AGILE AI FOUNDATION
-   Institutional Refinement Layer — v1.14
+   Institutional Refinement Layer — v1.15
    Header / Navigation / Page UX
    ---------------------------------------------------------
    This file refines the canonical design system defined in
@@ -24,10 +24,11 @@
       Shared UX polish (footer + overlay)
 
    Version Notes
-   v1.14
-   - Corrected hamburger → X centering
-   - Ensured symmetric toggle animation
-   - Improved mobile navigation spacing
+   v1.15
+   - Corrected mobile navigation viewport sizing
+   - Converted mobile menu from absolute → fixed positioning
+   - Ensured full viewport width menu panel
+   - Added premium mobile menu micro-interactions
    - Maintained compatibility with canonical design tokens
    ========================================================= */
 
@@ -198,8 +199,6 @@ transform .28s cubic-bezier(.4,0,.2,1),
 opacity .18s ease;
 }
 
-/* Hamburger positions */
-
 .nav-toggle span:nth-child(1){
 transform:translate(-50%,-6px);
 }
@@ -211,8 +210,6 @@ transform:translate(-50%,0);
 .nav-toggle span:nth-child(3){
 transform:translate(-50%,6px);
 }
-
-/* Centered X transformation */
 
 .nav-toggle.active span:nth-child(1){
 transform:translate(-50%,0) rotate(45deg);
@@ -245,35 +242,55 @@ padding:10px 20px;
 display:block;
 }
 
+
+/* Mobile Menu Panel */
+
 .site-nav{
-position:absolute;
-top:100%;
+
+position:fixed;
+top:60px;
 left:0;
-width:100%;
+
+width:100vw;
+height:calc(100vh - 60px);
 
 background:var(--color-bg-primary);
 border-bottom:1px solid var(--color-border-subtle);
 
 flex-direction:column;
-padding:1rem 20px;
+align-items:center;
+
+padding:2rem 20px;
 
 opacity:0;
-transform:translateY(-10px);
+transform:translateY(-8px) scale(.995);
 pointer-events:none;
 
 transition:
 opacity .25s ease,
 transform .25s ease;
+
 }
 
 .site-nav.open{
 opacity:1;
-transform:translateY(0);
+transform:translateY(0) scale(1);
 pointer-events:auto;
 }
 
+
+/* Menu Links */
+
 .site-nav a{
-margin:8px 0;
+margin:12px 0;
+font-size:1.05rem;
+letter-spacing:.02em;
+transition:opacity .2s ease, transform .15s ease;
+}
+
+.site-nav a:hover{
+transform:translateY(-1px);
+opacity:1;
 }
 
 }
@@ -382,6 +399,7 @@ vertical-align:middle;
 .header-controls{
 display:flex;
 align-items:center;
+gap:12px;
 }
 
 .theme-toggle{
@@ -395,7 +413,6 @@ border-radius:8px;
 background:var(--color-bg-primary);
 cursor:pointer;
 transition:all .2s ease;
-margin-left:18px;
 }
 
 .theme-toggle:hover{
