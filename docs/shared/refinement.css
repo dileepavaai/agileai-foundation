@@ -1,6 +1,22 @@
 /* =========================================================
-   Institutional Footer — Shared Authority Layer
-   Non-Structural · Refinement Only
+   AGILE AI FOUNDATION
+   Shared Refinement Layer — Header + Footer UX
+   Version: v1.12
+   ---------------------------------------------------------
+   Responsibilities
+
+   • Footer visual refinement
+   • Header stability improvements
+   • Mobile navigation toggle animation
+   • Mobile navigation layout corrections
+
+   This file intentionally does NOT redefine design tokens.
+   Those belong to styles.css.
+   ========================================================= */
+
+
+/* =========================================================
+   FOOTER STYLING
    ========================================================= */
 
 #site-footer {
@@ -24,14 +40,6 @@
 /* =========================================================
    Footer Layout Container
    ========================================================= */
-
-/*
-   Width, centering, and horizontal padding
-   are inherited from the shared .container class
-   used inside footer.html.
-
-   This ensures alignment with all documentation pages.
-*/
 
 .site-footer-inner {
   padding: 0;
@@ -123,26 +131,11 @@
 
 }
 
+
 /* =========================================================
-   HEADER STABILITY + MOBILE NAVIGATION UX
-   Version: v1.11 Enhancement Layer
-   ---------------------------------------------------------
-   Improvements implemented:
-
-   1. Header layout stabilization to prevent CLS (layout shift)
-   2. Animated hamburger → close icon transition
-   3. Smooth interaction polish for mobile navigation
-
-   These changes are visual-only and do not alter layout
-   structure or navigation behavior.
-
+   HEADER STABILITY
+   Prevent layout shift during page load
    ========================================================= */
-
-
-/* ---------------------------------------------------------
-   Header Layout Stabilization
-   Prevents layout shift during page load
-   --------------------------------------------------------- */
 
 #site-header {
   min-height: 64px;
@@ -153,58 +146,60 @@
 }
 
 
-/* ---------------------------------------------------------
-   Mobile Navigation Toggle Styling
-   --------------------------------------------------------- */
+/* =========================================================
+   MOBILE NAVIGATION TOGGLE
+   ========================================================= */
 
 .nav-toggle {
+
   width: 34px;
   height: 34px;
+
   display: none;
+
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   border: none;
   background: transparent;
+
   cursor: pointer;
   padding: 0;
+
 }
 
 
-/* ---------------------------------------------------------
+/* =========================================================
    Hamburger Lines
-   --------------------------------------------------------- */
+   ========================================================= */
 
 .nav-toggle span {
+
   display: block;
+
   width: 22px;
   height: 2px;
+
   background: var(--color-text-primary);
-  margin: 3px 0;
-  transition: transform .25s ease, opacity .25s ease;
-}
 
+  margin: 4px 0;
 
-/* ---------------------------------------------------------
-   Mobile Breakpoint
-   --------------------------------------------------------- */
+  transform-origin: center;
 
-@media (max-width:768px) {
-
-  .nav-toggle {
-    display: flex;
-  }
+  transition:
+    transform .28s cubic-bezier(.4,0,.2,1),
+    opacity .18s ease;
 
 }
 
 
-/* ---------------------------------------------------------
+/* =========================================================
    Hamburger → X Animation
-   Triggered when navigation is open
-   --------------------------------------------------------- */
+   ========================================================= */
 
 .nav-toggle.active span:nth-child(1) {
-  transform: translateY(5px) rotate(45deg);
+  transform: translateY(6px) rotate(45deg);
 }
 
 .nav-toggle.active span:nth-child(2) {
@@ -212,5 +207,61 @@
 }
 
 .nav-toggle.active span:nth-child(3) {
-  transform: translateY(-5px) rotate(-45deg);
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION LAYOUT
+   ========================================================= */
+
+@media (max-width:768px) {
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .site-nav {
+
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+
+    background: var(--color-bg-primary);
+
+    border-bottom: 1px solid var(--color-border-subtle);
+
+    flex-direction: column;
+    align-items: center;
+
+    padding: 1rem 0;
+
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+
+    transition:
+      opacity .25s ease,
+      transform .25s ease;
+
+  }
+
+  .site-nav.open {
+
+    opacity: 1;
+    transform: translateY(0);
+
+    pointer-events: auto;
+
+  }
+
+  .site-nav a {
+
+    margin: 10px 0;
+
+  }
+
 }
