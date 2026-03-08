@@ -1,6 +1,6 @@
 /* =========================================================
    AGILE AI FOUNDATION
-   Institutional Refinement Layer — v1.15
+   Institutional Refinement Layer — v1.16
    Header / Navigation / Page UX
    ---------------------------------------------------------
    This file refines the canonical design system defined in
@@ -24,12 +24,10 @@
       Shared UX polish (footer + overlay)
 
    Version Notes
-   v1.15
-   - Corrected mobile navigation viewport sizing
-   - Converted mobile menu from absolute → fixed positioning
-   - Ensured full viewport width menu panel
-   - Added premium mobile menu micro-interactions
-   - Maintained compatibility with canonical design tokens
+   v1.16
+   - Header vertical rhythm stabilization
+   - Header height aligned with mobile menu offset
+   - Maintained v1.15 mobile navigation system
    ========================================================= */
 
 
@@ -77,7 +75,8 @@ width:100%;
 max-width:1200px;
 margin:0 auto;
 box-sizing:border-box;
-padding:12px 40px;
+padding:14px 40px;
+min-height:60px;
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -502,7 +501,7 @@ opacity:.9;
 
 /* ======================================================
    Download Button (Artifact Styling)
-   ====================================================== */
+   ========================================================= */
 
 .download-button{
 display:inline-block;
