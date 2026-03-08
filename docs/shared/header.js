@@ -1,5 +1,6 @@
 // ======================================================
 // Agile AI Foundation — Institutional Header System
+// Version: v1.11
 // ======================================================
 //
 // Responsibilities
@@ -14,6 +15,14 @@
 // 8. Track concept progression automatically
 // 9. Measure section engagement time
 // 10. Apply scroll-based header styling
+//
+// UX Enhancements (v1.11)
+// ------------------------------------------------------
+// • Premium mobile navigation behaviour
+// • Background scroll lock when menu open
+// • Auto-close navigation on link click
+// • ESC key support for accessibility
+// • ARIA state consistency
 //
 // Design Principles
 // ------------------------------------------------------
@@ -77,6 +86,7 @@ console.error("Header load failed:", error);
 
 // ======================================================
 // Mobile Navigation Toggle
+// Premium UX + Accessibility
 // ======================================================
 
 function initializeNavigation() {
@@ -86,6 +96,10 @@ const nav = document.querySelector(".site-nav");
 
 if (!toggle || !nav) return;
 
+/* ------------------------------------------------------
+   Toggle navigation
+------------------------------------------------------ */
+
 toggle.addEventListener("click", function () {
 
 const isOpen = nav.classList.toggle("open");
@@ -93,6 +107,57 @@ const isOpen = nav.classList.toggle("open");
 toggle.classList.toggle("active");
 
 toggle.setAttribute("aria-expanded", isOpen);
+
+/* Lock background scroll (premium UX) */
+
+document.body.classList.toggle("menu-open", isOpen);
+
+/* Accessibility */
+
+if (isOpen) {
+nav.querySelector("a")?.focus();
+}
+
+});
+
+
+/* ------------------------------------------------------
+   Close menu when link clicked
+------------------------------------------------------ */
+
+nav.querySelectorAll("a").forEach(link => {
+
+link.addEventListener("click", () => {
+
+nav.classList.remove("open");
+toggle.classList.remove("active");
+toggle.setAttribute("aria-expanded", false);
+
+document.body.classList.remove("menu-open");
+
+});
+
+});
+
+
+/* ------------------------------------------------------
+   ESC key closes menu
+   (WCAG accessibility improvement)
+------------------------------------------------------ */
+
+document.addEventListener("keydown", function (event) {
+
+if (event.key === "Escape") {
+
+nav.classList.remove("open");
+toggle.classList.remove("active");
+toggle.setAttribute("aria-expanded", false);
+
+document.body.classList.remove("menu-open");
+
+toggle.focus();
+
+}
 
 });
 
@@ -283,7 +348,8 @@ if (entry.isIntersecting) {
 
 const newSection = entry.target.id;
 
-// Send engagement time for previous section
+/* Send engagement time */
+
 if (activeSection && sectionStartTime && typeof gtag === "function") {
 
 const duration = Math.round(
@@ -298,11 +364,13 @@ page: window.location.pathname
 
 }
 
-// Start timing new section
+/* Start new section */
+
 activeSection = newSection;
 sectionStartTime = Date.now();
 
-// Track section view
+/* Track view */
+
 if (typeof gtag === "function") {
 
 gtag("event", "spec_section_view", {

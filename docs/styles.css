@@ -1,13 +1,73 @@
 /* =========================================================
    AGILE AI FOUNDATION
-   Institutional CSS Token Contract — v1.10
-   Unified Adaptive Token Model
-   Canonical Surface Implementation
+   Canonical CSS Design System
+
+   File: styles.css
+   Version: v1.11
+   Status: STABLE CANONICAL IMPLEMENTATION
+
+   ---------------------------------------------------------
+   SYSTEM ROLE
+   ---------------------------------------------------------
+
+   This file defines the canonical visual contract for the
+   Agile AI Foundation institutional surface.
+
+   It contains:
+
+   • Design Tokens
+   • Core Layout System
+   • Typography Rules
+   • Institutional Visual Identity
+   • Governance Surface Styling
+   • Behavioral Utilities required by JS systems
+
+   This file must remain stable.
+
+   Visual refinements MUST be implemented in:
+   /shared/css/refinement.css
+
+   ---------------------------------------------------------
+   ARCHITECTURE LAYERS
+   ---------------------------------------------------------
+
+   Layer 1 — Design Tokens
+   Color system, typography tokens, and layout constants.
+
+   Layer 2 — Canonical Layout System
+   Core page layout, typography, containers, watermark
+   system, governance visual elements.
+
+   Layer 3 — Behavioral Utilities
+   Minimal CSS used by JavaScript systems (ex: mobile menu).
+
+   ---------------------------------------------------------
+   GOVERNANCE RULES
+   ---------------------------------------------------------
+
+   1. Design tokens defined here are the canonical contract.
+   2. Refinement styling must NOT modify this file.
+   3. Structural changes require version increment.
+   4. Behaviour utilities must remain minimal and documented.
+
+   ---------------------------------------------------------
+   VERSION HISTORY
+   ---------------------------------------------------------
+
+   v1.11
+   - Added mobile navigation scroll lock utility
+   - Documentation and governance clarification
+
+   v1.10
+   - Unified Adaptive Token Model introduced
+   - Canonical theme system stabilized
+
    ========================================================= */
 
 
 /* =========================================================
-   Root Design Tokens — Light
+   LAYER 1 — DESIGN TOKENS
+   Root Design Tokens (Light Theme)
    ========================================================= */
 
 :root{
@@ -67,7 +127,7 @@
 
 
 /* =========================================================
-   System Dark Mode
+   System Dark Mode (Fallback)
    ========================================================= */
 
 @media(prefers-color-scheme:dark){
@@ -98,8 +158,13 @@
 
 
 /* =========================================================
-   Page Layout
+   LAYER 2 — CANONICAL LAYOUT SYSTEM
    ========================================================= */
+
+
+/* ---------------------------------------------------------
+   Page Layout
+--------------------------------------------------------- */
 
 body{
 
@@ -123,9 +188,9 @@ position:relative;
 }
 
 
-/* =========================================================
+/* ---------------------------------------------------------
    Canonical Watermark
-   ========================================================= */
+--------------------------------------------------------- */
 
 body::before{
 
@@ -156,9 +221,9 @@ text-align:center;
 }
 
 
-/* =========================================================
+/* ---------------------------------------------------------
    Container
-   ========================================================= */
+--------------------------------------------------------- */
 
 .container{
 
@@ -175,9 +240,9 @@ z-index:1;
 }
 
 
-/* =========================================================
+/* ---------------------------------------------------------
    Typography
-   ========================================================= */
+--------------------------------------------------------- */
 
 h1{
 font-size:2.6rem;
@@ -218,9 +283,9 @@ margin-top:1.5rem;
 }
 
 
-/* =========================================================
+/* ---------------------------------------------------------
    Identity Layer
-   ========================================================= */
+--------------------------------------------------------- */
 
 .identity-line{
 
@@ -263,9 +328,9 @@ max-width:75ch;
 }
 
 
-/* =========================================================
+/* ---------------------------------------------------------
    Links
-   ========================================================= */
+--------------------------------------------------------- */
 
 a{
 
@@ -280,9 +345,9 @@ text-decoration:none;
 }
 
 
-/* =========================================================
+/* ---------------------------------------------------------
    Footer
-   ========================================================= */
+--------------------------------------------------------- */
 
 footer{
 
@@ -301,9 +366,9 @@ line-height:1.6;
 }
 
 
-/* =========================================================
+/* ---------------------------------------------------------
    Breadcrumb
-   ========================================================= */
+--------------------------------------------------------- */
 
 .authority-breadcrumb{
 
@@ -332,9 +397,9 @@ margin:0 .5rem;
 }
 
 
-/* =========================================================
-   Governance Enhancements
-   ========================================================= */
+/* ---------------------------------------------------------
+   Governance Surface Enhancements
+--------------------------------------------------------- */
 
 .governance-page h1{
 font-weight:700;
@@ -416,9 +481,9 @@ fill:var(--color-seal-fill);
 }
 
 
-/* =========================================================
+/* ---------------------------------------------------------
    Header Layout (Sticky Navigation)
-   ========================================================= */
+--------------------------------------------------------- */
 
 #site-header{
 
@@ -472,9 +537,9 @@ gap:1rem;
 }
 
 
-/* =========================================================
+/* ---------------------------------------------------------
    Diagram Theme Logic
-   ========================================================= */
+--------------------------------------------------------- */
 
 .diagram-container img{
 width:100%;
@@ -507,9 +572,9 @@ display:block;
 }
 
 
-/* =========================================================
+/* ---------------------------------------------------------
    Print Styles
-   ========================================================= */
+--------------------------------------------------------- */
 
 @media print{
 
@@ -546,4 +611,24 @@ nav,.no-print{
 display:none !important;
 }
 
+}
+
+
+/* =========================================================
+   LAYER 3 — BEHAVIORAL UTILITIES
+   Used by JavaScript Systems
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   Mobile Navigation Scroll Lock
+
+   Used by header.js when mobile menu is open.
+   Prevents background page scroll.
+
+   Introduced in v1.11
+--------------------------------------------------------- */
+
+body.menu-open{
+overflow:hidden;
 }
