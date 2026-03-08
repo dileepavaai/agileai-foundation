@@ -1,7 +1,7 @@
 /* =========================================================
    AGILE AI FOUNDATION
    Shared Refinement Layer — Header + Footer UX
-   Version: v1.14
+   Version: v1.15
    ---------------------------------------------------------
    Responsibilities
 
@@ -9,9 +9,15 @@
    • Header stability improvements
    • Mobile navigation toggle animation
    • Mobile navigation layout corrections
+   • Mobile menu overlay behavior
 
-   This file intentionally does NOT redefine design tokens.
-   Those belong to styles.css.
+   GOVERNANCE
+
+   This layer provides UX and interaction refinements for
+   shared components only (header / navigation / footer).
+
+   It intentionally DOES NOT redefine design tokens.
+   Design tokens remain canonical in styles.css.
    ========================================================= */
 
 
@@ -132,6 +138,7 @@
 }
 
 
+
 /* =========================================================
    HEADER STABILITY
    Prevent layout shift during page load
@@ -146,26 +153,36 @@
 }
 
 
+
 /* =========================================================
    MOBILE NAVIGATION TOGGLE
+   ---------------------------------------------------------
+   Unified definition (previous duplicate rules removed)
+
+   • 40px touch target for accessibility
+   • Consistent visual container
+   • Clean hamburger → X transformation
    ========================================================= */
 
 .nav-toggle {
 
-  width: 34px;
-  height: 34px;
+  width: 40px;
+  height: 40px;
 
   display: none;
 
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.15);
 
-  border: none;
   background: transparent;
 
   cursor: pointer;
   padding: 0;
+
+  position: relative;
+
+  display: grid;
+  place-items: center;
 
 }
 
@@ -178,7 +195,7 @@
 
   display: block;
 
-  width: 22px;
+  width: 18px;
   height: 2px;
 
   background: var(--color-text-primary);
@@ -199,7 +216,7 @@
    ========================================================= */
 
 .nav-toggle.active span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
+  transform: translateY(6px) rotate(45deg);
 }
 
 .nav-toggle.active span:nth-child(2) {
@@ -207,8 +224,9 @@
 }
 
 .nav-toggle.active span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+  transform: translateY(-6px) rotate(-45deg);
 }
+
 
 
 /* =========================================================
@@ -218,14 +236,14 @@
 @media (max-width:768px) {
 
   .nav-toggle {
-    display: flex;
+    display: grid;
   }
 
   .site-nav {
 
     position: absolute;
 
-    /* anchor menu directly under header */
+    /* Anchor menu directly under header */
     top: 64px;
     left: 0;
 
@@ -239,8 +257,9 @@
 
     padding: 20px 0;
 
-    /* keep menu inside viewport */
+    /* Keep menu inside viewport */
     max-height: calc(100vh - 64px);
+
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 
@@ -271,19 +290,29 @@
 
 }
 
-/* ==========================================
-   MOBILE MENU OVERLAY FIX
-   Prevent pseudo element from affecting layout
-========================================== */
+
+
+/* =========================================================
+   MOBILE MENU OVERLAY
+   ---------------------------------------------------------
+   Prevents background scroll and provides
+   visual focus when mobile navigation is open.
+   ========================================================= */
 
 body.menu-open::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.45);
-    z-index: 900;
+
+  content: "";
+
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0,0,0,0.45);
+
+  z-index: 1000;
+
 }
 
 body.menu-open {
-    overflow: hidden;
+  overflow: hidden;
 }
