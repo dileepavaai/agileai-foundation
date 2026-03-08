@@ -7,6 +7,11 @@
 // ======================================================
 
 
+// Prevent duplicate initialization
+if (!window.__AAF_HEADER_INITIALIZED__) {
+  window.__AAF_HEADER_INITIALIZED__ = true;
+
+
 // ------------------------------------------------------
 // Header Loader
 // ------------------------------------------------------
@@ -114,9 +119,7 @@ function initializeThemeToggle() {
   const storedTheme = localStorage.getItem("aaf-theme");
 
   if (storedTheme) {
-
     document.documentElement.setAttribute("data-theme", storedTheme);
-
   }
 
   toggle.addEventListener("click", function () {
@@ -135,8 +138,17 @@ function initializeThemeToggle() {
 
 }
 
+
+
+
+// ======================================================
+// Scroll-Based Header Styling
+// ======================================================
+
 window.addEventListener("scroll", () => {
+
   const header = document.getElementById("site-header");
+
   if (!header) return;
 
   if (window.scrollY > 10) {
@@ -144,4 +156,9 @@ window.addEventListener("scroll", () => {
   } else {
     header.classList.remove("is-scrolled");
   }
+
 });
+
+
+// Close initialization guard
+}
