@@ -1,21 +1,42 @@
 // ======================================================
-// Institutional Header Loader
-// Safe Injection + Mobile Toggle Initialization
-// + Section-Based Active Navigation Highlight
-// + Theme Toggle Initialization
-// + Layout Stabilization
-// + GA4 PDF Download Tracking
+// Agile AI Foundation — Institutional Header System
+// ======================================================
+//
+// Responsibilities
+// ------------------------------------------------------
+// 1. Load shared header HTML
+// 2. Initialize navigation behavior
+// 3. Apply active navigation highlighting
+// 4. Initialize theme toggle
+// 5. Load Google Analytics (centralized)
+// 6. Track PDF downloads
+// 7. Track specification section reading
+// 8. Apply scroll-based header styling
+//
+// Design Principles
+// ------------------------------------------------------
+// • Deterministic initialization order
+// • No duplicate initialization
+// • Centralized analytics loading
+// • Non-invasive behavior tracking
+// • Governance-safe architecture
 // ======================================================
 
 
-// Prevent duplicate initialization
+// ======================================================
+// Initialization Guard
+// Prevent duplicate execution if header loads twice
+// ======================================================
+
 if (!window.__AAF_HEADER_INITIALIZED__) {
+
   window.__AAF_HEADER_INITIALIZED__ = true;
 
 
-// ------------------------------------------------------
+// ======================================================
 // Header Loader
-// ------------------------------------------------------
+// Inject shared header HTML into every page
+// ======================================================
 
 fetch("/shared/header.html")
 
@@ -32,16 +53,19 @@ fetch("/shared/header.html")
 
     if (!headerContainer) return;
 
-    // Inject header HTML
+    // Inject header markup
     headerContainer.innerHTML = data;
 
-    // Stabilize layout after injection
+    // Stabilize layout and initialize system
     requestAnimationFrame(() => {
 
+      // Order matters
+      initializeAnalytics();
       initializeNavigation();
       applyActiveNavigation();
       initializeThemeToggle();
       initializePDFTracking();
+      initializeSectionTracking();
 
     });
 
@@ -56,6 +80,7 @@ fetch("/shared/header.html")
 
 // ======================================================
 // Mobile Navigation Toggle
+// Handles hamburger navigation on mobile devices
 // ======================================================
 
 function initializeNavigation() {
@@ -110,6 +135,7 @@ function applyActiveNavigation() {
 
 // ======================================================
 // Theme Toggle Initialization
+// Controls light / dark theme switching
 // ======================================================
 
 function initializeThemeToggle() {
@@ -144,12 +170,46 @@ function initializeThemeToggle() {
 
 
 // ======================================================
-// GA4 PDF Download Tracking
+// Google Analytics Loader (Centralized)
+// Loads GA4 once for the entire site
+// ======================================================
+
+function initializeAnalytics() {
+
+  // Prevent duplicate GA initialization
+  if (window.gtag) return;
+
+  const script = document.createElement("script");
+
+  script.async = true;
+  script.src =
+    "https://www.googletagmanager.com/gtag/js?id=G-B7RTGWC99E";
+
+  document.head.appendChild(script);
+
+  window.dataLayer = window.dataLayer || [];
+
+  window.gtag = function () {
+    dataLayer.push(arguments);
+  };
+
+  gtag("js", new Date());
+
+  gtag("config", "G-B7RTGWC99E");
+
+}
+
+
+
+
+// ======================================================
+// PDF Download Tracking
+// Tracks downloads of standards and guide PDFs
 // ======================================================
 
 function initializePDFTracking() {
 
-  document.addEventListener("click", function(event) {
+  document.addEventListener("click", function (event) {
 
     const link = event.target.closest("a");
 
@@ -180,50 +240,8 @@ function initializePDFTracking() {
 
 
 // ======================================================
-// Scroll-Based Header Styling
-// ======================================================
-
-window.addEventListener("scroll", () => {
-
-  const header = document.getElementById("site-header");
-
-  if (!header) return;
-
-  if (window.scrollY > 10) {
-    header.classList.add("is-scrolled");
-  } else {
-    header.classList.remove("is-scrolled");
-  }
-
-});
-
-// ======================================================
-// Google Analytics Loader
-// ======================================================
-
-function initializeAnalytics() {
-
-  if (window.gtag) return;
-
-  const script = document.createElement("script");
-  script.async = true;
-  script.src = "https://www.googletagmanager.com/gtag/js?id=G-B7RTGWC99E";
-
-  document.head.appendChild(script);
-
-  window.dataLayer = window.dataLayer || [];
-
-  window.gtag = function(){dataLayer.push(arguments);};
-
-  gtag('js', new Date());
-  gtag('config', 'G-B7RTGWC99E');
-
-}
-// Close initialization guard
-}
-
-// ======================================================
-// Specification Section Scroll Tracking
+// Specification Section Tracking
+// Tracks which sections of a specification are viewed
 // ======================================================
 
 function initializeSectionTracking() {
@@ -258,5 +276,34 @@ function initializeSectionTracking() {
   });
 
   sections.forEach(section => observer.observe(section));
+
+}
+
+
+
+
+// ======================================================
+// Scroll-Based Header Styling
+// Adds subtle styling when page scrolls
+// ======================================================
+
+window.addEventListener("scroll", () => {
+
+  const header = document.getElementById("site-header");
+
+  if (!header) return;
+
+  if (window.scrollY > 10) {
+    header.classList.add("is-scrolled");
+  } else {
+    header.classList.remove("is-scrolled");
+  }
+
+});
+
+
+// ======================================================
+// End Initialization Guard
+// ======================================================
 
 }
