@@ -1,4 +1,58 @@
+<!-- ======================================================
+     Agile AI Foundation
+     Institutional Header Component
+     Version: v1.11
+
+     ------------------------------------------------------
+     SYSTEM ROLE
+     ------------------------------------------------------
+
+     This file defines the canonical navigation header
+     used across the Agile AI Foundation public surface.
+
+     It provides:
+
+     • Institutional identity banner
+     • Primary navigation
+     • Mobile navigation toggle
+     • Theme toggle control
+
+     Behavior is implemented in:
+
+     /shared/header.js
+
+     Visual refinement is implemented in:
+
+     /shared/refinement.css
+
+     ------------------------------------------------------
+     GOVERNANCE RULES
+     ------------------------------------------------------
+
+     1. Structural class names must not change.
+     2. Navigation data-nav attributes power active state.
+     3. Mobile toggle behavior is controlled by header.js.
+     4. Theme toggle behavior is controlled by theme system.
+
+     ------------------------------------------------------
+     VERSION HISTORY
+     ------------------------------------------------------
+
+     v1.11
+     - Accessibility improvements (ARIA relationships)
+     - Navigation ID added for accessibility
+     - Structural documentation added
+
+     v1.10
+     - Initial institutional header system
+
+     ====================================================== -->
+
 <div class="site-header">
+
+  <!-- --------------------------------------------------
+       Institutional Title
+       -------------------------------------------------- -->
 
   <a href="/" class="site-title">
     AGILE AI FOUNDATION
@@ -6,25 +60,67 @@
 
   <div class="header-controls">
 
-    <button class="nav-toggle"
-            aria-label="Toggle navigation"
-            aria-expanded="false">
+    <!-- --------------------------------------------------
+         Mobile Navigation Toggle
+         -------------------------------------------------- -->
+
+    <button
+      class="nav-toggle"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+      aria-controls="primary-navigation">
+
       <span></span>
       <span></span>
       <span></span>
+
     </button>
 
-    <nav class="site-nav">
-      <a href="/agile-ai/" data-nav="agile-ai">Agile AI</a>
-      <a href="/standards/current/" data-nav="specification">Specification</a>
-      <a href="/standards/" data-nav="standards">Standards Registry</a>
-      <a href="/guide/" data-nav="guide">Guide</a>
-      <a href="/governance/" data-nav="governance">Governance</a>
-      <a href="https://agileai.university"
-         target="_blank"
-         rel="noopener"
-         data-nav="university">University</a>
+    <!-- --------------------------------------------------
+         Primary Navigation
+         -------------------------------------------------- -->
+
+    <nav
+      id="primary-navigation"
+      class="site-nav"
+      role="navigation"
+      aria-label="Primary">
+
+      <a href="/agile-ai/" data-nav="agile-ai">
+        Agile AI
+      </a>
+
+      <a href="/standards/current/" data-nav="specification">
+        Specification
+      </a>
+
+      <a href="/standards/" data-nav="standards">
+        Standards Registry
+      </a>
+
+      <a href="/guide/" data-nav="guide">
+        Guide
+      </a>
+
+      <a href="/governance/" data-nav="governance">
+        Governance
+      </a>
+
+      <a
+        href="https://agileai.university"
+        target="_blank"
+        rel="noopener"
+        data-nav="university">
+
+        University
+
+      </a>
+
     </nav>
+
+    <!-- --------------------------------------------------
+         Theme Toggle Control
+         -------------------------------------------------- -->
 
     <button
       id="theme-toggle"
