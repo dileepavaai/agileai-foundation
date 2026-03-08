@@ -27,6 +27,7 @@
    v1.14
    - Corrected hamburger → X centering
    - Ensured symmetric toggle animation
+   - Improved mobile navigation spacing
    - Maintained compatibility with canonical design tokens
    ========================================================= */
 
@@ -272,7 +273,7 @@ pointer-events:auto;
 }
 
 .site-nav a{
-margin:12px 0;
+margin:8px 0;
 }
 
 }
