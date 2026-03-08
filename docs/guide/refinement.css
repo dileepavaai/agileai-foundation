@@ -179,12 +179,3 @@ body.guide-page .theme-switcher a {
 body.guide-page .theme-switcher:hover {
   opacity: 0.85;
 }
-
-/* =========================================================
-   Theme Control Safety Guard
-   Prevent duplicate page-level theme switchers
-   ========================================================= */
-
-.theme-switcher{
-display:none !important;
-}

@@ -425,3 +425,7 @@ Visual refinement layer only
   background: #2e7cf6;
   color: #ffffff;
 }
+
+.download-button {
+  margin-top: 10px;
+}
