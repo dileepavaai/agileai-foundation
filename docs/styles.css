@@ -25,7 +25,9 @@
    This file must remain stable.
 
    Visual refinements MUST be implemented in:
-   /shared/refinement.css
+
+      docs/refinement.css
+      docs/shared/refinement.css
 
    ---------------------------------------------------------
    ARCHITECTURE LAYERS
@@ -39,7 +41,8 @@
    system, governance visual elements.
 
    Layer 3 — Behavioral Utilities
-   Minimal CSS used by JavaScript systems (ex: mobile menu).
+   Minimal CSS used by JavaScript systems
+   (example: mobile navigation scroll lock).
 
    ---------------------------------------------------------
    GOVERNANCE RULES
@@ -482,7 +485,7 @@ fill:var(--color-seal-fill);
 
 
 /* ---------------------------------------------------------
-   Header Layout (Sticky Navigation)
+   Header Layout (Baseline Structure)
 --------------------------------------------------------- */
 
 #site-header{
@@ -622,11 +625,7 @@ display:none !important;
 
 /* ---------------------------------------------------------
    Mobile Navigation Scroll Lock
-
-   Used by header.js when mobile menu is open.
-   Prevents background page scroll.
-
-   Introduced in v1.11
+   Prevents background scrolling when mobile menu is open.
 --------------------------------------------------------- */
 
 body.menu-open{
