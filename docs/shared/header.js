@@ -4,6 +4,7 @@
 // + Section-Based Active Navigation Highlight
 // + Theme Toggle Initialization
 // + Layout Stabilization
+// + GA4 PDF Download Tracking
 // ======================================================
 
 
@@ -40,6 +41,7 @@ fetch("/shared/header.html")
       initializeNavigation();
       applyActiveNavigation();
       initializeThemeToggle();
+      initializePDFTracking();
 
     });
 
@@ -133,6 +135,42 @@ function initializeThemeToggle() {
     document.documentElement.setAttribute("data-theme", newTheme);
 
     localStorage.setItem("aaf-theme", newTheme);
+
+  });
+
+}
+
+
+
+
+// ======================================================
+// GA4 PDF Download Tracking
+// ======================================================
+
+function initializePDFTracking() {
+
+  document.addEventListener("click", function(event) {
+
+    const link = event.target.closest("a");
+
+    if (!link) return;
+
+    const href = link.getAttribute("href");
+
+    if (!href) return;
+
+    if (href.toLowerCase().endsWith(".pdf")) {
+
+      if (typeof gtag === "function") {
+
+        gtag("event", "pdf_download", {
+          file_name: href.split("/").pop(),
+          file_path: href
+        });
+
+      }
+
+    }
 
   });
 
