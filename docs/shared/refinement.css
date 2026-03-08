@@ -1,7 +1,7 @@
 /* =========================================================
    AGILE AI FOUNDATION
    Shared Refinement Layer — Header + Footer UX
-   Version: v1.12
+   Version: v1.13
    ---------------------------------------------------------
    Responsibilities
 
@@ -183,7 +183,7 @@
 
   background: var(--color-text-primary);
 
-  margin: 4px 0;
+  margin: 5px 0;
 
   transform-origin: center;
 
@@ -196,10 +196,11 @@
 
 /* =========================================================
    Hamburger → X Animation
+   Centered transformation
    ========================================================= */
 
 .nav-toggle.active span:nth-child(1) {
-  transform: translateY(6px) rotate(45deg);
+  transform: translateY(7px) rotate(45deg);
 }
 
 .nav-toggle.active span:nth-child(2) {
@@ -207,7 +208,7 @@
 }
 
 .nav-toggle.active span:nth-child(3) {
-  transform: translateY(-6px) rotate(-45deg);
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 
@@ -237,7 +238,10 @@
     flex-direction: column;
     align-items: center;
 
-    padding: 1rem 0;
+    padding: 20px 0;
+
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
 
     opacity: 0;
     transform: translateY(-8px);
@@ -260,28 +264,8 @@
 
   .site-nav a {
 
-    margin: 10px 0;
+    margin: 12px 0;
 
   }
 
-}
-
-/* =========================================================
-   MOBILE NAVIGATION AUTHORITY OVERRIDE
-   ---------------------------------------------------------
-   Ensures the shared refinement layer controls the mobile
-   navigation behavior even if root refinement.css contains
-   similar selectors.
-   ========================================================= */
-
-.nav-toggle span{
-margin:5px 0 !important;
-}
-
-.nav-toggle.active span:nth-child(1){
-transform:translateY(7px) rotate(45deg) !important;
-}
-
-.nav-toggle.active span:nth-child(3){
-transform:translateY(-7px) rotate(-45deg) !important;
 }
