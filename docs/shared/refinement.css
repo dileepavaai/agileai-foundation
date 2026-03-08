@@ -270,3 +270,20 @@
   }
 
 }
+
+/* ==========================================
+   MOBILE MENU OVERLAY FIX
+   Prevent pseudo element from affecting layout
+========================================== */
+
+body.menu-open::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 900;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
