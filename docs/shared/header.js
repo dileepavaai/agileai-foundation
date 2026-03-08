@@ -197,6 +197,66 @@ window.addEventListener("scroll", () => {
 
 });
 
+// ======================================================
+// Google Analytics Loader
+// ======================================================
 
+function initializeAnalytics() {
+
+  if (window.gtag) return;
+
+  const script = document.createElement("script");
+  script.async = true;
+  script.src = "https://www.googletagmanager.com/gtag/js?id=G-B7RTGWC99E";
+
+  document.head.appendChild(script);
+
+  window.dataLayer = window.dataLayer || [];
+
+  window.gtag = function(){dataLayer.push(arguments);};
+
+  gtag('js', new Date());
+  gtag('config', 'G-B7RTGWC99E');
+
+}
 // Close initialization guard
+}
+
+// ======================================================
+// Specification Section Scroll Tracking
+// ======================================================
+
+function initializeSectionTracking() {
+
+  const sections = document.querySelectorAll("section[id]");
+
+  if (!sections.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+      if (entry.isIntersecting) {
+
+        const sectionId = entry.target.id;
+
+        if (typeof gtag === "function") {
+
+          gtag("event", "spec_section_view", {
+            section: sectionId,
+            page: window.location.pathname
+          });
+
+        }
+
+      }
+
+    });
+
+  }, {
+    threshold: 0.6
+  });
+
+  sections.forEach(section => observer.observe(section));
+
 }
