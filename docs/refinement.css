@@ -1,38 +1,60 @@
 /* =========================================================
    AGILE AI FOUNDATION
-   Institutional Refinement Layer — v1.16
-   Header / Navigation / Page UX
+   Institutional Refinement Layer — v1.17
+   Header / Navigation / Page UX Layer
+   ---------------------------------------------------------
+
+   PURPOSE
    ---------------------------------------------------------
    This file refines the canonical design system defined in
-   styles.css.
+   styles.css. It provides interaction polish and layout
+   behavior without modifying the canonical design tokens.
 
-   Responsibilities
+   RESPONSIBILITIES
+   ---------------------------------------------------------
    • Header interaction behavior
    • Mobile navigation system
    • Navigation toggle animation
    • Institutional typography refinements
    • Specification document UX
 
-   Architecture
-
+   ARCHITECTURE
+   ---------------------------------------------------------
    styles.css
       ↓
-   refinement.css
-      Header + Navigation + page UX
+   docs/refinement.css
+      Header + Navigation + Page UX
       ↓
-   shared/refinement.css
-      Shared UX polish (footer + overlay)
+   docs/shared/refinement.css
+      Shared UX polish (footer + overlays)
 
-   Version Notes
+   GOVERNANCE RULES
+   ---------------------------------------------------------
+   1. This file must NOT redefine design tokens.
+   2. Structural layout primitives remain in styles.css.
+   3. This layer is for interaction and UX refinement only.
+   4. Shared UI overlays must live in shared/refinement.css.
+
+   VERSION HISTORY
+   ---------------------------------------------------------
+   v1.17
+   - Mobile navigation alignment corrected
+   - Menu items changed from center → left alignment
+   - Navigation padding adjusted for institutional layout
+
    v1.16
    - Header vertical rhythm stabilization
    - Header height aligned with mobile menu offset
-   - Maintained v1.15 mobile navigation system
+
+   v1.15
+   - Mobile navigation converted to fixed viewport panel
+   - Improved mobile menu animation and spacing
    ========================================================= */
 
 
 /* =========================================================
-   Header Shell
+   HEADER SHELL
+   Sticky institutional header container
    ========================================================= */
 
 #site-header{
@@ -48,7 +70,7 @@ will-change:box-shadow;
 
 
 /* =========================================================
-   Header Shadow On Scroll
+   HEADER SHADOW ON SCROLL
    ========================================================= */
 
 #site-header.is-scrolled{
@@ -67,7 +89,8 @@ box-shadow:0 4px 14px rgba(0,0,0,.35);
 
 
 /* =========================================================
-   Header Container
+   HEADER CONTAINER
+   Defines layout rhythm for title + controls
    ========================================================= */
 
 .site-header{
@@ -75,18 +98,22 @@ width:100%;
 max-width:1200px;
 margin:0 auto;
 box-sizing:border-box;
+
 padding:14px 40px;
 min-height:60px;
+
 display:flex;
 justify-content:space-between;
 align-items:center;
+
 background:var(--color-bg-primary);
 backdrop-filter:blur(6px);
 }
 
 
 /* =========================================================
-   Header Offset Handling
+   HEADER OFFSET HANDLING
+   Prevent content overlap under sticky header
    ========================================================= */
 
 body:not([data-section="specification"]) main{
@@ -99,7 +126,7 @@ padding-top:0;
 
 
 /* =========================================================
-   Title
+   SITE TITLE
    ========================================================= */
 
 .site-title{
@@ -117,7 +144,7 @@ opacity:.85;
 
 
 /* =========================================================
-   Navigation (Desktop)
+   DESKTOP NAVIGATION
    ========================================================= */
 
 .site-nav{
@@ -141,7 +168,7 @@ opacity:1;
 
 
 /* =========================================================
-   Navigation Underline
+   NAVIGATION UNDERLINE ANIMATION
    ========================================================= */
 
 .site-nav a::after{
@@ -172,7 +199,8 @@ transform:scaleX(1);
 
 
 /* =========================================================
-   Navigation Toggle (Hamburger → X)
+   NAVIGATION TOGGLE
+   Hamburger → X animation
    ========================================================= */
 
 .nav-toggle{
@@ -224,7 +252,8 @@ transform:translate(-50%,0) rotate(-45deg);
 
 
 /* =========================================================
-   Mobile Navigation Layout
+   MOBILE NAVIGATION
+   Full viewport navigation panel
    ========================================================= */
 
 @media(max-width:768px){
@@ -242,7 +271,9 @@ display:block;
 }
 
 
-/* Mobile Menu Panel */
+/* ---------------------------------------------------------
+   Mobile Menu Panel
+--------------------------------------------------------- */
 
 .site-nav{
 
@@ -257,9 +288,11 @@ background:var(--color-bg-primary);
 border-bottom:1px solid var(--color-border-subtle);
 
 flex-direction:column;
-align-items:center;
 
-padding:2rem 20px;
+/* v1.17 alignment fix */
+align-items:flex-start;
+
+padding:2rem 32px;
 
 opacity:0;
 transform:translateY(-8px) scale(.995);
@@ -278,7 +311,9 @@ pointer-events:auto;
 }
 
 
-/* Menu Links */
+/* ---------------------------------------------------------
+   Mobile Menu Links
+--------------------------------------------------------- */
 
 .site-nav a{
 margin:12px 0;
@@ -296,7 +331,7 @@ opacity:1;
 
 
 /* =========================================================
-   Specification Metadata
+   SPECIFICATION DOCUMENT UX
    ========================================================= */
 
 .spec-meta{
@@ -321,7 +356,7 @@ color:var(--color-text-secondary);
 
 
 /* =========================================================
-   Specification Content
+   SPECIFICATION CONTENT NUMBERING
    ========================================================= */
 
 .spec-content{
@@ -349,7 +384,7 @@ content:counter(section) "." counter(subsection) " ";
 
 
 /* =========================================================
-   Institutional Typography Refinement
+   TYPOGRAPHY REFINEMENTS
    ========================================================= */
 
 .identity-line{
@@ -376,7 +411,7 @@ margin-bottom:12px;
 
 
 /* =========================================================
-   Version Badge
+   VERSION BADGE
    ========================================================= */
 
 .std-badge{
@@ -392,7 +427,7 @@ vertical-align:middle;
 
 
 /* =========================================================
-   Theme Toggle
+   THEME TOGGLE
    ========================================================= */
 
 .header-controls{
@@ -441,7 +476,7 @@ display:inline;
 
 
 /* =========================================================
-   Smooth Scrolling
+   GLOBAL SMOOTH SCROLLING
    ========================================================= */
 
 html{
@@ -450,7 +485,7 @@ scroll-behavior:smooth;
 
 
 /* =========================================================
-   Specification Layout Fixes
+   SPECIFICATION PAGE LAYOUT FIXES
    ========================================================= */
 
 .spec-content > section:first-child{
@@ -477,7 +512,7 @@ padding-top:0;
 
 
 /* =========================================================
-   Theme Safety Guard
+   THEME SAFETY GUARD
    ========================================================= */
 
 .theme-switcher{
@@ -486,7 +521,7 @@ display:none !important;
 
 
 /* =========================================================
-   Concept Triad
+   CONCEPT TRIAD
    ========================================================= */
 
 .concept-triad{
@@ -500,8 +535,8 @@ opacity:.9;
 
 
 /* ======================================================
-   Download Button (Artifact Styling)
-   ========================================================= */
+   DOWNLOAD BUTTON (ARTIFACT STYLE)
+   ====================================================== */
 
 .download-button{
 display:inline-block;
