@@ -316,7 +316,7 @@ pointer-events:auto;
 --------------------------------------------------------- */
 
 .site-nav a{
-margin:12px 0;
+margin:8px 0;
 font-size:1.05rem;
 letter-spacing:.02em;
 transition:opacity .2s ease, transform .15s ease;
