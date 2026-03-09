@@ -103,3 +103,37 @@ This enables automated changelog generation.
 
 These tools are intended for repository maintainers and contributors.
 They do not affect the published Agile AI Foundation content.
+
+## Git Aliases
+
+git config --global alias.timeline "log --graph --decorate --oneline --all"
+
+git config --global alias.refinement "log --follow --oneline docs/refinement.css"
+
+## Inspect Line History
+
+View who changed each line of a file.
+
+git blame docs/refinement.css
+
+Alias:
+
+git config --global alias.inspect "blame"
+
+Usage:
+
+git inspect docs/refinement.css
+
+## Inspect Line History
+
+View who changed each line of a file.
+
+git blame docs/refinement.css
+
+Alias:
+
+git config --global alias.inspect "blame"
+
+Usage:
+
+git inspect docs/refinement.css
