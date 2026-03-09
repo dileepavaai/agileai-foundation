@@ -1,0 +1,87 @@
+- 33a9414 | 2026-03-09 | refinement(nav): add mobile navigation depth layer and stabilize layout (v1.17)
+- a2820b8 | 2026-03-09 | refinement(nav): stabilize mobile navigation layout and spacing (v1.17)
+- 0e35b64 | 2026-03-09 | refinement(nav): tighten mobile menu spacing for improved vertical rhythm
+- 8e256ec | 2026-03-09 | refinement(nav): left-align mobile navigation and improve documentation (v1.17)
+- 48f0794 | 2026-03-09 | refinement(css): header rhythm stabilization and mobile menu alignment (v1.16)
+- 851e50c | 2026-03-09 | refinement(nav): stabilize mobile navigation panel and viewport sizing (v1.15)
+- 15406d3 | 2026-03-08 | Mobile navigation UX — refine menu spacing for improved readability
+- 4c58c66 | 2026-03-08 | Header UX v1.14 — fix centered hamburger → X toggle animation
+- 817083f | 2026-03-08 | Institutional refinement v1.13 — align header/navigation architecture with shared refinement layer
+- a870c18 | 2026-03-08 | Refinement layer v1.12: centered hamburger animation and smooth mobile navigation transition
+- b09f379 | 2026-03-08 | Refinement layer v1.11: corrected hamburger animation, removed duplicate rules, improved mobile navigation transitions
+- c26a6b4 | 2026-03-08 | Header UX: add hamburger icon styling and animation
+- 36eda28 | 2026-03-08 | Refinement layer v1.11: mobile navigation toggle animation and header layout stabilization
+- 7781e1f | 2026-03-08 | Refine Guide typography, spacing, and diagram presentation
+- a18b32c | 2026-03-08 | Add PDF download link for Agile AI Functional Elements v1.1
+- 937aec1 | 2026-03-07 | Refine Agile AI concept page: structural model wording, institutional purpose statement, and conceptual triad styling
+- 5ece2c7 | 2026-03-07 | Add Agile AI conceptual triad model and styling for rapid concept understanding
+- 146b691 | 2026-03-07 | Add safety guard to prevent duplicate theme switchers
+- 4ade893 | 2026-03-07 | Refinement: align specification header with container top
+- dc85578 | 2026-03-07 | Refinement: correct header offset logic for specification pages
+- 46da2d8 | 2026-03-07 | Refinement layer: normalize specification container spacing
+- 7d290f1 | 2026-03-07 | Adjust specification container spacing via refinement layer override
+- 1aa6271 | 2026-03-07 | Fix specification container spacing via refinement layer override
+- e287284 | 2026-03-07 | Fix specification hero spacing by overriding container top padding
+- 5c8874b | 2026-03-07 | Remove spec layout negative margin and stabilize refinement layer spacing
+- 998bf26 | 2026-03-07 | Refine specification header spacing for consistent page alignment
+- e20c4a3 | 2026-03-07 | Refine specification page hero spacing to align with global page layout
+- 8d8f3de | 2026-03-07 | Restore specification layout alignment with global container grid
+- 9274b4d | 2026-03-07 | Align specification layout with global site container grid
+- 5799a96 | 2026-03-07 | Align specification layout with site container for consistent left margin
+- 0dd1e65 | 2026-03-07 | Normalize specification hero spacing and remove conflicting layout rules
+- 2c44eeb | 2026-03-07 | Adjust specification header spacing
+- 89fbe3d | 2026-03-07 | Refine specification hero spacing under header
+- c4b3069 | 2026-03-07 | Simplify specification hero spacing and remove conflicting layout rules
+- db3d027 | 2026-03-07 | Adjust hero spacing for specification pages
+- 6c84a91 | 2026-03-07 | Adjust specification page header spacing
+- 17287ec | 2026-03-07 | Fix specification hero alignment selector
+- 0aba685 | 2026-03-07 | Clean refinement.css and stabilize specification hero alignment
+- a60bd5f | 2026-03-07 | Refine specification hero spacing under sticky header
+- 5ae5931 | 2026-03-07 | Refine specification hero alignment under sticky header
+- e20f04d | 2026-03-07 | Align specification header spacing with sticky header offset
+- e917d51 | 2026-03-07 | Adjust specification header spacing to align with sticky header offset
+- c50f31a | 2026-03-07 | Stabilize header refinement and specification layout spacing
+- 5be5bd6 | 2026-03-07 | Harden standards registry structure and stabilize institutional header refinement
+- f6ab38b | 2026-03-07 | Stabilize global page offset below sticky header via refinement layer
+- 685c781 | 2026-03-07 | Fix sticky header scroll offset using margin instead of padding
+- baed70f | 2026-03-07 | Stabilize sticky header and add page offset to prevent layout overlap
+- 0dbc4ea | 2026-03-07 | Stabilize core token stylesheet and unify sticky header layout
+- 5aafc67 | 2026-03-07 | Stabilize sticky header system and remove conflicting layout offsets
+- 5fd6093 | 2026-03-07 | Clean and stabilize refinement.css (remove duplicate rules)
+- 6cf6d5a | 2026-03-06 | Refine institutional header divider for standards portal layout
+- 6c0083e | 2026-03-06 | Override std-badge color to support theme tokens
+- d369753 | 2026-03-06 | Fix version badge styling for light and dark theme compatibility
+- 2c95a9a | 2026-03-06 | Fix std-badge styling to support light and dark theme tokens
+- 5631a9c | 2026-03-06 | Fix theme toggle icon switching for light and dark modes
+- c484021 | 2026-03-06 | Upgrade theme toggle to documentation-style icon button
+- 62da804 | 2026-03-06 | Fix header-controls flex layout for theme toggle alignment
+- 3cdaa51 | 2026-03-06 | Finalize TOC stability and anchor behavior
+- f8e0678 | 2026-03-06 | Fix specification anchor offset and stabilize TOC navigation
+- 4f5fc6c | 2026-03-06 | Fix specification TOC scrolling and sticky behavior
+- c891ac9 | 2026-03-06 | Add Agile AI concept page and refine homepage specification presentation
+- ce8ff95 | 2026-03-06 | Refine homepage layout, remove duplicate navigation and add institutional heading refinement
+- c6c7b9c | 2026-03-06 | Foundation release stabilization: homepage stewardship positioning and adoption page added
+- 0332eeb | 2026-03-05 | Refinement layer stabilized for specification layout and navigation
+- fae3589 | 2026-03-05 | Refinement CSS cleanup and spec layout stabilization
+- c8153d6 | 2026-03-05 | Fix specification layout sticky sidebar alignment (spec-layout flex stabilization)
+- 7b96052 | 2026-03-05 | Stabilize specification sidebar sticky behavior (flex alignment fix)
+- 906ad1b | 2026-03-04 | Enhance specification navigation: CSS counters, TOC scroll highlight, copyable anchors
+- f135fa8 | 2026-03-04 | Add shared specification navigation with sticky TOC and mobile collapse
+- 484cd56 | 2026-03-04 | Add active section highlighting to specification TOC
+- a7ab068 | 2026-03-04 | Add W3C-style sticky TOC sidebar to Agile AI specification
+- 0a570a7 | 2026-03-04 | Add W3C-style section anchor links to specification headings
+- fbe43b4 | 2026-03-04 | Standards presentation: add specification metadata styling
+- 2af332d | 2026-03-02 | Stabilize institutional navigation system: section-based active highlight, header alignment, underline animation
+- 35743ed | 2026-03-02 | Header refinement: section-based active navigation + subtle underline animation (refinement layer only)
+- 300ff1e | 2026-03-02 | Stabilize institutional mobile navigation and header integration
+- 6193de4 | 2026-03-02 | Implement institutional mobile drop-down navigation toggle
+- fcb3b91 | 2026-03-02 | Refine header density and stabilize sticky offset alignment
+- 7791b91 | 2026-03-02 | Add sticky header offset to prevent content overlap
+- 1fb12e2 | 2026-03-02 | Strengthen institutional header layering and stacking stability
+- beb2152 | 2026-03-02 | Restore full-width institutional header band
+- aaf087e | 2026-03-02 | Align Foundation header container width with content layout (institutional coherence)
+- 632e108 | 2026-03-02 | Calibrate Foundation header title for institutional authority
+- cb781a3 | 2026-02-28 | feat: add official PDF artifact for Agile AI Functional Elements v1.0
+- ddba2b8 | 2026-02-28 | Stabilize shared header authority: wrapper-level sticky implementation, scroll shadow alignment, root-relative active navigation, and long-term architecture hardening (no content changes)
+- ae4a90e | 2026-02-28 | Foundation Navigation Authority v1.0 — Centralized shared header, unified theme controller, active navigation state, and scroll shadow. Removed duplicated header blocks. Structural integrity locked.
+- 3d4d2c2 | 2026-02-28 | Add institutional header (refinement layer) and wire Guide navigation
