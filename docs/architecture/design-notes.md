@@ -37,3 +37,12 @@ Concept:
 
 Definition:
     /definition
+
+## 3. Concept Formula
+
+Agile AI = Adaptive Execution + Machine Intelligence + Accountable Human Judgment
+
+## 4. Structural Similarity to the Agile Manifesto
+
+## 5. Path Toward a Reference Architecture
+

@@ -130,3 +130,46 @@ Agile AI is not a methodology or a prescriptive framework.
 It is a structured reference model that defines the essential capability domains required for adaptive and responsibly governed AI systems.
 
 By integrating adaptive execution, machine intelligence, and accountable human judgment, organizations can design and operate reliable AI-enabled systems.
+
+The Structural Model of Agile AI
+
+Visual:
+
+                Agile AI
+      Structured Reference Model
+                      │
+                      │
+        ┌─────────────┼─────────────┐
+        │             │             │
+        │             │             │
+Adaptive Execution  Machine       Accountable
+                    Intelligence   Human Judgment
+        │             │             │
+        │             │             │
+  Delivery Systems   AI Systems     Governance Systems
+
+                  Agile AI
+        Structured Reference Model
+
+Triangle Diagram
+
+           Adaptive Execution
+                 /\
+                /  \
+               /    \
+              /      \
+             /        \
+            /          \
+ Machine Intelligence ---- Accountable Human Judgment
+
+Agile AI is built on a simple structural insight.
+
+AI-enabled systems require three integrated capabilities.
+
+The first is adaptive execution, which enables organizations to continuously design and evolve AI systems.
+
+The second is machine intelligence, which provides computational learning and automation.
+
+The third is accountable human judgment, which ensures governance, oversight, and responsible decision-making.
+
+Agile AI integrates these three domains into a single structural reference model.
