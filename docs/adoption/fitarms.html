@@ -1,57 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FITARMS principles for responsible AI use · Agile AI Foundation</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FITARMS principles for responsible AI use — Agile AI Foundation</title>
+  <link rel="canonical" href="https://agileai.foundation/adoption/fitarms.html">
   <meta name="description" content="A brief reference to the seven Agile AI Ethical and Responsible AI Principles represented by FITARMS.">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/refinement.css">
   <style>
-    :root { color-scheme: light; color: #172839; background: white; font: 1.05rem/1.6 system-ui, sans-serif; }
-    * { box-sizing: border-box; }
-    body { margin: 0; }
-    a { color: #155668; text-underline-offset: .2em; }
-    :focus-visible { outline: 3px solid #a04110; outline-offset: 4px; }
-    .skip { position: absolute; left: 1rem; top: -8rem; padding: .5rem 1rem; background: white; }
-    .skip:focus { top: .5rem; }
-    header { border-bottom: 1px solid #bdcbd4; }
-    header nav { max-width: 66rem; margin: auto; padding: .9rem clamp(1rem, 4vw, 3rem); display: flex; justify-content: space-between; gap: .15rem 1.5rem; flex-wrap: wrap; align-items: baseline; }
-    header a { padding-block: .25rem; }
-    .brand { font-weight: 700; color: #172839; text-decoration: none; }
-    .brand:hover { text-decoration: underline; }
-    main { width: min(100%, 46rem); margin: auto; padding: clamp(2rem, 6vw, 4rem) clamp(1.15rem, 5vw, 2.5rem) 3rem; }
-    h1 { margin: 0 0 .45rem; font: 600 clamp(2.5rem, 6vw, 3.7rem)/1.1 Georgia, serif; letter-spacing: -.035em; }
-    h2 { font-size: 1.25rem; line-height: 1.3; margin: 1.6rem 0 .6rem; }
-    p { margin: .6rem 0; }
-    .subtitle { font-size: 1.2rem; color: #344e61; }
-    dl { margin: 0; }
-    dl div { border-top: 1px solid #bdcbd4; display: grid; grid-template-columns: 2.5rem auto; gap: .35rem; padding: .52rem .25rem; }
-    dl div:last-child { border-bottom: 1px solid #bdcbd4; }
-    dt { color: #155668; font-weight: 700; }
-    dd { margin: 0; }
+    .fitarms-skip:not(:focus) { position: absolute; clip-path: inset(50%); width: 1px; height: 1px; overflow: hidden; }
+    .fitarms-skip:focus { position: relative; z-index: 2; }
+    .fitarms-principles > div {
+      display: grid;
+      grid-template-columns: 2rem minmax(0, 1fr);
+      gap: .5rem;
+      padding: .5rem 0;
+      border-bottom: 1px solid var(--color-border-subtle);
+    }
+    .fitarms-principles dt { font-weight: 700; }
+    .fitarms-principles dd { margin: 0; }
   </style>
 </head>
-<body>
-  <a class="skip" href="#reference">Skip to the reference</a>
-  <header>
-    <nav aria-label="Foundation navigation">
-      <a class="brand" href="../">Agile AI Foundation</a>
-      <a href="./">Adoption resources</a>
-    </nav>
-  </header>
-  <main id="reference" tabindex="-1">
+<body data-section="adoption">
+  <a class="fitarms-skip" href="#reference">Skip to the reference</a>
+  <div id="site-header"></div>
+  <main class="container" id="reference" tabindex="-1">
+    <p class="identity-line">AGILE AI FOUNDATION — STANDARD ADOPTION</p>
     <h1>FITARMS principles for responsible AI use</h1>
-    <p class="subtitle">Agile AI Ethical and Responsible AI Principles</p>
+    <p>Agile AI Ethical and Responsible AI Principles</p>
     <p>FITARMS gives teams a common language for considering how AI affects people. The seven principles inform human judgment about when and how to use AI.</p>
-    <h2>The seven principles</h2>
-    <dl>
-      <div><dt>F</dt><dd>Fairness</dd></div>
-      <div><dt>I</dt><dd>Inclusiveness</dd></div>
-      <div><dt>T</dt><dd>Transparency</dd></div>
-      <div><dt>A</dt><dd>Accountability</dd></div>
-      <div><dt>R</dt><dd>Respect for privacy</dd></div>
-      <div><dt>M</dt><dd>Masking</dd></div>
-      <div><dt>S</dt><dd>Safety, Security, and Reliability</dd></div>
-    </dl>
+    <section aria-labelledby="principles">
+      <h2 id="principles">The seven principles</h2>
+      <dl class="fitarms-principles">
+        <div><dt>F</dt><dd>Fairness</dd></div>
+        <div><dt>I</dt><dd>Inclusiveness</dd></div>
+        <div><dt>T</dt><dd>Transparency</dd></div>
+        <div><dt>A</dt><dd>Accountability</dd></div>
+        <div><dt>R</dt><dd>Respect for privacy</dd></div>
+        <div><dt>M</dt><dd>Masking</dd></div>
+        <div><dt>S</dt><dd>Safety, Security, and Reliability</dd></div>
+      </dl>
+    </section>
+    <p><a href="/adoption/">Adoption resources</a></p>
   </main>
+  <div id="site-footer"></div>
+  <script src="/shared/header.js"></script>
+  <script src="/shared/footer.js"></script>
 </body>
 </html>
